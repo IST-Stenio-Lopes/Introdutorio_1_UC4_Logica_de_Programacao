@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Digitais - SENAI EAD</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="SENAISP">
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/aula9.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./scripts/index.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a onclick="openNav()"><img src="./img/global/icons/menu.png" class="logoJogos" /></a>
+        <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+        <div></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <button onclick="openList()" class="accordion"><img src="./img/global/icons/summary.svg"
+                style="margin-right: 10px;">
+            <p>Sumário</p>
+        </button>
+        <div class="panel" id="panelBtn">
+            <ul type="1">
+                <a class="listPanel" href="#contextualizing">
+                    <li>1.0 Contextualizando</li>
+                </a>
+                <a class="listPanel" href="#function">
+                    <li>2.0 Função</li>
+                </a>
+
+            </ul>
+
+        </div>
+        <button onclick="changeTheme()" class="accordion">
+            <img src="./img/global/icons/themeIcon.svg" style="margin-right: 10px;" alt="Alterar tema">
+            <p>Alterar tema</p>
+        </button>
+        <button onclick="changeGray()" class="accordion">
+            <img src="./img/global/icons/scaleGrayIcon.svg" style="margin-right: 10px;" alt="Escala de Cinza">
+            <p>Escala de Cinza</p>
+        </button>
+        <div class="accordion2">
+            <div style="display: flex;">
+                <img src="./img/global/icons/textIcon.svg" style="margin-right: 10px;" alt="Tamanho da fonte">
+                <p>Tamanho da fonte</p>
+            </div>
+            <div>
+                <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+                <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="homePage">
+
+        <div class="header-title">
+            <div>
+                <h2 class="text-Course" style="color: white;">Curso Técnico em</h2>
+                <h1 class="text-NameCourse">Jogos Digitais</h1>
+            </div>
+
+            <div id="containerBoxTitle">
+                <div class="numberTitle">9</div>
+                <div class="titleHeader">Funções e Procedimentos</div>
+            </div>
+
+            <div>
+                <strong class="objectiveLearning">Objetivo de Aprendizagem</strong>
+                <p class="text-DescriptUnit">Objetivo de Aprendizagem: Programar funções e métodos na elaboração de
+                    programas e sistemas
+                </p>
+            </div>
+
+            <div>
+                <p class="text-LetsLearn">Vamos iniciar os estudos</p>
+                <a class="btnPlay" href="#contextualizing">Play</a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img
+            src="./img/global/icons/arrowUpScroll.png"></button>
+    <div class="espaceTitle" id="contextualizing"></div>
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <h1 class="text-Title light-blue">Contextualizando</h1>
+                <p>
+                    Joana trabalha como programadora em uma rede de supermercados e recebeu a tarefa de atualizar o
+                    software de vendas de toda a empresa. A justificativa é tornar o aplicativo mais compatível, quando
+                    houver informações compartilhadas com outros softwares mais novos, e assim, evitar um mau
+                    funcionamento.
+                    Ela logo percebeu que, por ser um software antigo, apresentava muitos comandos repetidos, que
+                    acabavam o deixando muito extenso e difícil de ler, e além disso, atrasaria o seu trabalho,
+                    dificultando a comunicação com os outros softwares.
+                    Então, Joana precisa encontrar uma forma de tornar o aplicativo menos suscetível a problemas de
+                    compatibilidade entre aplicativos e ainda deixar o código limpo e prático para encontrar bugs, caso
+                    ocorram.
+                </p>
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/bI84_84ahdg"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+              gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <div class="dicas">
+                    <img src="./img/global/icons/help.png" id="help" style="margin-right: 20px;" />
+                    <p>
+                        Quais os principais motivos que levaram Joana a decidir implementar funções e procedimentos no
+                        código dos softwares da empresa?
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Parallax-->
+    <div class="parallax background-parallax1">
+        <div class="cubeBlack">
+            <h1 class="text-Title light-blue">Função</h1>
+            <p>
+                Em termos técnicos, uma função é um trecho de código fechado (ou sub-rotina), que pode ser chamado por
+                um programa a qualquer momento, realizando todos os comandos e instruções contidas dentro do seu escopo.
+            </p>
+
+            <p>
+                Para te ajudar a entender o que é uma função, imagine que você precisa realizar várias multiplicações
+                entre números como 1994 x 219, por exemplo. Sabemos que esse processo é um pouco demorado se fizemos no
+                papel. Só que você pode contar com as calculadoras, com a função de realizar esse cálculo já programado,
+                então, ao invés de você ter que repetir todas as etapas, para encontrar o resultado em cada nova
+                multiplicação, essa repetição pode ser evitada utilizando a função programada da calculadora.
+            </p>
+
+            <div class="atencion my-3 mx-3">
+                <img src="./img/global/icons/lightbulb.png" />
+                <p>
+                    Toda vez que você aperta no botão de igualdade na calculadora, é chamada a função programada para
+                    operação que você quer fazer. Por exemplo, quando o algoritmo da mesma identifica o sinal de adição
+                    entre dois valores, ela chama a função que soma esses valores.
+                </p>
+            </div>
+
+        </div> <!-- End BlackBox -->
+    </div> <!-- End Parallax -->
+
+    <!--Section-->
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <p>
+
+                    Quando uma função é chamada, o fluxo de processamento do programa principal é interrompido e
+                    passa-se a executar as instruções contidas na função. Ao término da execução, ela pode retornar
+                    algum valor que também pode ser atribuído à alguma variável. De uma forma mais resumida, pense que
+                    seu programa precisa saber o valor da raiz quadrada de um número. Então, ele chama a função de raiz
+                    quadrada, informando o valor a ser calculado. A função calcula esse valor e retorna o valor que saiu
+                    desse cálculo. Sendo assim, o programa principal é notificado que a função já encerrou seu cálculo,
+                    pega o valor calculado e faz uso dele.
+                </p>
+
+                <p>
+                    Note que as funções podem receber valores e retornar valores. Daí vem a diferença entre função e
+                    procedimento. As funções, obrigatoriamente, retornam um valor (como a raiz quadrada, o seno ou a
+                    área de um quadrado) e os procedimentos não retornam nada (como um procedimento de enviar e-mail,
+                    por exemplo). Observe que, no caso de funções, elas retornam um e somente um valor.
+                    Para ajudar na compreensão, pense nos seguintes problemas: como gerar um número aleatório para o meu
+                    algoritmo? Ou calcular a raiz quadrada de um número? Ou calcular o seno de um ângulo? Veja que não
+                    são algoritmos fáceis de implementar e que demandam bastante conhecimento do programador. Para nossa
+                    sorte, esses tipos de algoritmos já vem implementados nas linguagens de programação e basta apenas
+                    solicitarmos sua execução.
+                </p>
+
+                <p>
+                    Além dessas funções já incorporadas na linguagem, é recomendado que o programador escreva suas
+                    próprias funções. A seguir há um exemplo de duas funções já incorporadas na linguagem C#:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue9/Imagem 1.png" alt="Função da primeira linha chamada Mathf.Sqrt com a palavra valor entre os 
+                parênteses, indicando que é o onde o valor numero deve ser inserido para ser calculada a sua raiz quadrada. A segunda função é chamada 
+                Mathf.Sin, com Valor também entre parênteses, mas nesse caso, será calculado o Seno do valor numérico inserido.
+                " />
+
+            </div>
+        </div>
+    </section>
+
+    <!--Parallax-->
+    <div class="parallax background-parallax2">
+        <div class="cubeBlack">
+
+            <div class="atencion my-3 mx-3">
+                <img src="./img/global/icons/lightbulb.png" />
+                <p>
+                    Método é o nome que se dá às funções e procedimentos em linguagens orientadas a objetos. É uma
+                    questão conceitual dessas linguagens, mas por finalidade acaba sendo a mesma coisa, apenas sendo uma
+                    forma de indicar que aquela função ou procedimento pertence a uma classe específica.
+                </p>
+            </div>
+
+            <p>
+                Por outro lado, funções e procedimentos podem receber valores (que podem ser variáveis) passados pelo
+                programa principal. Esses valores são conhecidos como parâmetros ou argumentos, e sua quantidade é
+                determinada pelo programador, podendo não ter nenhum. Por exemplo, o cálculo da área de um triângulo
+                deve receber o valor da base e da altura. A raiz quadrada recebe somente um número inteiro. Já o
+                procedimento de desligar o computador, não recebe nada, simplesmente ele vai e desliga o computador.
+            </p>
+        </div> <!-- End BlackBox -->
+    </div> <!-- End Parallax -->
+
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <img class="w-75 m-auto" src="./img/ue9/Imagem 2.png" alt="Fluxograma que representa o processo de execução de uma função. 
+                Utiliza-se várias formas e setas. O infográfico segue uma trilha que começa com um retângulo arredondado com a informação, 
+                Chamado das Função dentro e então uma seta o liga para um paralelogramo com Recebimento dos Parâmetros, então mais uma seta 
+                levando para um retângulo com Execução das Instruções dentro, e então mais uma seta leva para um último retângulo arredondado 
+                com Retorno da Função em seu interior." />
+
+                <p>
+                    Assim, quando você for projetar uma função, deve ter em mente o valor e o tipo de dado que ela irá
+                    retornar e quais são os parâmetros que serão passados a ela. A vantagem do uso de funções é que você
+                    pode estruturar seu código de uma forma mais legível, e reaproveitar esses códigos em outra parte do
+                    programa.
+                </p>
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/gqC1xcGGqPA"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+
+                <p>
+                    Agora, vamos conhecer melhor sobre procedimentos, que se diferenciam de uma função comum por não
+                    retornar nenhum valor específico. Um procedimento é montado de forma semelhante às funções, a única
+                    diferença é que o seu tipo é definido como “void” do inglês vazio, indicando que seu retorno é
+                    vazio, ou seja, não retorna nada.<br />
+                    Recomenda-se o uso de um procedimento quando o programador quer executar ações simples e que
+                    pretende repeti-las futuramente, como quando quer que algo seja exibido na tela, depois de alguma
+                    condição ser validada.
+                </p>
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/VTNKlB_nAd4"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+
+                <p>
+                    As funções e procedimentos são utilizados com muita frequência no desenvolvimento de softwares. São
+                    vários os benefícios, como evitar a duplicação de código quando precisamos executar a mesma operação
+                    várias vezes, além de deixar o entendimento do algoritmo bem mais intuitivo, pois tiramos a parte
+                    complexa do código do fluxo principal do algoritmo, além de facilitar a localização de falhas no
+                    código quando acontecem. Esses, entre outros fatores, tornam o uso das funções uma recomendação
+                    importante para todo programador.
+                </p>
+
+
+                <div class="flex justify-center w-full mtop-1">
+                    <img src="./img/ue1/check.svg" />
+                    <p class="px-3" id="check-green-word"> Solução do problematizando</p>
+                </div>
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/zsTTj9437MM"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="containerFooter row">
+        <a class="row" href="aula-8.html">
+            <img class="arrowImg" src="img/global/icons/previusclass.png" />
+            <p class="btnDesafio">Desafio anterior</p>
+        </a>
+        <a class="row" href="aula-10.html">
+            <p class="btnDesafio">Próximo Desafio</p>
+            <img class="arrowImg" src="img/global/icons/nextclass.png" />
+        </a>
+    </div>
+
+    <!-- Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>

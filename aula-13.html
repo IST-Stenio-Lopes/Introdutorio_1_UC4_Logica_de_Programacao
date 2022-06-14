@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Digitais - SENAI EAD</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="SENAISP">
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/aula13.css">
+    <link rel="stylesheet" href="./css/uc4.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./scripts/index.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a onclick="openNav()"><img src="./img/global/icons/menu.png" class="logoJogos" /></a>
+        <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+        <div></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <button onclick="openList()" class="accordion"><img src="./img/global/icons/summary.svg"
+                style="margin-right: 10px;">
+            <p>Sumário</p>
+        </button>
+        <div class="panel" id="panelBtn">
+            <ul type="1">
+                <a class="listPanel" href="#contextualizing">
+                    <li>1.0 Contextualizando</li>
+                </a>
+                <a class="listPanel" href="#recursividade">
+                    <li>2.0 Recursividade</li>
+                </a>
+                <ul type="1" style="margin-left:20px;">
+                    <a class="listPanel" href="#recursao">
+                        <li>2.1 Recursão direta e indireta</li>
+                    </a>
+                    <a class="listPanel" href="#caso-trivial">
+                        <li>2.2 Caso trivial</li>
+                    </a>
+                </ul>
+
+            </ul>
+
+        </div>
+        <button onclick="changeTheme()" class="accordion">
+            <img src="./img/global/icons/themeIcon.svg" style="margin-right: 10px;" alt="Alterar tema">
+            <p>Alterar tema</p>
+        </button>
+        <button onclick="changeGray()" class="accordion">
+            <img src="./img/global/icons/scaleGrayIcon.svg" style="margin-right: 10px;" alt="Escala de Cinza">
+            <p>Escala de Cinza</p>
+        </button>
+        <div class="accordion2">
+            <div style="display: flex;">
+                <img src="./img/global/icons/textIcon.svg" style="margin-right: 10px;" alt="Tamanho da fonte">
+                <p>Tamanho da fonte</p>
+            </div>
+            <div>
+                <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+                <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="homePage">
+
+        <div class="header-title">
+            <div>
+                <h2 class="text-Course" style="color: white;">Curso Técnico em</h2>
+                <h1 class="text-NameCourse">Jogos Digitais</h1>
+            </div>
+
+            <div id="containerBoxTitle">
+                <div class="numberTitle">13</div>
+                <div class="titleHeader">Recursividade</div>
+            </div>
+
+            <div>
+                <strong class="objectiveLearning">Objetivo de Aprendizagem</strong>
+                <p class="text-DescriptUnit">Programar estruturas de dados na elaboração de programas e sistemas</p>
+            </div>
+
+            <div>
+                <p class="text-LetsLearn">Vamos iniciar os estudos</p>
+                <a class="btnPlay" href="#contextualizing">Play</a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img
+            src="./img/global/icons/arrowUpScroll.png"></button>
+    <div class="espaceTitle" id="contextualizing"></div>
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <h1 class="text-Title light-blue">Contextualizando</h1>
+
+                <p>
+                    Assista ao vídeo abaixo para uma introdução aos seus estudos
+                </p>
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/ArV9lJurxA0"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+              gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <div class="dicas">
+                    <img src="./img/global/icons/help.png" id="help" style="margin-right: 20px;" />
+                    <p>
+                        Durante a palestra, um dos participantes questionou: - Henrique como posso desenvolver uma
+                        função recursiva que forneça o MDC de 2 números inteiros?
+                    </p>
+                </div>
+
+                <div class="espaceTitle" id="recursividade"></div>
+                <h1 class="text-Title light-blue">Recursividade</h1>
+
+                <p>
+                    A recursão é, a grosso modo, um processo de repetição de uma função ou procedimento, onde essa
+                    função ou procedimento chama a si mesma de forma direta ou indireta. Um ponto de atenção é que, se a
+                    rotina (função ou procedimento) chama a si mesma, então é criado na memória um tipo de repetição.
+                    Aqui, devemos tomar cuidado para que essas chamadas recursivas não entrem em loop infinito.
+                </p>
+
+                <!--Div de aviso com lâmpada-->
+                <div class="atencion my-3 mx-3">
+                    <img src="./img/global/icons/lightbulb.png" />
+                    <p>
+                        Um loop ocorre quando uma parte de um código fica repetindo de forma ininterrupta, acarretando
+                        no travamento do sistema.
+                    </p>
+                </div>
+
+                <p>
+                    Para que não ocorra uma condição de loop, é necessário se estabelecer uma condição de término ou
+                    condição de parada. Essa condição deve ser muito bem planejada, pois é muito comum que a causa da
+                    entrada em loop infinito seja uma condição de parada mal projetada (obviamente que uma rotina
+                    recursiva sem um critério de término sempre entrará em loop infinito).
+                </p>
+                <p>
+                    Para aprofundar o conhecimento veja o vídeo a seguir sobre Recursão.
+                </p>
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/__eDcnt9wbA"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+              gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Parallax-->
+    <div class="parallax background-parallax1">
+        <div class="cubeBlack">
+
+            <p>
+                Um outro cuidado que devemos tomar, quando utilizamos funções recursivas, é quanto ao estouro da pilha.
+                Para entender melhor esse problema, vamos introduzir dois conceitos: memória heap e memória stack.
+            </p>
+
+            <p>
+                Em linhas gerais, quando um programa entra em execução, o sistema operacional disponibiliza um espaço na
+                memória para este programa. Sendo assim, o heap é o espaço reservado para as variáveis e dados criados
+                durante a execução do programa e se comporta como a memória global deste programa. Já a stack, (pilha de
+                funções) é uma área da memória que aloca dados e variáveis relativos às funções. Assim, quando uma
+                função é chamada, os dados e variáveis locais das funções são alocados na stack.
+            </p>
+
+            <p>
+                O funcionamento da stack é como uma estrutura do tipo pilha, onde a cada chamada de função um bloco de
+                informação é alocado nessa memória. Isso significa que, para se desalocar uma função, é necessário
+                desalocar todas as outras que estão acima dela (aquelas que foram chamadas posteriormente).
+            </p>
+
+            <p>
+                Aqui é que entra o problema do estouro da pilha: se uma função for chamada diversas vezes de forma
+                recursiva, a cada chamada é alocado um bloco de informações na stack. Por exemplo, se uma função se
+                chama a si mesmo 10.000 vezes, então teremos 10.000 blocos de informações na stack. O problema é que,
+                geralmente, o tamanho da stack é pequeno (na ordem de Kbytes) e, quando esse limite é atingido, ocorre o
+                erro de estouro de pilha. Portanto, empilhar muitas funções recursivas pode ocasionar esse erro.
+            </p>
+
+            <p>
+                Que tal assistir o vídeo a seguir e entender melhor o que é e quais são as diferenças das memórias Heap
+                e Stack?
+            </p>
+
+        </div> <!-- End BlackBox -->
+    </div> <!-- End Parallax -->
+
+    <!--Section-->
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/73sM9oQxmE8"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+
+
+                <div class="espaceTitle" id="recursao"></div>
+                <h1 class="text-Title light-blue">Recursão direta e indireta</h1>
+
+                <p>
+                    A recursão direta ocorre quando uma função é formada por seu conjunto de comandos e uma chamada a
+                    ela mesmo. Já a recursão indireta, ocorre quando uma função A chama a função B e B faz uma chamada
+                    para A.
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue13/Imagem 1.png" alt="Versão mais elaborada, com todas as mecânicas e itens previstos para o 
+                jogo já implementados. Essa fase é a mais intensa em relação aos testes. Ajuste no balanceamento e sem mudanças drásticas.
+                " />
+
+                <p>
+                    No exemplo acima, a função FuncaoA é recursiva direta. Veja, na linha 5, que há uma chamada para a
+                    própria função FuncaoA:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue13/Imagem 2.png" alt="Codificação de duas funções indiretamente recursivas. As funções FuncaoA e FuncaoB 
+                recebem dois parâmetros inteiros, x e y. Se y for menor do que x, a FuncaoA retorna x. Caso contrário, FuncaoA chama FuncaoB, que por sua vez 
+                realiza uma nova chamada à FuncaoA.
+                " />
+
+                <p>
+                    Já nesse último exemplo, a FuncaoA agora é recursiva indireta. Veja que na linha 5 FuncaoA faz uma
+                    chamada a FuncaoB. Essa, por sua vez, na linha 10 faz uma chamada a FuncaoA, criando assim uma
+                    recursão indireta.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Parallax-->
+    <div class="parallax background-parallax1">
+        <div class="cubeBlack">
+            <div class="espaceTitle" id="caso-trivial"></div>
+            <h1>Caso trivial</h1>
+
+            <p>
+                Nós utilizamos a recursão quando queremos resolver problemas que podem ser divididos em casos menores. A
+                ideia, denominada divisão e conquista, é a seguinte: eu sei como resolver a parte mais simples do
+                problema (o trivial), mas não tenho certeza de como resolver a parte mais complexa (a geral). Assim, a
+                recursão divide o problema em duas partes: uma que ela sabe resolver e a outra que ela não sabe
+                resolver. Essa segunda parte é semelhante ao problema original, mas em uma forma mais simplificada ou
+                menor. No final, a última chamada só terá o caso mais simples para resolver, e fornecerá a solução do
+                problema. Daí o nome divisão (dividir em problemas menores) e conquista (a última chamada conquista a
+                solução!).
+            </p>
+
+            <p>
+                Para que possamos então projetar uma função recursiva, temos que pensar em duas situações:
+            </p>
+
+            <p>
+                <li class="my-1 mx-1">
+                    Caso trivial: é a parte simples do problema, onde é retornado um valor e não há necessidade de se
+                    aplicar a recursão. Funciona como a condição de parada: uma vez que o caso trivial é atingido, não
+                    há
+                    mais chamadas recursivas.
+                </li>
+                <li class="my-1 mx-1">
+                    Caso geral: a parte mais complexa do problema. Para que tudo ocorra bem, o caso geral deve ser igual
+                    ao
+                    problema original, porém em uma versão mais genérica e simplificada. Como o problema é igual, então
+                    a
+                    função faz uma chamada recursiva com valores de parâmetros mais simplificados. A ideia então é que,
+                    a
+                    cada chamada recursiva, os parâmetros são alterados para que possam ser mais próximos do caso
+                    trivial.
+                </li>
+            </p>
+
+        </div> <!-- End BlackBox -->
+    </div> <!-- End Parallax -->
+
+    <!--Section-->
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <p>
+                    Lembrando que a cada chamada, os valores da função são empilhados na stack. Quando ocorre o caso
+                    trivial, a função para de se dividir e começa a calcular o resultado. Para tanto, as funções são
+                    desempilhadas da stack (da última para a primeira) e seus valores de retorno são calculados. Assim,
+                    a
+                    última função calcula o caso trivial e retorna o valor para a penúltima. Essa agrupa esse valor
+                    recebido
+                    aos seus valores internos, calcula o valor de retorno e passa para a antepenúltima, e assim
+                    sucessivamente, até chegar na primeira chamada da função recursiva<br />
+                    Exemplo
+                </p>
+
+                <p>
+                    Fatorial de um número: o fatorial de um número natural n, representado por n!, é o produto de todos
+                    os
+                    naturais menor ou igual a n.
+                </p>
+
+
+                <div id="container-fatorial" class="w-50 m-auto">
+                    <p>
+                        n! = n (n-1) (n-2z ) (n-3)1
+                    </p>
+                </div>
+
+
+                <p>
+                    Esse problema é inerentemente recursivo. Assim, podemos dividi-lo em caso trivial e caso geral:
+                </p>
+
+                <p>
+                    <li class="my-1 mx-1">
+                        Caso trivial: 0! = 1 e 1! = 1
+                    </li>
+                    <li class="my-1 mx-1">
+                        Caso geral: n! = n * (n - 1)!
+                    </li>
+                </p>
+
+                <p>
+                    Veja a solução para o problema:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue13/Imagem 3.png" alt="Exemplo recursivo de uma função que calcula o fatorial de um número. 
+                Caso o número seja 0, a função retorna 1. Caso contrário, há uma chamada recursiva.
+                " />
+
+                <p>
+                    Neste exemplo, na linha 3 temos o caso trivial (n = 0) e na linha 9 o caso geral (n * (n - 1)!).
+                    Para melhor entendimento, veja como fica a pilha com o empilhamento e desempilhamento das funções,
+                    quando fazemos fatorial(5):
+                </p>
+                <p>
+                    Empilhamento:
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--Tabela-->
+    <table class="table-uc4 w-25 text-center">
+        <tr id="first">
+            <td>Função</td>
+            <td>Retorno</td>
+        </tr>
+        <tr>
+            <td>Fatorial (5)</td>
+            <td>5 * fatorial (4)</td>
+        </tr>
+        <tr>
+            <td>Fatorial (4)</td>
+            <td>4 * fatorial (3)</td>
+        </tr>
+        <tr>
+            <td>Fatorial (3)</td>
+            <td>3 * fatorial (2)</td>
+        </tr>
+        <tr>
+            <td>Fatorial (2)</td>
+            <td>2 * fatorial (1)</td>
+        </tr>
+        <tr>
+            <td>Fatorial (1)</td>
+            <td>1 * fatorial (0)</td>
+        </tr>
+        <tr>
+            <td>Fatorial (0)</td>
+            <td>1 (caso trivial)</td>
+        </tr>
+    </table>
+
+
+    <!--Section-->
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+                <p>
+                    Quando o caso trivial é atingido, o valor é repassado para a função anterior, que recebe o valor e
+                    faz o cálculo
+                    e retorna para a função anterior e assim sucessivamente. Veja como fica o desempilhamento:
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--Tabela-->
+    <table class="table-uc4 w-25 text-center">
+        <tr id="first">
+            <td>Função</td>
+            <td>Retorno</td>
+        </tr>
+        <tr>
+            <td>Fatorial (0)</td>
+            <td>1 (caso trivial)</td>
+        </tr>
+        <tr>
+            <td>Fatorial (1)</td>
+            <td>1 * fatorial (0)= 1 * 1 = 1</td>
+        </tr>
+        <tr>
+            <td>Fatorial (2)</td>
+            <td>2 * fatorial (1)= 2 * 1 = 2</td>
+        </tr>
+        <tr>
+            <td>Fatorial (3)</td>
+            <td>3 * fatorial (1)= 3 * 2 = 6</td>
+        </tr>
+        <tr>
+            <td>Fatorial (4)</td>
+            <td>4 * fatorial (3)= 4 * 6 = 24</td>
+        </tr>
+        <tr>
+            <td>Fatorial (5)</td>
+            <td>5 * fatorial (4)= 5 * 24 = 120</td>
+        </tr>
+    </table>
+
+    <!--Section-->
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+                <p>
+                    Portanto, nesse exemplo ficou claro a estratégia da recursão, que é dividir o problema em partes
+                    menores até encontrar o trivial, e, a partir disso, combinar todos os resultados para fornecer uma
+                    única solução.
+                </p>
+
+
+                <div class="flex justify-center w-full mtop-1">
+                    <img src="./img/ue1/check.svg" />
+                    <p class="px-3" id="check-green-word"> Solução do problematizando</p>
+                </div>
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/Z6iSm1p2sSo"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <div class="containerFooter row">
+        <a class="row" href="aula-10.html">
+            <img class="arrowImg" src="img/global/icons/previusclass.png" />
+            <p class="btnDesafio">Desafio anterior</p>
+        </a>
+        <a class="row" href="aula-12.html">
+            <p class="btnDesafio">Próximo Desafio</p>
+            <img class="arrowImg" src="img/global/icons/nextclass.png" />
+        </a>
+    </div>
+
+    <!-- Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Digitais - SENAI EAD</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="SENAISP">
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/aula12.css">
+    <link rel="stylesheet" href="./css/uc4.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./scripts/index.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a onclick="openNav()"><img src="./img/global/icons/menu.png" class="logoJogos" /></a>
+        <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+        <div></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <button onclick="openList()" class="accordion"><img src="./img/global/icons/summary.svg"
+                style="margin-right: 10px;">
+            <p>Sumário</p>
+        </button>
+        <div class="panel" id="panelBtn">
+            <ul type="1">
+                <a class="listPanel" href="#contextualizing">
+                    <li>1.0 Contextualizando</li>
+                </a>
+                <a class="listPanel" href="#dicionario">
+                    <li>2.0 Dicionários</li>
+                </a>
+            </ul>
+
+        </div>
+        <button onclick="changeTheme()" class="accordion">
+            <img src="./img/global/icons/themeIcon.svg" style="margin-right: 10px;" alt="Alterar tema">
+            <p>Alterar tema</p>
+        </button>
+        <button onclick="changeGray()" class="accordion">
+            <img src="./img/global/icons/scaleGrayIcon.svg" style="margin-right: 10px;" alt="Escala de Cinza">
+            <p>Escala de Cinza</p>
+        </button>
+        <div class="accordion2">
+            <div style="display: flex;">
+                <img src="./img/global/icons/textIcon.svg" style="margin-right: 10px;" alt="Tamanho da fonte">
+                <p>Tamanho da fonte</p>
+            </div>
+            <div>
+                <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+                <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="homePage">
+
+        <div class="header-title">
+            <div>
+                <h2 class="text-Course" style="color: white;">Curso Técnico em</h2>
+                <h1 class="text-NameCourse">Jogos Digitais</h1>
+            </div>
+
+            <div id="containerBoxTitle">
+                <div class="numberTitle">12</div>
+                <div class="titleHeader">Dicionários e Mapas</div>
+            </div>
+
+            <div>
+                <strong class="objectiveLearning">Objetivo de Aprendizagem</strong>
+                <p class="text-DescriptUnit">Programar estruturas de dados na elaboração de programas e sistemas</p>
+            </div>
+
+            <div>
+                <p class="text-LetsLearn">Vamos iniciar os estudos</p>
+                <a class="btnPlay" href="#contextualizing">Play</a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img
+            src="./img/global/icons/arrowUpScroll.png"></button>
+    <div class="espaceTitle" id="contextualizing"></div>
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <h1 class="text-Title light-blue">Contextualizando</h1>
+
+                <p>
+                    Assista ao vídeo abaixo para uma introdução aos seus estudos
+                </p>
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/VON1Bym-PwY"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+              gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <div class="dicas">
+                    <img src="./img/global/icons/help.png" id="help" style="margin-right: 20px;" />
+                    <p>
+                        Visto que o processo é bastante dinâmico, pois há diversos caixas operando ao mesmo tempo, como
+                        Marcos poderia estruturar seu software
+                        de estoques utilizando dicionários?
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="parallax background-parallax1">
+        <div class="cubeBlack">
+            <div class="espaceTitle" id="dicionario"></div>
+            <h1 class="text-Title light-blue">Dicionários</h1>
+            <p>
+                As estruturas de dados do tipo dicionário são estruturas que associam um valor a uma determinada chave.
+                A principal diferença, entre os dicionários e as listas, é que estas são ordenadas de uma forma
+                específica e seus elementos são acessados por um índice numérico, enquanto que nos dicionários os
+                elementos possuem uma chave que é utilizada para recuperar um item, não tendo assim uma ordem
+                específica. A vantagem de se utilizar um dicionário é que o processo de recuperação de um item é feito
+                de forma mais eficiente. Nas listas, para se acessar um elemento, é necessário percorrer todos os
+                elementos anteriores a ele. Já nos dicionários, o acesso é feito executando-se uma função matemática
+                sobre a chave e daí obtém-se o valor associado. Por exemplo, em uma lista com um milhão de elementos,
+                você poderá ter que percorrer até um milhão de elementos para acessar um determinado item. Nos
+                dicionários, independentemente da quantidade de elementos, o acesso a um item é feito sempre ao mesmo
+                tempo, otimizando o desempenho. A desvantagem do uso de dicionários é que ocupa-se mais memória: é
+                necessário armazenar a chave e o valor.
+            </p>
+        </div> <!-- End BlackBox -->
+    </div> <!-- End Parallax -->
+
+    <table class="table-uc4">
+        <tr id="first">
+            <td id="table-color-none"></td>
+            <td>Lista</td>
+            <td>Dicionário</td>
+        </tr>
+        <tr>
+            <td>Ordenação</td>
+            <td>Dados ordenados</td>
+            <td>Dados não ordenados</td>
+        </tr>
+        <tr>
+            <td>Acesso</td>
+            <td>Índice numérico</td>
+            <td>Função matemática sobre a chave</td>
+        </tr>
+        <tr>
+            <td>Desempenho</td>
+            <td>Mais lento. Pode ser
+                necessário percorrer
+                vários elementos para
+                encontrar o procurado</td>
+            <td>Mais rápido. Independente
+                da posição, o tempo de
+                acesso é sempre o mesmo</td>
+        </tr>
+        <tr>
+            <td>Memória</td>
+            <td>Menor uso de memória -
+                armazena apenas o valor</td>
+            <td>Maior uso de memória -
+                armazena chave e valor</td>
+        </tr>
+
+    </table>
+
+    <!--Section-->
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <p>
+                    Vamos agora a um exemplo simples: suponha que no seu algoritmo seja necessário armazenar o nome do
+                    funcionário e o seu salário, e que a consulta ao salário seja feita de forma recorrente no seu
+                    código. Assim, podemos criar um dicionário com essas informações, pois isso vai otimizar o processo
+                    de consulta:
+                </p>
+
+                <!--Imagem-->
+                <img class="w-75 m-auto" src="./img/ue12/Imagem 1.png" alt="Exemplo de funcionamento da estrutura dicionário. Na primeira linha há a 
+                criação de um dicionário com chave string e valor float e nome funcionarios. Nas outras 4 linhas, há a inserção de elementos na estrutura.
+                " />
+
+                <p>
+                    Veja que foi criado o dicionário de funcionários, tendo como chave o nome (uma string) e o valor é o
+                    salário (um float). Através do método Add, foram adicionados quatro pares chave-valor e, para
+                    consultar o valor do salário de um funcionário, basta fornecer sua chave:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue12/Imagem 2.png" alt="Alteração e exibição do valor do dicionário funcionários na chave “Pedro”.
+                " />
+
+                <p>
+                    Veja que, no exemplo acima, foi adicionado 500 ao valor do funcionário Pedro e, em seguida, foi
+                    exibido o valor da chave “Pedro” na linha de comando. Assim, quando quisermos acessar um determinado
+                    valor, basta fornecer a chave entre os símbolos []. Repare que o valor associado a uma chave se
+                    comporta como uma variável, onde é possível fazer todas as operações pertinentes ao tipo de dado.
+                </p>
+
+                <p>
+                    Se quisermos percorrer todos os pares chave-valor de um dicionário, podemos utilizar o comando
+                    KeyValuePair associado a um laço foreach. Isso faz com que sejam criados esses pares chave-valor
+                    para cada um dos itens do dicionário. Veja o exemplo:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue12/Imagem 3.png" alt="Exibição de todos os pares chave-valor do dicionário funcionários, utilizando os comandos 
+                foreach e KeyValuePair.
+                " />
+
+                <p>
+                    Explicando o código acima, a variável “item” é do tipo para chave-valor. Como ela está sendo
+                    utilizada associada ao comando foreach, a cada iteração do laço foreach ela vai receber um par
+                    chave-valor do dicionário de funcionários.
+                </p>
+
+                <p>
+                    Para acessarmos a chave de item, basta referenciar a propriedade Key e para o valor, a propriedade
+                    Value. Assim, neste exemplo, estamos escrevendo na saída do console todos as chaves e valores
+                    contidos no dicionário, como apresentado na imagem a seguir:
+                </p>
+
+                <img class="w-50 m-auto" src="./img/ue12/Imagem 4.png" alt="Exemplo de chaves e valores contidos no dicionário organizados em quatro linhas lendo-se de cima 
+                para baixo contém as seguintes informações: linha 1 - Pedro - 1500; Linha 2 - Antônio - 1500; Linha 3 - João - 1250 e Linha 4 - Maria - 1300.
+                " />
+            </div>
+        </div>
+    </section>
+
+    <!--Parallax-->
+    <div class="parallax background-parallax1">
+        <div class="cubeBlack">
+
+            <p>
+                Para evitar erros quando tentamos acessar uma chave não existente no dicionário, podemos utilizar o
+                comando TryGetValue, que retorna um valor false se a
+                chave não puder ser encontrada:
+            </p>
+
+            <img class="w-75 m-auto" src="./img/ue12/Imagem 5.png"
+                alt="Exemplo de uso do comando TryGetValue. É buscado no dicionário funcionários a chave “Marcos”. 
+            Caso ela exista, o resultado será exibido na tela. Caso contrário, será exibido a mensagem “Não foi possível encontrar a chave especificada”." />
+
+            <p>
+                No exemplo acima, o algoritmo vai procurar pela chave “Marcos”. Caso ela exista, o valor será atribuído
+                à variável resultado. Caso contrário, é exibido uma mensagem de alerta. Esse tipo de tratamento é
+                interessante, pois evita que o programa trave e encerre de forma inesperada ao tentar acessar uma chave
+                inexistente.
+            </p>
+
+            <p>
+                Uma outra funcionalidade, presente nos dicionários, é a possibilidade de verificar se uma determinada
+                chave ou um par chave-valor está presente no dicionário. Para tanto, podemos utilizar os métodos
+                ContainsKey, ContainsValue ou Contains. Veja o exemplo:
+            </p>
+
+            <img class="w-75 m-auto" src="./img/ue12/Imagem 6.png"
+                alt="A imagem apresenta a criação de um dicionário string-float denominado funcionarios. Faz a inserção de quatro elementos (Pedro - 1000, 
+                Antonio - 1500, João - 1250, Maria - 1300). Pelo comando ContainsKey exibe na tela se a chave “Marcos” está no dicionário. Com o comando Contains, 
+                verifica se o par “Maria - 1300” está no dicionário. Com o comando ContainsValue faz a verificação de o valor 1500 est;a no dicionário." />
+
+        </div> <!-- End BlackBox -->
+    </div> <!-- End Parallax -->
+
+    <!--Section-->
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <p>
+                    Aqui, a saída do Console será respectivamente false, true e true. Isso ocorre pois o método
+                    ContainsKey vai retornar false, pois a chave “Marcos” não está presente no dicionário. Já o método
+                    Contains, retornará true, pois ele buscará pelo par “Maria”-1300, que está presente no dicionário.
+                    Por fim, ContainsValue busca um valor, e nesse exemplo retornará true pois o valor 1500 está no
+                    dicionário (associado a chave “Antonio”).
+                </p>
+
+                <p>
+                    Por fim, é possível remover elementos de um dicionário. Basta utilizar o método Remove(), informando
+                    qual a chave a ser removida.
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue12/Imagem 7.png" alt="A imagem mostra a inserção de quatro elementos (Pedro - 1000, Antonio - 1500, João - 1250, Maria - 1300). no dicionário funcionarios. Em 
+                    seguida, mostra o tamanho do dicionário antes da remoção. Com o comando Remove, o elemento “Pedro” é retirado do dicionário e por fim será exibido 
+                    o tamanho do dicionário após a remoção.
+                    " />
+
+                <p>
+                    O exemplo anterior mostra, que a chave “Pedro” foi removida do dicionário (na verdade, o par
+                    chave-valor foi removido). Para demonstrar que realmente a chave foi removida, utilizamos a
+                    propriedade Count para informar a quantidade de elementos do dicionário. Segue na imagem o resultado
+                    da execução desse algoritmo:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue12/Imagem 8.png"
+                    alt="A imagem mostra a saída do console do C# antes e após a remoção de elementos." />
+
+                <p>
+                    Antes da remoção, tínhamos 4 elementos. Naturalmente, depois da remoção restaram 3 elementos. Assim,
+                    vimos aqui as principais propriedades e métodos de um dicionário: Add, Remove, Contains e Count,
+                    além de sabermos como acessar uma chave através de seu índice e também a trabalhar com pares
+                    chave-valor, através de KeyValuePair.
+                </p>
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/28dwdr6joyY"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+
+
+                <div class="flex justify-center w-full mtop-1">
+                    <img src="./img/ue1/check.svg" />
+                    <p class="px-3" id="check-green-word"> Solução do problematizando</p>
+                </div>
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/5J0IPT37N-Q"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="containerFooter row">
+        <a class="row" href="aula-11.html">
+            <img class="arrowImg" src="img/global/icons/previusclass.png" />
+            <p class="btnDesafio">Desafio anterior</p>
+        </a>
+        <a class="row" href="aula-13.html">
+            <p class="btnDesafio">Próximo Desafio</p>
+            <img class="arrowImg" src="img/global/icons/nextclass.png" />
+        </a>
+    </div>
+
+    <!-- Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>

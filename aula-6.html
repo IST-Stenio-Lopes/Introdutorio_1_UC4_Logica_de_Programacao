@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogos Digitais - SENAI EAD</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="SENAISP">
+
+  <!-- Font Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/aula6.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./scripts/index.js"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <a onclick="openNav()"><img src="./img/global/icons/menu.png" class="logoJogos" /></a>
+    <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+    <div></div>
+  </div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <button onclick="openList()" class="accordion"><img src="./img/global/icons/summary.svg"
+        style="margin-right: 10px;">
+      <p>Sumário</p>
+    </button>
+    <div class="panel" id="panelBtn">
+      <ul type="1">
+        <a class="listPanel" href="#contextualizing">
+          <li>1.0 Contextualizando</li>
+        </a>
+        <a class="listPanel" href="#decisions">
+          <li>2.0 Decisões</li>
+        </a>
+        <ul type="1" style="margin-left:20px;">
+          <a class="listPanel" href="#if">
+            <li>2.1 If</li>
+          </a>
+          <a class="listPanel" href="#else">
+            <li>2.2 Else</li>
+          </a>
+          <a class="listPanel" href="#else-if">
+            <li>2.3 Else If</li>
+          </a>
+          <a class="listPanel" href="#switch">
+            <li>2.4 Switch case</li>
+          </a>
+        </ul>
+
+      </ul>
+
+    </div>
+    <button onclick="changeTheme()" class="accordion">
+      <img src="./img/global/icons/themeIcon.svg" style="margin-right: 10px;" alt="Alterar tema">
+      <p>Alterar tema</p>
+    </button>
+    <button onclick="changeGray()" class="accordion">
+      <img src="./img/global/icons/scaleGrayIcon.svg" style="margin-right: 10px;" alt="Escala de Cinza">
+      <p>Escala de Cinza</p>
+    </button>
+    <div class="accordion2">
+      <div style="display: flex;">
+        <img src="./img/global/icons/textIcon.svg" style="margin-right: 10px;" alt="Tamanho da fonte">
+        <p>Tamanho da fonte</p>
+      </div>
+      <div>
+        <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+      </div>
+    </div>
+  </div>
+
+
+  <header class="homePage">
+
+    <div class="header-title">
+      <div>
+        <h2 class="text-Course" style="color: white;">Curso Técnico em</h2>
+        <h1 class="text-NameCourse">Jogos Digitais</h1>
+      </div>
+
+      <div id="containerBoxTitle">
+        <div class="numberTitle">6</div>
+        <div class="titleHeader">Decisões</div>
+      </div>
+
+      <div>
+        <strong class="objectiveLearning">Objetivo de Aprendizagem</strong>
+        <p class="text-DescriptUnit">
+          Programar rotinas na elaboração de programas e sistemas.
+        </p>
+      </div>
+
+      <div>
+        <p class="text-LetsLearn">Vamos iniciar os estudos</p>
+        <a class="btnPlay" href="#contextualizing">Play</a>
+      </div>
+
+    </div>
+
+  </header>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./img/global/icons/arrowUpScroll.png"></button>
+  <div class="espaceTitle" id="contextualizing"></div>
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <h1 class="text-Title light-blue">Contextualizando</h1>
+        <h3 class="text-Course">Assista ao vídeo abaixo para uma introdução
+          aos seus estudos</h3>
+
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/qOSK4RgOQ18"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="dicas">
+          <img src="./img/global/icons/help.png" id="help" style="margin-right: 20px;" />
+          <p>
+            Quais estratégias sobre estruturas de decisões, Júlio pode criar para gerenciar a lista de clientes?
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--Parallax-->
+  <div class="parallax background-parallax1">
+    <div class="cubeBlack">
+      <div class="espaceTitle" id="decisions"></div>
+      <h1 class="text-Title light-blue">Decisões</h1>
+      <p>
+        Durante o nosso cotidiano, temos que tomar várias decisões. Para onde ir, o que fazer quando chegar, entre
+        outras coisas, não é mesmo? Sendo assim, inconsciente ou até conscientemente nos estruturamos uma rotina
+        para facilitar essa tomada decisões. Na elaboração de algoritmo não é diferente, ao desenvolver um
+        algoritmo, muitas vezes, é necessária a utilização de rotinas para tomada de decisões, e dependendo dos
+        dados recebidos pelo sistema, o algoritmo decidirá executar determinada função.
+      </p>
+      <p>
+        Mas o que seria essa “função”? De forma resumida, um conjunto fechado de comandos executados linha por
+        linha no código, utilizando de expressões lógicas e/ou aritméticas para obter um resultado.
+      </p>
+
+      <!--Div de aviso com lâmpada-->
+      <div class="atencion my-3 mx-3">
+        <img src="./img/global/icons/lightbulb.png" />
+        <p>
+          Uma das principais características e, também, um dos maiores motivos do uso de uma função, é a
+          praticidade na execução de comandos. Com isso, o programador não vai precisar mais escrever todas as
+          expressões e decisões novamente, pois uma vez definida, basta apenas executar essa função no código,
+          assim, todo o conjunto de comandos será executado novamente.
+        </p>
+      </div>
+
+      <p>
+        Essas decisões podem ser simples ou compostas e são tomadas utilizando os conceitos dos operadores lógicos
+        em conjunto com os operadores relacionais que estudamos anteriormente, para decidir se uma determinada
+        etapa do algoritmo deve ser executada ou não.
+
+
+
+      </p>
+
+
+    </div> <!-- End BlackBox -->
+  </div> <!-- End Parallax -->
+
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <p>
+          Nas decisões simples, caso a condição seja atendida, significando que obteve um resultado verdadeiro, uma
+          função será executada; mas caso não seja atendida e obtenha um resultado falso, o algoritmo não vai
+          executar nada, e assim, continuará o andamento do programa, acompanhe no exemplo a seguir.
+        </p>
+
+        <!--GIF-->
+        <img class="w-75 m-auto" src="./img/ue6/Imagem 1.gif" alt="Fluxograma que tem seu início com a decisão, podendo ser 
+        verdadeiro e então executar a função e finalizar, ou ser falso e chegar ao fim.
+        " />
+
+        <p>
+          Com as decisões compostas, mais de uma ação pode ser executada caso a verificação seja verdadeira ou falsa,
+          por exemplo, podemos criar um algoritmo onde o professor insira as notas dos alunos e, então, poderá ser
+          implementada uma rotina que decida executar uma entre duas funções: Aprovado ou Reprovado.
+        </p>
+
+        <p>
+          A primeira informa ao professor que o aluno foi aprovado caso sua média seja maior ou igual a sete (digamos
+          que esse seja o caso verdadeiro); caso contrário (ou seja, caso seja falso), será executado a segunda função e
+          o sistema informa ao professor que o aluno foi reprovado, assim como demonstrado no exemplo a seguir.
+        </p>
+
+        <img class="w-75 m-auto" src="./img/ue6/Imagem 2.png" alt="Fluxograma que tem início na média maior ou igual a sete, podendo 
+        ser verdadeiro, seguindo para executar função: aprovada e finalizar, ou podendo ser falso, seguindo para executar função: 
+        reprovado e finalizar.
+        " />
+
+        <p>
+          Independentemente de serem algoritmos para tomada de decisões simples ou compostas, todos eles possuem
+          comandos condicionais, que permitem determinar qual função será executada de acordo com as condições
+          preestabelecidas na programação do algoritmo.
+        </p>
+
+        <p>
+          Em programação, esses comandos servem para controlar o que deve ser executado ou não, dentro da lógica de
+          programação. A seguir, conheça cada um deles utilizando a linguagem C# como exemplo.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!--Parallax-->
+  <div class="parallax background-parallax2">
+    <div class="cubeBlack">
+
+      <div class="espaceTitle" id="if"></div>
+      <h1 class="text-Title light-blue">IF</h1>
+      <p>
+        O comando if (se) é uma estrutura de decisão simples que usamos no nosso dia a dia, é algo tão natural que não
+        damos conta que estamos fazendo uso de algo tão útil na área de programação, por exemplo: “se chover, não saio
+        de casa” ou, “quando a água ferver, então desligo o fogo”, esse “se” ou “quando” que sempre usamos é exatamente
+        o que o if representa na programação.
+      </p>
+      <p>
+        Ele é um comando de decisão que examina se uma determinada condição é verdadeira ou falsa, para que uma ou um
+        conjunto de ações sejam tomadas, utilizando parênteses “( )” para delimitar qual expressão lógica será examinada
+        e chaves “{ }” para delimitar quais ações serão executadas (que é o “escopo” do comando).
+      </p>
+
+      <div class="espaceTitle" id="else"></div>
+      <h1 class="text-Title light-blue">Else</h1>
+      <p>
+        O else (senão) é um comando que auxilia outra estrutura de decisão, permitindo uma segunda opção. Imagine que o
+        if que vimos anteriormente, determinasse algo que você planejou fazer, mas alguma coisa sai errada, e agora?
+        Nesse caso, o else seria o seu “plano B”, tendo as ações dentro do seu escopo sendo executadas assim que a
+        condição anterior não é atendida. É importante salientar que o else só pode ser usado se já houver um comando de
+        decisão anterior, ou seja, deve sempre estar depois de uma checagem de condição, pois, caso a condição não seja
+        atendida, o else será executado automaticamente em seguida.
+      </p>
+
+
+    </div> <!-- End BlackBox -->
+  </div> <!-- End Parallax -->
+
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <div class="espaceTitle" id="else-if"></div>
+        <h1 class="text-Title light-blue">Else If</h1>
+        <p>
+          O else if (senão se) é uma estrutura de decisão formada pela junção do else e do if, assim como o else, é
+          necessário que haja outra decisão antes, pois só é executado caso a primeira condição seja falsa. Porém, nesse
+          momento, é possível examinar expressões lógicas entre os parênteses, como acontece no if, contanto que sejam
+          diferentes das examinadas no comando anterior. Logo, o else if testa se uma segunda condição é verdadeira ou
+          falsa.
+        </p>
+
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/0AXS13HF09U"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+        <div class="espaceTitle" id="switch"></div>
+        <h1 class="text-Title light-blue">Switch case</h1>
+        <p>As funções if e else funcionam muito bem para casos onde se deseja testar uma ou mais condições. Mas,
+          geralmente, nos programas são necessárias várias rotinas sequenciais, utilizando vários if e else. Além de
+          deixar o código bastante poluído, a probabilidade do programador se atrapalhar, em algumas dessas condições, é
+          bem considerável. Então, existe uma forma mais simples de representar um conjunto de if e else, esse comando é
+          o switch case (também entendido como comutação).
+        </p>
+
+        <p>
+          Essencialmente, o conteúdo de uma variável é comparado com um índice de valores. Caso a comparação seja
+          verdadeira, a rotina correspondente é acionada. Para facilitar a compreensão, imagine que criamos uma variável
+          do tipo int, o switch case analisamos o valor dela e, para cada valor, podemos determinar várias ações.
+          Acompanhe no vídeo a seguir, como fazer uso das rotinas apresentadas.
+        </p>
+
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/qXIypO0Q6ZY"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+
+
+
+        <div class="flex justify-center w-full mtop-1">
+          <img src="./img/ue1/check.svg" />
+          <p class="px-3" id="check-green-word"> Solução do problematizando</p>
+        </div>
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/my75p8sESy8\"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <div class="containerFooter row">
+    <a class="row" href="aula-5.html">
+      <img class="arrowImg" src="img/global/icons/previusclass.png" />
+      <p class="btnDesafio">Desafio anterior</p>
+    </a>
+    <a class="row" href="aula-7.html">
+      <p class="btnDesafio">Próximo Desafio</p>
+      <img class="arrowImg" src="img/global/icons/nextclass.png" />
+    </a>
+  </div>
+
+  <!-- Libras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+
+</html>

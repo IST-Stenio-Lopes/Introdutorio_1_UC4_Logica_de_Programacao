@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogos Digitais - SENAI EAD</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="SENAISP">
+
+  <!-- Font Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/aula3.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./scripts/index.js"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <a onclick="openNav()"><img src="./img/global/icons/menu.png" class="logoJogos" /></a>
+    <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+    <div></div>
+  </div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <button onclick="openList()" class="accordion"><img src="./img/global/icons/summary.svg"
+        style="margin-right: 10px;">
+      <p>Sumário</p>
+    </button>
+    <div class="panel" id="panelBtn">
+      <ul type="1">
+        <a class="listPanel" href="#contextualizing">
+          <li>1.0 Contextualizando</li>
+        </a>
+        <a class="listPanel" href="#paradigms">
+          <li>2.0 Paradigmas de Programação</li>
+        </a>
+        <ul type="1" style="margin-left:20px;">
+          <a class="listPanel" href="#definition">
+            <li>2.1 Definição</li>
+          </a>
+          <a class="listPanel" href="#structured-programming">
+            <li>2.2 Programação estruturada</li>
+          </a>
+          <a class="listPanel" href="#functional-programming">
+            <li>2.3 Programação funcional</li>
+          </a>
+          <a class="listPanel" href="#object-oriented-programming">
+            <li>2.2 Programação Orientada a objetos</li>
+          </a>
+          <a class="listPanel" href="#imperative-programming">
+            <li>2.5 Programação Imperativa</li>
+          </a>
+          <a class="listPanel" href="#declarative-programming">
+            <li>2.6 Programação declarativa</li>
+          </a>
+          <a class="listPanel" href="#logic-programming">
+            <li>2.7 Programação lógica</li>
+          </a>
+          <a class="listPanel" href="#event-oriented-programming">
+            <li>2.8 Programação Orientada a Eventos</li>
+          </a>
+        </ul>
+
+      </ul>
+
+    </div>
+    <button onclick="changeTheme()" class="accordion">
+      <img src="./img/global/icons/themeIcon.svg" style="margin-right: 10px;" alt="Alterar tema">
+      <p>Alterar tema</p>
+    </button>
+    <button onclick="changeGray()" class="accordion">
+      <img src="./img/global/icons/scaleGrayIcon.svg" style="margin-right: 10px;" alt="Escala de Cinza">
+      <p>Escala de Cinza</p>
+    </button>
+    <div class="accordion2">
+      <div style="display: flex;">
+        <img src="./img/global/icons/textIcon.svg" style="margin-right: 10px;" alt="Tamanho da fonte">
+        <p>Tamanho da fonte</p>
+      </div>
+      <div>
+        <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+      </div>
+    </div>
+  </div>
+
+
+  <header class="homePage">
+
+    <div class="header-title">
+      <div>
+        <h2 class="text-Course" style="color: white;">Curso Técnico em</h2>
+        <h1 class="text-NameCourse">Jogos Digitais</h1>
+      </div>
+
+      <div id="containerBoxTitle">
+        <div class="numberTitle">3</div>
+        <div class="titleHeader">Paradigmas</div>
+      </div>
+
+      <div>
+        <strong class="objectiveLearning">Objetivo de Aprendizagem</strong>
+        <p class="text-DescriptUnit">
+          Reconhecer paradigmas de programação de acordo com as demandas da aplicação
+        </p>
+      </div>
+
+      <div>
+        <p class="text-LetsLearn">Vamos iniciar os estudos</p>
+        <a class="btnPlay" href="#contextualizing">Play</a>
+      </div>
+
+    </div>
+
+  </header>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./img/global/icons/arrowUpScroll.png"></button>
+  <div class="espaceTitle" id="contextualizing"></div>
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <div>
+          <div class="espaceTitle" id="contextualizing"></div>
+          <h1 class="text-Title light-blue">Contextualizando</h1>
+          <h3 class="text-Course">Assista ao vídeo abaixo para uma introdução
+            aos seus estudos</h3>
+        </div>
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/xBqfAhuUcr4"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+        <div class="dicas">
+          <img src="./img/global/icons/help.png" id="help" style="margin-right: 20px;" />
+          <p>
+            A empresa recebeu três propostas de desenvolvimento de sistemas: um para desenvolvimento de uma aplicação
+            on-line de gerenciamento de uma escola. O segundo é para controlar o sistema embarcado em geladeiras
+            inteligentes. Por fim, o terceiro é um sistema de mapeamento de DNA de insetos para um laboratório de
+            biologia. Quais paradigmas / linguagens são os mais indicados para cada um dos sistemas?
+          </p>
+        </div>
+
+        <div class="espaceTitle" id="paradigms"></div>
+        <h1 class="text-Title light-blue">Paradigmas de Programação</h1>
+
+        <div class="espaceTitle" id="definition"></div>
+        <h1 class="text-subtitle1 dark-blue mx-3">Definição</h1>
+
+        <p>
+          Quando se fala em paradigma de programação estamos nos referindo à forma de classificar as linguagens de
+          programação através de suas funcionalidades. Isso é importante, pois determinados paradigmas se encaixam
+          melhor em certos tipos de problemas. Por exemplo, fazer um programa de computador para uma nave espacial da
+          NASA requer linguagens que fazem cálculos muito complexos e em grande quantidade. Já para se desenvolver um
+          videogame é necessário linguagens que trabalham muito bem a edição e renderização de imagens. Nesse sentido, é
+          importante que você saiba os diversos tipos (ou paradigmas) de linguagens para que possa escolher
+          adequadamente de acordo com o seu problema.
+        </p>
+
+        <p>
+          Além disso, um paradigma de programação fornece ao programador uma visão sobre a estruturação e execução do
+          programa. Isso seria como o programador pode abstrair a situação do mundo real na qual ele está trabalhando e
+          escrevê-la em formato de código. Os paradigmas estão focados em determinados aspectos das linguagens: uns se
+          preocupam com o modelo de execução da linguagem, outros na organização do código e ainda há outros que olham
+          mais para o estilo de sintaxe e gramática da linguagem.
+        </p>
+
+        <p>
+          Ainda assim, existem linguagens que suportam apenas um paradigma e outras que são multiparadigma, isto é,
+          permite diversos paradigmas, dando a opção ao programador de escolher com qual irá trabalhar.
+        </p>
+
+        <div class="atencion my-3 mx-3">
+          <img src="./img/global/icons/lightbulb.png" />
+          <p>
+            No início, os computadores eram programados em código binário direto na CPU. Depois surgiram as linguagens
+            de montagem e, consequentemente, as linguagens estruturadas, que foram as primeiras a serem de alto nível.
+            Por fim, surgiram outros paradigmas, como o funcional, orientado a objetos e lógico.
+          </p>
+        </div>
+
+        <img class="w-75 m-auto" src="./img/ue3/Imagem 1.png" alt="Diagrama do paradigma de programação, segmentado em uma parte 
+        paradigma imperativo, subdividido em paradigma procedimental e paradigma orientado a objetos, este último direciona para 
+        programação orientada a eventos, e em outra parte de paradigma declarativo, subdividido em paradigma funcional e paradigma 
+        lógico, este último direciona para programação baseada em regras." />
+
+      </div>
+    </div>
+  </section>
+
+  <div class="espaceTitle" id="structured-programming"></div>
+  <div class="parallax background-parallax1">
+    <div class="cubeBlack">
+      <h1 class="text-subtitle1 dark-blue mx-3">Programação estruturada</h1>
+      <p>
+        O paradigma de programação estruturada é um padrão de programação criado no final da década de 1950 com as
+        linguagens ALGOL 58 e ALGOL 60 tem como ênfase as sequências, decisões e iterações, baseado em
+        sub-rotinas, laços de repetição, condicionais e blocos.
+      </p>
+
+      <p>
+        Em geral, os códigos em linguagens estruturadas são formados por um único bloco de comandos e é formado
+        por três estruturas:
+      </p>
+
+      <p>
+        <li class="my-1 mx-1">
+          Sequência: tarefas sendo executadas uma após a outra;
+        </li>
+        <li class="my-1 mx-1">
+          Decisão: tarefas sendo executadas após um teste lógico;
+        </li>
+        <li class="my-1 mx-1">
+          Iteração: um trecho de código pode ser repetido diversas vezes, dependendo de um teste lógico.
+        </li>
+      </p>
+
+      <p>
+        Na programação estruturada há instruções de sequência, tais como: comandos de atribuição; de condição, com
+        instruções podendo ser ou não executadas; de repetição, onde instruções são executadas diversas vezes, a
+        depender de um teste lógico e, também, de sub-rotinas que são blocos com sequências de instruções tratadas
+        como uma única instrução.
+      </p>
+
+    </div> <!-- End BlackBox -->
+  </div> <!-- End Parallax -->
+
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <div class="atencion my-3 mx-3">
+          <img src="./img/global/icons/lightbulb.png" />
+          <p>
+            O comando GOTO, presente em algumas linguagens, é utilizado para salto de instruções. Cada instrução
+            está em uma linha e o comando GOTO permite o salto (ou desvio) para uma linha específica do código.
+          </p>
+        </div>
+
+        <p>
+          Há muitas críticas sobre a utilização do GOTO, pois prejudica a legibilidade do código. Assim, no
+          paradigma estruturado não é comum trabalhar com esse tipo de comando. Ademais, as desvantagens de se
+          utilizar programação estruturada está no fato de que os códigos estão voltados à resolução de um
+          problema particular e, também, na dificuldade do reuso do código.
+        </p>
+
+        <div class="espaceTitle" id="functional-programming"></div>
+        <h1 class="text-subtitle1 dark-blue mx-3">Programação funcional</h1>
+
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/6bpJ4s4GtcM"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+              gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+        <p>
+          O paradigma de programação funcional é um estilo de programação que envolve linguagens que tratam a
+          computação, como sendo um conjunto de funções matemáticas e, ainda, evita estados mutáveis (as
+          variáveis). Nesse tipo de linguagem, há uma ênfase maior nas expressões e funções do que em comandos,
+          como ocorre nas linguagens estruturadas. Assim, as funções desempenham cálculos e podem ou não receber
+          parâmetros, retornando um simples valor. Os parâmetros são os valores de entrada e o retorno é o
+          resultado da função. A principal característica dessas linguagens é que elas trabalham valores
+          constantes (imutáveis) ao invés de variáveis (mutáveis). Sendo assim, o resultado de uma função pode ser
+          armazenado em uma constante. Além disso, as funções podem ser definidas em termo de outras funções, como
+          no seguinte exemplo: f(x) = x3 - 5. Nesse caso, a função f(x) está definida em termos das funções de
+          exponenciação e subtração. Sendo assim, as linguagens funcionais devem ter suporte às funções básicas.
+        </p>
+
+        <p>
+          Linguagens que são puramente funcionais são utilizadas na maior parte em ensino acadêmico do que em
+          aplicações comerciais. Ainda assim, existem linguagens funcionais que são utilizadas para aplicações,
+          tais como R para estatística e Erlang para aplicações que envolvem programação concorrente.
+        </p>
+        <p>
+          Outras linguagens de programação, como Python por exemplo, se apropriaram de conceitos de linguagens
+          funcionais tais como o cálculo lambda. Esse cálculo é um meio formal de se descrever o cálculo de uma
+          função. Veja a seguir um exemplo:
+        </p>
+
+        <p>
+          <b> ((lambda (x) (+x x)) ( 2 5))
+          </b>
+        </p>
+
+        <p>
+          A expressão acima é equivalente à fórmula f(x) = 2(2 5). Pode parecer mais complexo pensar de maneira
+          funcional, como o cálculo lambda, mas acredite, dessa forma é muito mais fácil e rápido para o
+          computador processar.
+        </p>
+
+        <div class="atencion my-3 mx-3">
+          <img src="./img/global/icons/lightbulb.png" />
+          <p>
+            A primeira linguagem funcional foi criada no fim dos anos 1950 no MIT, Estados Unidos, e se chamava
+            LISP.
+          </p>
+        </div>
+
+        <p>
+          A principal vantagem de se utilizar programação funcional está no processo de alocação de memória, pois
+          não é feito diretamente pelo programador, evitando erros. A desvantagem é que funcionalidades básicas
+          como alocação explícita de memória e variáveis não existem ou são bem escondidas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="espaceTitle" id="object-oriented-programming"></div>
+  <div class="parallax background-parallax2 ">
+    <div class="cubeBlack">
+      <h1 class="text-subtitle1 dark-blue mx-3">Programação Orientada a Objetos</h1>
+      <p>
+        Programação orientada a objetos é um paradigma de programação e modelo de análise e projeto de software onde
+        temos diversas unidades que interagem entre si, denominadas objetos. Esse conceito surgiu com a linguagem Simula
+        67 e, passou por aperfeiçoamento, com a linguagem Smalltalk 80, que ainda hoje muitos consideram como sendo a
+        única e genuína linguagem 100% orientada a objetos. Assim, esse conceito difere das linguagens estruturadas e
+        procedimentais, enquanto essas deveriam passar as funcionalidades à subrotinas, em OO as funcionalidades são
+        incorporadas dentro do objeto. Para ficar mais claro, imagine um problema de ordenação de vetores: em uma
+        linguagem estruturada, o vetor seria passado como parâmetro a uma sub-rotina. Já em OO, a funcionalidade de
+        ordenação já estaria embutida no objeto vetor.
+      </p>
+
+      <p>
+        Somente na década de 1980 a programação OO se tornou popular e hoje é definida em três conceitos chave: tipos
+        abstratos de dados, herança e amarração dinâmica. Além disso, um modelo OO tem uma entidade fundamental chamada
+        “objeto”, que vai receber e enviar mensagens, executar os processamentos e alterar seu próprio estado local.
+        Assim, um modelo OO é constituído de quatro componentes básicos (objetos, mensagens, métodos e classes):
+
+      </p>
+
+    </div> <!-- End BlackBox -->
+  </div> <!-- End Parallax -->
+
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <p>
+          <b>Objeto:</b> conjunto de operações (métodos) e características (atributos), além de um “estado” determinado
+          pelo
+          valor de seus atributos. Assim, um objeto possui todas as informações necessárias sobre si mesmo (lembre do
+          exemplo anterior, sobre ordenação de vetor, onde em uma linguagem estruturada o “objeto” vetor não tem o
+          conhecimento próprio de como ordená-lo). O objeto vai executar uma operação em resposta a uma mensagem
+          recebida
+          e o resultado da operação depende tanto da mensagem recebida quanto do estado do objeto. Por exemplo, se você
+          tiver um objeto do tipo carro, ele poderá receber uma mensagem de aceleração. Então, levando em conta o valor
+          recebido da mensagem de acelerar e o estado do objeto carro (se ele está parado, em movimento, com freio de
+          mão
+          acionado, portas abertas etc) ele pode ou não executar a ação de aceleração, e retornará uma resposta de “ok,
+          consegui acelerar” ou “não deu para acelerar agora”.
+        </p>
+        <p>
+          <b>Mensagem:</b> as mensagens são as requisições enviadas de um objeto para o outro. Elas têm como intuito a
+          obtenção
+          de um determinado resultado que será fornecido pelo objeto receptor, através do processamento de operações.
+          Essas mensagens podem vir acompanhadas ou não de parâmetros (por exemplo, acelere a 100 km/h ou somente
+          freie!).
+        </p>
+        <p>
+          <b>Métodos:</b>
+          são as descrições das operações que um objeto executa quando recebe uma mensagem. Por exemplo, podemos
+          em um objeto tipo carro ter os métodos acelerar e frear.
+        </p>
+        <p>
+          <b>Atributos: </b>um atributo é um dado ou uma informação do estado de um objeto, podendo variar entre objetos
+          de uma
+          mesma classe. São divididos em atributos de objeto e atributos de classe. Pense em um game de corrida de
+          carros.
+          Lá, temos diversos objetos do tipo carro. Então, os atributos de objeto, que são particulares a cada objeto,
+          poderiam ser velocidade, potência, entre outros. Um atributo de classe, que é compartilhado entre todos os
+          objetos, poderia ser a quantidade de carros participantes da corrida.
+        </p>
+        <p>
+          <b>Classe: </b>uma classe vai definir as características de uma coleção de objetos, descrevendo os métodos e
+          atributos
+          que os objetos pertencentes à classe vão possuir. A grosso modo, uma classe é uma forma ou modelo de criação
+          de
+          objetos. Por exemplo, posso ter uma classe Carro, com seus métodos e atributos e os objetos dessa classe
+          poderiam ser Fusca, Ferrari e BMW. Veja que todos os objetos foram criados pelo modelo Carro, tendo métodos e
+          atributos em comum que podem variar de objeto para objeto (é evidente que o atributo velocidade de uma Ferrari
+          é
+          diferente de um Fusca).
+        </p>
+
+        <div class="espaceTitle" id="imperative-programming"></div>
+        <h1 class="text-subtitle1 dark-blue mx-3">Programação imperativa</h1>
+
+        <p>
+          Programação imperativa é um paradigma de programação que vai descrever as computações como ações que mudam o
+          estado (variáveis) de um programa, sendo essas ações muito próximas do que encontramos nas linguagens
+          naturais. Assim, o programador vai utilizar na descrição das ações ordens imperativas: “faça isso, depois
+          isso, depois aquilo outro…”. São muito parecidas com o conceito de programação estruturada e compartilham de
+          mesmos conceitos, como sequências, decisões e iterações. As primeiras linguagens imperativas foram ALGOL,
+          COBOL e C.
+        </p>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <div class="espaceTitle" id="declarative-programming"></div>
+  <div class="parallax background-parallax3">
+    <div class="cubeBlack">
+      <h1 class="text-subtitle1 dark-blue mx-3">Programação declarativa</h1>
+      <p>
+        O paradigma declarativo é baseado em linguagens funcionais e lógicas, além de ser utilizado para contrapor
+        o conceito de linguagem declarativa. Nesse conceito, o programador deve modelar o problema em assertivas,
+        definindo assim um relacionamento lógico entre os elementos (cabeça e cauda) de uma cláusula e não
+        descrevendo como vão funcionar os procedimentos. A principal diferença entre a programação imperativa e a
+        declarativa pode ser vista no exemplo a seguir, tendo a tarefa de resolver três problemas: A, B e X:
+      </p>
+
+      <p>
+        <b>Imperativa:</b> Para solucionar X, solucione A e depois B.<br>
+        <b>Declarativa:</b> X é verdade (cauda) se A e B são verdade (cabeça).
+      </p>
+
+      <p>
+        Observe que na forma declarativa não fornecemos as ações necessárias para se resolver o problema X como na
+        imperativa, mas sim condições em que X seria solucionado.
+      </p>
+
+    </div> <!-- End BlackBox -->
+  </div> <!-- End Parallax -->
+
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/sT5qtXl2fUY"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+        gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+
+        <div class="espaceTitle" id="logic-programming"></div>
+        <h1 class="text-subtitle1 dark-blue mx-3">Programação lógica</h1>
+
+        <p>
+          Programação lógica é um paradigma de programação que faz uso da lógica matemática. Seu conceito foi
+          desenvolvido por McCarthy, em 1958, e teve como primeira linguagem a Planner. Sua ideia baseia-se em
+          cálculo de predicado, onde o programa formará conclusões a partir de uma lista de premissas e suas
+          instruções são do tipo “se A e B e C então conclua X”.
+        </p>
+
+        <p>
+          Hoje a principal linguagem desse paradigma é a PROLOG. Ela foi desenvolvida em 1972 e utiliza em sua
+          programação sentenças do tipo cláusula de Horn, como no exemplo abaixo:
+        </p>
+
+        <p>
+        <p>H : - B <sub>1 </sub> , ... , B <sub>n</sub></p>
+        </p>
+
+        <p>
+          Que podem ser lidas assim: se as cláusulas B1até Bn (chamadas de cabeça) forem verdade, então deduza H
+          (chamada de cauda). Isso é muito utilizado em programas de Inteligência Artificial que precisam simular o
+          raciocínio e tomada de decisão. Por exemplo, o problema clássico de Sócrates poderia ser resolvido por PROLOG:
+        </p>
+
+        <p>
+          <b>1- </b>Todo homem é mortal. <br>
+          <b>2- </b>Sócrates é homem.<br>
+          <b>3- </b>Logo, Sócrates é mortal. <br>
+        </p>
+
+        <p>
+          Veja que a conclusão foi tomada a partir das premissas. A esse processo damos o nome de inferência lógica.
+          Sendo assim, o paradigma lógico é o mais apropriado para se trabalhar com problemas desse tipo.
+        </p>
+
+        <div class="espaceTitle" id="event-oriented-programming"></div>
+        <h1 class="text-subtitle1 dark-blue mx-3">Programação Orientada a Eventos</h1>
+
+        <p>
+          Ao contrário de outros tipos de programação que obedecem a um fluxo de controle, as linguagens orientadas a
+          eventos são guiadas por indicações externas (os eventos). São utilizadas principalmente em interfaces com o
+          usuário. Assim, podem ser disparadas ações a partir de eventos como click do mouse, pressionamento de uma
+          tecla, fechamento de uma janela etc. Linguagens como Visual Basic, Javascript ou sistemas como Node.js são
+          orientados a eventos. Lá, se programa funções que serão executadas somente se um determinado evento acontecer.
+          Por exemplo, quando você estiver preenchendo um formulário on-line, a função de buscar o CEP só será disparada
+          quando o campo de CEP perder o foco do cursor.
+        </p>
+
+        <p>
+          Assim, programas orientados a eventos consistem de pequenos tratadores, que são programas que processam os
+          eventos para produzir as respostas, e os programas disparadores (ouvintes), que vão chamar os tratadores de
+          acordo com o evento ocorrido.
+        </p>
+
+        <div class="flex justify-center w-full">
+          <img src="./img/ue1/check.svg" />
+          <p class="px-3" id="check-green-word"> Solução do problematizando</p>
+        </div>
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/-mohxD83weA"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="containerFooter row">
+    <a class="row" href="aula-2.html">
+      <img class="arrowImg" src="img/global/icons/previusclass.png" />
+      <p class="btnDesafio">Desafio anterior</p>
+    </a>
+    <a class="row" href="aula-4.html">
+      <p class="btnDesafio">Próximo Desafio</p>
+      <img class="arrowImg" src="img/global/icons/nextclass.png" />
+    </a>
+  </div>
+
+  <!-- Libras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogos Digitais - SENAI EAD</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="SENAISP">
+
+  <!-- Font Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/aula4.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/uc4.css">
+  <script src="./scripts/index.js"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <a onclick="openNav()"><img src="./img/global/icons/menu.png" class="logoJogos" /></a>
+    <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+    <div></div>
+  </div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <button onclick="openList()" class="accordion"><img src="./img/global/icons/summary.svg"
+        style="margin-right: 10px;">
+      <p>Sumário</p>
+    </button>
+    <div class="panel" id="panelBtn">
+      <ul type="1">
+        <a class="listPanel" href="#contextualizing">
+          <li>1.0 Contextualizando</li>
+        </a>
+        <a class="listPanel" href="#logic">
+          <li>2.0 Lógica</li>
+        </a>
+        <ul type="1" style="margin-left:20px;">
+          <a class="listPanel" href="#propositional-logic">
+            <li>2.1 Lógica Proposicional</li>
+          </a>
+          <ul type="1" style="margin-left:30px;">
+            <a class="listPanel" href="#boolean-algebra">
+              <li>2.1.1 Álgebra Booleana</li>
+            </a>
+          </ul>
+        </ul>
+
+      </ul>
+
+    </div>
+    <button onclick="changeTheme()" class="accordion">
+      <img src="./img/global/icons/themeIcon.svg" style="margin-right: 10px;" alt="Alterar tema">
+      <p>Alterar tema</p>
+    </button>
+    <button onclick="changeGray()" class="accordion">
+      <img src="./img/global/icons/scaleGrayIcon.svg" style="margin-right: 10px;" alt="Escala de Cinza">
+      <p>Escala de Cinza</p>
+    </button>
+    <div class="accordion2">
+      <div style="display: flex;">
+        <img src="./img/global/icons/textIcon.svg" style="margin-right: 10px;" alt="Tamanho da fonte">
+        <p>Tamanho da fonte</p>
+      </div>
+      <div>
+        <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+      </div>
+    </div>
+  </div>
+
+
+  <header class="homePage">
+
+    <div class="header-title">
+      <div>
+        <h2 class="text-Course" style="color: white;">Curso Técnico em</h2>
+        <h1 class="text-NameCourse">Jogos Digitais</h1>
+      </div>
+
+      <div id="containerBoxTitle">
+        <div class="numberTitle">4</div>
+        <div class="titleHeader">Álgebra Booleana</div>
+      </div>
+
+      <div>
+        <strong class="objectiveLearning">Objetivo de Aprendizagem</strong>
+        <p class="text-DescriptUnit">
+          Reconhecer os fundamentos de álgebra booleana
+        </p>
+      </div>
+
+      <div>
+        <p class="text-LetsLearn">Vamos iniciar os estudos</p>
+        <a class="btnPlay" href="#contextualizing">Play</a>
+      </div>
+
+    </div>
+
+  </header>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./img/global/icons/arrowUpScroll.png"></button>
+  <div class="espaceTitle" id="contextualizing"></div>
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <h1 class="text-Title light-blue">Contextualizando</h1>
+        <h3 class="text-Course">Assista ao vídeo abaixo para uma introdução
+          aos seus estudos</h3>
+
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/Y2m2-8KDQOU"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="dicas">
+          <img src="./img/global/icons/help.png" id="help" style="margin-right: 20px;" />
+          <p>
+            Para solucionar o bug do game, quais os pontos fundamentais do estudo da lógica booleana podem ser
+            utilizados para solucioná-lo?
+          </p>
+        </div>
+        <div class="espaceTitle" id="logic"></div>
+        <h1 class="text-Title light-blue">Lógica</h1>
+
+        <p>
+          Todos nós tomamos decisões diariamente, seja em casa, na faculdade, no trabalho ou na vida. Algumas dessas
+          decisões são simples, como o que comer no café da manhã; já outras são mais complexas, como qual carreira
+          escolher. Todas essas decisões são baseadas em uma lógica, ou seja, em um conjunto de decisões que são
+          executadas de maneira ordenada e racional, com o intuito de atingir um objetivo.
+        </p>
+
+        <p>
+          Digamos que você queira tomar um café da manhã, então, se tiver pão e achocolatado em casa, essa será sua
+          refeição. Se você tiver dinheiro e carro, poderá se deslocar para sua faculdade ou trabalho, do contrário, não
+          terá como se deslocar ou deverá utilizar meios alternativos de transporte, como uma bicicleta ou até mesmo ir
+          a pé. Ou seja, a vida é um mar de escolhas que você tem que fazer. ir
+        </p>
+
+
+        <img class="w-75 m-auto" src="./img/ue4/Imagem 1.png" alt="Placas de direção, indicando onde é possível pegar certos meios de 
+        transporte, de cima para baixo: ônibus, metrô, bike e carro.
+        " />
+
+        <p>
+          Nos computadores a lógica é bastante similar, a diferença agora não se trata ser mais de um contexto físico, e
+          sim, virtual. Sendo assim, pode-se entender que o termo lógica nada mais é do que o passo a passo das tomadas
+          de decisões e cálculos que um programa realiza dentro de um sistema com o intuito de realizar alguma tarefa
+          específica.
+        </p>
+        <img class="w-75 m-auto" src="./img/ue4/Imagem 2.png" alt="Imagem com fundo preto, com letras e números com diversas cores representando 
+        um algoritmo implementado em uma linguagem de programação.
+        " />
+
+        <p>
+          A lógica é o campo de estudo que utiliza princípios e conhecimentos para se atingir um raciocínio correto,
+          utilizando estruturas lógicas de início, meio e fim, com regras e códigos que trabalham em conjunto para
+          resolverem um problema ou controlarem um dispositivo ou processo. A utilização do raciocínio lógico é tão
+          comum e natural ao ser humano que nem percebemos. Nos próximos tópicos conheceremos sobre a lógica
+          proposicional e a álgebra booleana.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="espaceTitle" id="propositional-logic"></div>
+  <!--Parallax-->
+  <div class="parallax background-parallax1">
+    <div class="cubeBlack">
+      <h1 class="text-subtitle1 dark-blue mx-3">Lógica Proposicional</h1>
+      <p>
+        A lógica proposicional estuda se determinadas afirmações são verdadeiras ou falsas, ou até mesmo se um conjunto
+        de hipóteses é válido ou não, trabalhando com proposições declarativas simples, ou seja, proposições que são os
+        elementos básicos de transmissão do conhecimento humano. Você já fez alguma prova do colégio, onde existiam
+        questões de verdadeiro ou falso? Isso é a aplicação da lógica proposicional.
+      </p>
+
+      <p>
+        Essa lógica funciona muito bem para seres humanos, mas em um computador é diferente, pois é uma máquina que não
+        consegue distinguir o certo do errado ou o verdadeiro do falso, ele somente executa as tarefas que lhe foram
+        dadas, não tendo a capacidade de raciocinar sobre o que é certo ou não.
+        <br />Então como usar esse tipo de lógica em um computador? Para resolver isso, o matemático George Boole
+        idealizou um método lógico para que o computador pudesse “distinguir” o verdadeiro do falso, onde o valor lógico
+        1 (um) foi associado à informação verdadeira; e o valor lógico 0 (zero) à informação falsa, permitindo assim uma
+        “comunicação” entre o método de raciocínio humano com o entendimento lógico das máquinas.
+      </p>
+
+      <p>
+        Essa lógica ficou conhecida como lógica Booleana em homenagem ao seu criador. Nos próximos tópicos vamos
+        conhecer os conceitos e aplicações da lógica Booleana no contexto que é comumente usado em testes para medir o
+        nível de raciocínio lógico de indivíduos.
+      </p>
+
+    </div> <!-- End BlackBox -->
+  </div> <!-- End Parallax -->
+
+
+
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+        <div class="espaceTitle" id="boolean-algebra"></div>
+
+        <h1 class="text-subtitle2 lilaz mx-6">Álgebra Booleana</h1>
+
+        <p>
+          O estudo da álgebra booleana contribui para a formação de um pensamento mais lógico e hábil a encontrar
+          soluções de forma mais prática e precisa. Se quando fazemos uma pergunta e a resposta só pode ser sim ou não,
+          estamos utilizando uma expressão booleana para termos a resposta, pois só pode ser verdade ou não, duas únicas
+          possibilidades de valores para o resultado, que são determinados independente do que foi perguntado. O que foi
+          dito em si não importa nesse caso e pode variar infinitamente nas palavras, o que interessa é saber se será
+          verdadeiro ou falso.
+        </p>
+
+        <div class="atencion my-3 mx-3">
+          <img src="./img/global/icons/lightbulb.png" />
+          <p>
+            Os microchips dos computadores usam a álgebra booleana nos milhares de interruptores miniaturizados e
+            combinados em portas lógicas, fazendo com que o hardware, utilizando a ausência e presença de corrente
+            elétrica, gera os valores binários que serão interpretados pelo software.
+          </p>
+        </div>
+
+        <p>
+          A lógica por trás da álgebra booleana consiste em uma técnica de encadeamento do raciocínio para atingir um
+          determinado objetivo ou solucionar um problema, fragmentando-o em etapas. Para isso, existem as portas
+          lógicas, utilizadas na análise de combinações lógicas de uma ou mais entradas de valores de um determinado
+          sistema para obter uma resposta, esses valores são chamados de Variáveis Booleanas, que são variáveis do tipo
+          lógico. As portas lógicas são simples de serem compreendidas e aplicadas a qualquer lógica de programação ou
+          sistema físico.
+        </p>
+
+        <p>
+          Existem três operações básicas (operadores lógicos) na álgebra booleana, que são:
+        </p>
+
+        <p>
+          <li class="my-1 mx-1">
+            o <b>“OU”</b> (chamado de Adição lógica);
+          </li>
+          <li class="my-1 mx-1">
+            o <b>“E”</b> (chamado de Multiplicação lógica);
+          </li>
+          <li class="my-1 mx-1">
+            e a <b>Negação</b> (ou Inversão).
+          </li>
+        </p>
+        <p>
+          Com elas é possível representar, em termos, todas as expressões booleanas. Nessas expressões, as variáveis
+          booleanas só podem assumir um dentre dois valores possíveis, os quais são V ou F (verdadeiro ou falso). Assim,
+          podemos descrever essas expressões em uma tabela conhecida como tabela verdade, onde são listadas todas as
+          combinações dos valores que as variáveis podem assumir e os correspondentes resultados para cada operação.
+        </p>
+        <p>
+          Ao trabalhar com uma equação que descreve uma expressão Booleana, o objetivo é saber como esta expressão se
+          comporta com as combinações das variáveis. O comportamento de uma expressão é descrito pela sua tabela verdade
+          e esse procedimento é conhecido como avaliação da expressão ou função.
+        </p>
+        <p>
+          Uma tabela verdade consiste basicamente em um conjunto de colunas, em que são listadas todas as combinações
+          possíveis, com as variáveis ficando na esquerda e o resultado da função, ficando à direita. Também, é possível
+          criar colunas intermediárias, nas quais são listados os resultados de sub-expressões. Isto normalmente
+          facilita a avaliação, principalmente no caso de equações muito complexas ou contendo muitas variáveis. A
+          tabela a seguir é apenas um exemplo de como pode ser uma tabela verdade.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <table class="table-uc4 text-center">
+    <tr id="first">
+      <td>Variável A</td>
+      <td>Variável B</td>
+      <td>Operação</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>V</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>V</td>
+    </tr>
+  </table>
+
+  <!--Section-->
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <p>
+          Agora, vamos ver como é aplicada cada operação. Começando com a chamada adição lógica ou <b>“OU”</b>, que é
+          representada pelo símbolo <b>“v”</b>, ficando assim entre as variáveis A v B. Nela o resultado será sempre V
+          se pelo
+          menos uma das variáveis for V, então, nessa operação o resultado só será F se todas as variáveis forem F,
+          assim como na tabela a seguir:
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <table class="table-uc4 text-center">
+    <tr id="first">
+      <td>A</td>
+      <td>B</td>
+      <td>AvB</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>F</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+  </table>
+
+  <!--Section-->
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <div class="atencion my-3 mx-3">
+          <img src="./img/global/icons/lightbulb.png" />
+          <p>
+            Um outro símbolo possível para representar a operação OU é “ + ” como o símbolo da adição na aritmética
+            comum.
+          </p>
+        </div>
+
+        <p>
+          Para facilitar a compreensão, vamos usar um exemplo mais casual, quando avaliamos uma equação com a adição
+          lógica, é como se disséssemos: Ou A é uma vogal, Ou B não é uma vogal, dessa forma, se qualquer uma dessas
+          afirmações for verdadeira, o resultado será V, senão será F.
+        </p>
+
+        <p>
+          E se tivermos uma terceira variável na equação? Então vamos adicionar a variável C, e então avaliar a equação
+          A v B v C (que é lido como A ou B ou C). Como na equação há apenas o símbolo “v” da adição lógica, se trata da
+          mesma operação sobre as três variáveis. Logo, pode-se aplicar diretamente a definição da operação OU, que é: o
+          resultado será V se pelo menos uma das variáveis for V.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <table class="table-uc4 text-center">
+    <tr id="first">
+      <td>A</td>
+      <td>B</td>
+      <td>C</td>
+      <td>AvBvC</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>V</td>
+      <td>F</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>F</td>
+      <td>F</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>F</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>V</td>
+      <td>F</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+
+  </table>
+
+  <!--Section-->
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+        <p>
+          Ao termos apenas um operador na equação, pode-se também avaliá-la em pares de cada vez. Primeiramente, achamos
+          o resultado de A v B, para depois operar os valores resultantes com os valores de C. Esta característica é
+          conhecida como associativa. A ordem das variáveis nesse caso é irrelevante (propriedade comutativa). Na tabela
+          verdade a seguir, veja como é operar com três variáveis, mas dessa vez avaliando-as em pares. Nela, os
+          parêntesis indicam as combinações já operadas na esquerda.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <table class="table-uc4 text-center">
+    <tr id="first">
+      <td>A B C</td>
+      <td>A v B v C</td>
+      <td>A v B</td>
+      <td>(A v B) v C</td>
+      <td>B v C</td>
+      <td>(B v C) v A</td>
+    </tr>
+    <tr>
+      <td>F F F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F F V</td>
+      <td>V</td>
+      <td>F</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>F V F</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>F V V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>V F F</td>
+      <td>V</td>
+      <td>F</td>
+      <td>V</td>
+      <td>F</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>V F V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>V V F</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>V V V </td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+
+  </table>
+
+  <!--Section-->
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+        <p>
+          Agora vamos conhecer a multiplicação lógica ou “E”, que é representada pelo símbolo “^” e diferentemente da
+          adição lógica, a operação de multiplicação lógica resulta F se pelo menos uma das variáveis for F, senão, será
+          V como na tabela a seguir.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <table class="table-uc4 text-center">
+    <tr id="first">
+      <td>A</td>
+      <td>B</td>
+      <td>A ^ B</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>V</td>
+      <td>F</td>
+
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>V</td>
+    </tr>
+  </table>
+
+  <!--Section-->
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+        <p>
+          É possível determinar o resultado da equação também usando uma terceira variável, que ficaria assim: A ^ B ^ C
+          (lê-se A e B e C) e como ainda se trata da mesma operação, mesmo que tenha três variáveis ou mais, o resultado
+          será F se pelo menos uma das variáveis for F. Veja um exemplo de tabela verdade operando com três variáveis,
+          agora já avaliando-as em pares numa equação de multiplicação lógica.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <table class="table-uc4 text-center">
+    <tr id="first">
+      <td>A B C</td>
+      <td>A ^ B ^ C</td>
+      <td>A ^ B</td>
+      <td>(A ^ B) ^ C</td>
+      <td>B ^ C</td>
+      <td>A ^ (B ^ C)</td>
+    </tr>
+    <tr>
+      <td>F F F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F F V</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F V F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F V V</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>V</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>V F F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>V F V</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>V V F</td>
+      <td>F</td>
+      <td>V</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>V V V </td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+
+  </table>
+
+  <!--Section-->
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <!--Div de aviso com lâmpada-->
+        <div class="atencion my-3 mx-3">
+          <img src="./img/global/icons/lightbulb.png" />
+          <p>
+            Um outro símbolo possível para representar a operação E é “ · ”, como o símbolo da multiplicação dos números
+            reais.
+          </p>
+        </div>
+
+        <p>
+          Já a operação de Negação ou também chamada de Inversão, é representada pelo símbolo “~”, e resulta em tornar o
+          valor oposto do que a variável apresenta, por exemplo, se formos negar a variável A, ficando ~A (lê-se A
+          negado), caso A for V agora ele se torna F e vice-versa. Diferente das operações anteriores, a Negação pode
+          ser aplicada a uma só variável, como na tabela a seguir.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <table class="table-uc4 text-center">
+    <tr id="first">
+      <td>A</td>
+      <td>~A</td>
+
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>F</td>
+
+    </tr>
+  </table>
+
+  <!--Section-->
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <!--Div de aviso com lâmpada-->
+        <div class="atencion my-3 mx-3">
+          <img src="./img/global/icons/lightbulb.png" />
+          <p>
+            Outro símbolo possível para representar negação é a aspa simples depois da variável, usando uma variável A
+            por exemplo, “ A’ ”.
+          </p>
+        </div>
+
+        <p>
+          Se numa mesma equação Booleana aparecerem mais de uma operação, é necessário seguir a ordem de precedência.
+          Semelhante a álgebra dos números reais que vemos na escola, a multiplicação lógica tem precedência sobre a
+          adição lógica. Além disso, expressões entre parêntesis têm precedência sobre operadores E e OU que estejam no
+          mesmo nível. No caso da Negação, ela deve ser avaliada o mais breve possível, a não ser que esteja sendo
+          aplicada sobre uma combinação entre parênteses, aí é preciso que se avalie primeiramente o que está entre os
+          parênteses para, só depois, inverter o seu resultado.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <table class="table-uc4 text-center">
+    <tr id="first">
+      <td>A B C</td>
+      <td>A ^ B ^ C</td>
+      <td>A V B</td>
+      <td>(A ^ B) ^ C</td>
+      <td>~ A</td>
+      <td>~ B ^ C</td>
+      <td>~ A V ~(B ^ C)</td>
+    </tr>
+    <tr>
+      <td>F F F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>F F V</td>
+      <td>F</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>F V F</td>
+      <td>F</td>
+      <td>V</td>
+      <td>F</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>F V V</td>
+      <td>F</td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>F</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>V F F</td>
+      <td>F</td>
+      <td>V</td>
+      <td>F</td>
+      <td>F</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>V F V</td>
+      <td>F</td>
+      <td>V</td>
+      <td>V</td>
+      <td>F</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>V V F</td>
+      <td>F</td>
+      <td>V</td>
+      <td>F</td>
+      <td>F</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>V V V </td>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+
+  </table>
+
+  <!--Section-->
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <p>
+          Que tal um pouco de prática? Tente preencher corretamente a tabela verdade a seguir.
+        </p>
+
+        <!--SIMULADOR-->
+
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/JjCu9Vusw8c"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+        gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+        <p>
+          A lógica booleana está mais presente do que imaginamos, pois frequentemente estamos analisando expressões
+          booleanas na nossa vida sem darmos conta disso, é tão natural para o ser humano raciocinar logicamente que nem
+          notamos que estamos tomando essa ação tão importante, o que para uma máquina passa a ser a única razão de sua
+          existência.
+        </p>
+
+        <p>
+          Nessa UE vimos que, por meio da lógica, se torna mais fácil lidarmos com questões que temos que resolver na
+          nossa vida, ao aprendermos a fragmentar um problema e ordená-lo em etapas. Semelhante como fazemos
+          estruturando as equações em uma tabela verdade e encontrarmos o resultado de cada expressão. Assim será
+          resolvido o problema, quando todas as suas etapas forem solucionadas.
+        </p>
+
+        <p>
+          Imagine que você tem o sonho de viajar pelo país em um trailer, essa é a nossa grande questão, mas como você
+          faria isso? Acha que seria possível para você? Vamos fragmentar a nossa grande questão em três partes menores.
+          Primeiramente é conseguir o trailer, depois é a habilitação para viajar e por fim é saber para onde ir, por
+          exemplo. Acha que ficou mais fácil de conseguir pelo menos alguma etapa dessa divisão? Agora analisando-as
+          isoladamente, que tal agora darmos possíveis soluções para cada uma delas? Veja o exemplo da tabela a seguir.
+        </p>
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  </table>
+
+  <table class="table-uc4 text-center">
+    <thead>
+      <tr id="first">
+        <td colspan="2" class="border-r-on-white">Ter o trailer</td>
+        <td colspan="2" class="border-r-on-white">Habilitação para viajar</td>
+        <td colspan="2">Escolher para onde ir</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="border-r-on-blue">Comprar o trailer</td>
+        <td id="border-r-on-blue">Alugar o trailer</td>
+        <td id="border-r-on-blue">Tirar habilitação</td>
+        <td id="border-r-on-blue">Ter um motorista</td>
+        <td id="border-r-on-blue">Seguir uma rota de viagem</td>
+        <td>Viajar sem destino predefinido</td>
+      </tr>
+    </tbody>
+
+  </table>
+
+
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <p>
+          Depois de toda essa divisão, acha que seria impossível realizar esse sonho? Se sim, então tente fragmentar
+          ainda mais, até começar a perceber que o que podia parecer inicialmente impossível, não passa apenas do
+          conjunto de pequenos passos do que podemos tornar realidade.
+        </p>
+
+        <p>
+          Contudo, utilizando a lógica booleana, foi encontrada não só uma forma de “comunicação” entre o raciocínio
+          humano com as máquinas, mas também um meio prático de avaliar as capacidades do raciocínio lógico das pessoas,
+          já que suas mentes estarão melhor condicionadas a trabalhar com esse tipo de raciocínio e expressá-lo com mais
+          exatidão.
+        </p>
+
+        <div class="flex justify-center w-full">
+          <img src="./img/ue1/check.svg" />
+          <p class="px-3" id="check-green-word"> Solução do problematizando</p>
+        </div>
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/SKFIJGdb2Vc"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <div class="containerFooter row">
+    <a class="row" href="aula-3.html">
+      <img class="arrowImg" src="img/global/icons/previusclass.png" />
+      <p class="btnDesafio">Desafio anterior</p>
+    </a>
+    <a class="row" href="aula-5.html">
+      <p class="btnDesafio">Próximo Desafio</p>
+      <img class="arrowImg" src="img/global/icons/nextclass.png" />
+    </a>
+  </div>
+
+
+
+
+  <!-- Libras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogos Digitais - SENAI EAD</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="SENAISP">
+
+  <!-- Font Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/aula2.css">
+
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/uc4.css">
+  <script type="text/javascript" src="./scripts/jquery.js"></script>
+  <script src="./scripts/index.js"></script>
+  <script src="./scripts/aula2.js"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <a onclick="openNav()"><img src="./img/global/icons/menu.png" class="logoJogos" /></a>
+    <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+    <div></div>
+  </div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <button onclick="openList()" class="accordion"><img src="./img/global/icons/summary.svg"
+        style="margin-right: 10px;">
+      <p>Sumário</p>
+    </button>
+    <div class="panel" id="panelBtn">
+      <ul type="1">
+        <a class="listPanel" href="#contextualizing">
+          <li>1.0 Contextualizando</li>
+        </a>
+        <a class="listPanel" href="#computer-program">
+          <li>2.0 Programa de Computador</li>
+        </a>
+        <a class="listPanel" href="#conversion">
+          <li>3.0 Conversão</li>
+        </a>
+        <a class="listPanel" href="#programming-languages">
+          <li>4.0 Linguagens de Programação</li>
+        </a>
+        <ul type="1" style="margin-left:20px;">
+          <a class="listPanel" href="#characteristics">
+            <li>4.1 Características</li>
+          </a>
+          <a class="listPanel" href="#semantics">
+            <li>4.2 Semântica</li>
+          </a>
+          <a class="listPanel" href="#indentation">
+            <li>4.3 Indentação</li>
+          </a>
+          <a class="listPanel" href="#modularization">
+            <li>4.4 Modularização</li>
+          </a>
+          <a class="listPanel" href="#Documentation">
+            <li>4.5 Documentação</li>
+          </a>
+          <a class="listPanel" href="#libraries-api-framework">
+            <li>4.6 Bibliotecas, APIs e Frameworks</li>
+          </a>
+          <a class="listPanel" href="#programming-language-levels">
+            <li>4.7 Níveis de Linguagens de programação</li>
+          </a>
+          <a class="listPanel" href="#some-programming-languages">
+            <li>4.8 Algumas linguagens de programação</li>
+          </a>
+        </ul>
+
+      </ul>
+
+    </div>
+    <button onclick="changeTheme()" class="accordion">
+      <img src="./img/global/icons/themeIcon.svg" style="margin-right: 10px;" alt="Alterar tema">
+      <p>Alterar tema</p>
+    </button>
+    <button onclick="changeGray()" class="accordion">
+      <img src="./img/global/icons/scaleGrayIcon.svg" style="margin-right: 10px;" alt="Escala de Cinza">
+      <p>Escala de Cinza</p>
+    </button>
+    <div class="accordion2">
+      <div style="display: flex;">
+        <img src="./img/global/icons/textIcon.svg" style="margin-right: 10px;" alt="Tamanho da fonte">
+        <p>Tamanho da fonte</p>
+      </div>
+      <div>
+        <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+      </div>
+    </div>
+  </div>
+
+
+  <header class="homePage">
+
+    <div class="header-title">
+      <div>
+        <h2 class="text-Course" style="color: white;">Curso Técnico em</h2>
+        <h1 class="text-NameCourse">Jogos Digitais</h1>
+      </div>
+
+      <div id="containerBoxTitle">
+        <div class="numberTitle">2</div>
+        <div class="titleHeader">Programação</div>
+      </div>
+
+      <div>
+        <strong class="objectiveLearning">Objetivo de Aprendizagem</strong>
+        <p class="text-DescriptUnit">
+          Reconhecer os fundamentos de lógica de programação
+        </p>
+      </div>
+
+      <div>
+        <p class="text-LetsLearn">Vamos iniciar os estudos</p>
+        <a class="btnPlay" href="#contextualizing">Play</a>
+      </div>
+
+    </div>
+
+  </header>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./img/global/icons/arrowUpScroll.png"></button>
+  <div class="espaceTitle" id="contextualizing"></div>
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <div>
+          <div class="espaceTitle" id="contextualizing"></div>
+          <h1 class="text-Title light-blue">Contextualizando</h1>
+          <p>
+            Assista ao vídeo abaixo para uma introdução
+            aos seus estudos
+          </p>
+
+        </div>
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/C1QIkdwQ1EY"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="dicas">
+          <img src="./img/global/icons/help.png" id="help" style="margin-right: 20px;" />
+          <p>
+            Qual a linguagem de programação mais apropriada para o desenvolvimento do sistema que Marcos poderá
+            utilizar? O uso de APIs e Frameworks são necessários?
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="espaceTitle" id="computer-program"></div>
+  <div class="parallax background-parallax1">
+    <div class="cubeBlack">
+
+      <h1 class="text-Title light-blue">Programa de Computador</h1>
+      <p>
+        Um programa de computador nada mais é do que um conjunto de instruções que são utilizadas para descrever uma
+        determinada tarefa a ser realizada pelo computador. Essas instruções são feitas de uma forma padronizada através
+        de comandos escritos em uma linguagem de programação.
+      </p>
+
+      <p>
+        Quando você quiser executar um algoritmo em um computador, você deve escrevê-lo de uma forma entendível por ele,
+        dando origem a um programa. Portanto, um programa de computador pode ser entendido como um algoritmo escrito em
+        uma determinada linguagem de programação.
+      </p>
+
+      <div class="atencion my-3 mx-3">
+        <img src="./img/global/icons/lightbulb.png" />
+        <p>
+          O programa de computador surgiu antes mesmo da invenção do computador eletrônico. Foi em 1843, quando Ada
+          Lovelace, propôs um programa para resolver um problema matemático utilizando uma máquina inventada por Charles
+          Babbage.
+        </p>
+      </div>
+
+      <p>
+        O processo de construção de um programa de computador envolve algumas etapas até que ele possa ser compreendido
+        pelo computador. Esse é o assunto que você verá na próxima seção.
+      </p>
+
+    </div> <!-- End BlackBox -->
+  </div> <!-- End Parallax -->
+
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+        <div class="espaceTitle" id="conversion"></div>
+        <h1 class="text-Title light-blue">Conversão</h1>
+
+        <p>
+          Para que um programa de computador possa ser executado, ele deve passar por algumas etapas de conversão. Isso
+          é necessário, pois na realidade o computador só processa as informações em bits, ou seja, em 0 e 1. O problema
+          é que, para nós humanos, programar utilizando apenas a notação binária é muito trabalhoso e demandaria muito
+          tempo, embora não fosse impossível. Assim, foram criadas as linguagens de programação, que possuem instruções
+          muito próximas da linguagem natural. Por isso, é necessário possuir um mecanismo que converta essas instruções
+          em alto nível até a codificação binária. Esse processo de conversão recebe o nome de tradução e pode ser feito
+          de duas formas: <b>interpretação e compilação.</b>
+        </p>
+
+        <p>
+          No processo de compilação, o código-fonte é escrito em uma linguagem de alto nível e enviado a um programa
+          chamado compilador, que será o responsável por efetuar a tradução.
+        </p>
+
+        <img class="w-75 m-auto" src="./img/ue2/Imagem 1.png" alt="" />
+
+        <p>
+          Os compiladores geralmente possuem dois módulos:
+        </p>
+
+        <div class="m-auto">
+          <!--           <img src="./img/ue2/icon/click.svg" /> -->
+          <p>clique para entender a definição de cada um. </p>
+        </div>
+
+        <!--INTERAÇÃO-->
+        <div class="flex-and-grid-2">
+          <img class="w-45 m-auto" src="./img/ue2/interaction/Front.png" alt="" onclick="openModalFront()" />
+          <img class="w-45 m-auto" src="./img/ue2/interaction/Back.png" alt="" onclick="openModalBack()" />
+
+        </div>
+
+        <div class="modal-overlay" id="overlay-front">
+          <div class="modal" id="modal-front">
+            <img src="./img/ue2/interaction/Front2.png" />
+          </div>
+        </div>
+
+        <div class="modal-overlay" id="overlay-back">
+          <div class="modal" id="modal-back">
+            <img src="./img/ue2/interaction/Back2.png" />
+          </div>
+        </div>
+
+        <div class="modal-overlay" id="overlay-js">
+          <div class="modal" id="modal-js">
+            <img src="./img/ue2/interaction 2/Javascript.png" />
+          </div>
+        </div>
+
+        <div class="modal-overlay" id="overlay-rubi">
+          <div class="modal" id="modal-rubi">
+            <img src="./img/ue2/interaction 2/Ruby.png" />
+          </div>
+        </div>
+
+        <div class="modal-overlay" id="overlay-c-sharp">
+          <div class="modal" id="modal-c-sharp">
+            <img src="./img/ue2/interaction 2/CSharp.png" />
+          </div>
+        </div>
+
+        <div class="modal-overlay" id="overlay-go">
+          <div class="modal" id="modal-go">
+            <img src="./img/ue2/interaction 2/Go.png" />
+          </div>
+        </div>
+
+        <div class="modal-overlay" id="overlay-python">
+          <div class="modal" id="modal-python">
+            <img src="./img/ue2/interaction 2/Python.png" />
+          </div>
+        </div>
+
+        <div class="modal-overlay" id="overlay-kotlin">
+          <div class="modal" id="modal-kotlin">
+            <img src="./img/ue2/interaction 2/Kotlin.png" />
+          </div>
+        </div>
+
+        <div class="modal-overlay" id="overlay-c-plus">
+          <div class="modal" id="modal-c-plus">
+            <img src="./img/ue2/interaction 2/CPlus.png" />
+          </div>
+        </div>
+
+        <div class="modal-overlay" id="overlay-c">
+          <div class="modal" id="modal-c">
+            <img src="./img/ue2/interaction 2/C.png" />
+          </div>
+        </div>
+
+        <div class="modal-overlay" id="overlay-java">
+          <div class="modal" id="modal-java">
+            <img src="./img/ue2/interaction 2/Java.png" />
+          </div>
+        </div>
+
+        <div class="modal-overlay" id="overlay-php">
+          <div class="modal" id="modal-php">
+            <img src="./img/ue2/interaction 2/Php.png" />
+          </div>
+        </div>
+
+
+
+        <p>
+          Na compilação existe um processo intermediário entre a fase de front-end e back-end, denominada montagem.
+          Nessa etapa, o código-fonte é traduzido para uma linguagem intermediária, chamada de linguagem de montagem.
+          Isso ocorre, porque um único comando em linguagem, de alto nível, pode gerar diversas instruções em
+          linguagem
+          de máquina. Além disso, o montador também escreve as instruções necessárias para que a memória possa ser
+          alocada para aquele programa quando for executado. Uma outra vantagem de ter a fase de montagem é que você
+          pode utilizar uma mesma linguagem de alto nível para diferentes sistemas operacionais. Por exemplo, você
+          pode
+          programar ou utilizar um mesmo código-fonte no Windows e no Linux, embora as instruções de máquina para
+          esses
+          dois sistemas sejam diferentes. Como isso é possível? De uma forma geral, o montador vai gerar um código
+          intermediário, denominado Assembly, com as instruções em formato de mnemônicos (pequenos textos que são
+          “apelidos” de instruções em código binário). A partir do código em linguagem de montagem, os mnemônicos são
+          substituídos por seus códigos binários, dependendo do sistema operacional utilizado.
+        </p>
+
+        <p>
+          Por fim, o último processo na etapa de compilação é a ligação. Nessa etapa, o ligador vai unir um ou mais
+          código-objeto, atribuindo endereços de memória para todas as referências e gerando o arquivo executável.
+        </p>
+
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/lh1dCidFLkw"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+        <p>
+          O segundo processo de tradução é chamado de interpretação. Nesse caso, não é necessário gerar um
+          código-objeto
+          intermediário ou um executável. Assim como na compilação, a interpretação também traduz o código-fonte, mas
+          com algumas diferenças. Na compilação, o compilador lê todas as informações, faz todas as análises e os
+          demais
+          processos para, no final, gerar um código-objeto ou executável. Já na interpretação, esses intermediários
+          não
+          são necessários e a tradução é feita de forma instantânea. Por exemplo, se você estiver programando na
+          linguagem Python, quando você chamar o interpretador via linha de comando, ele irá ler seu código linha a
+          linha em tempo de execução. Isso significa que, no momento em que o interpretador lê uma linha, ele traduz
+          para a linguagem de máquina e já executa aquela linha.
+        </p>
+
+        <img class="w-75 m-auto" src="./img/ue2/Imagem 2.png" alt="Imagem que representa o processo de interpretação. É composto 
+        por formas e setas. É passado um código-fonte e o interpretador faz o armazenamento em uma estrutura interna. Há um módulo 
+        de execução que recebe os dados e envia os resultados.
+        " />
+
+        <p>
+          A imagem 2 ilustra o processo de interpretação. O código-fonte é enviado ao interpretador, que possui um
+          módulo de análise (léxica, sintática e semântica) e em seguida é armazenado em uma estrutura interna. O
+          módulo
+          de execução percorre essa estrutura interna executando as operações e consumindo os dados. Por fim, os
+          resultados são enviados para quem chamou o interpretador.
+        </p>
+
+        <div class="espaceTitle" id="programming-languages"></div>
+        <h1 class="text-Title light-blue">Linguagens de Programação</h1>
+
+        <p>
+          Uma linguagem de programação é um conjunto de regras sintáticas e semânticas que tem por finalidade a
+          implementação de um algoritmo que possa ser executado por um computador. Com esse conjunto de regras, o
+          programador é capaz de especificar, de uma forma precisa, quais os dados que o computador irá atuar, como
+          esses dados são armazenados ou transmitidos e, também, as ações que o computador deve tomar, dependendo dos
+          dados informados.
+        </p>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <div class="espaceTitle" id="semantics"></div>
+  <div class="parallax background-parallax2">
+    <div class="cubeBlack">
+      <h1 class="text-subtitle1 dark-blue mx-3">Semântica</h1>
+      <p>
+        As linguagens de programação trazem duas abordagens para a definição se um determinado comando ou função está
+        correto ou não: a sintaxe e a semântica. A sintaxe define a estrutura gramatical da linguagem. Veja o seguinte
+        exemplo:<br>
+
+      </p>
+      <div id="container-fatorial" class="w-40 m-auto">
+        <p>
+          ) + 10 - 5 (
+        </p>
+      </div>
+
+      <p>
+        Nesse caso, há um claro erro de sintaxe, pois os delimitadores (parênteses) estão posicionados de forma
+        incorreta. Agora observe o próximo exemplo:<br>
+
+      </p>
+
+      <div id="container-fatorial" class="w-40 m-auto">
+        <p>
+          3 + x = false
+        </p>
+      </div>
+      <p>
+        Aqui, temos um problema semântico, pois do ponto de vista sintático todos os operadores estão sendo utilizados
+        de forma correta, porém espera-se que o operando após o operador de atribuição (=) seja um número e não um
+        valor-verdade.
+      </p>
+
+
+
+    </div> <!-- End BlackBox -->
+  </div> <!-- End Parallax -->
+
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+        <div class="espaceTitle" id="indentation"></div>
+        <h1 class="text-subtitle1 dark-blue mx-3">Indentação</h1>
+
+        <p>
+          Nas linguagens de programação, a indentação (recuo) é um termo aplicado a um código-fonte para definir ou
+          ressaltar a estrutura de um algoritmo. Na grande maioria das linguagens, a indentação é empregada para
+          estruturar o código, facilitando a legibilidade. Em outras linguagens, como o Python, a indentação é utilizada
+          para marcar a hierarquia nos blocos de comando. Embora na maioria das linguagens seja opcional, é altamente
+          recomendável que você utilize indentação em seu código. Isso ocorrerá quando você utilizar comandos aninhados,
+          ou seja, um comando dentro de um bloco de um outro comando. Assim, para os comandos posicionados em um nível
+          hierárquico menor, você deve adicionar recuos (geralmente utilizando a tecla tab).
+        </p>
+
+        <img class="w-75 m-auto" src="./img/ue2/Imagem 3.png" alt="A imagem representa um trecho de um código-fonte, com cinco comandos indentados, 
+        " />
+
+        <img class="w-75 m-auto" src="./img/ue2/Imagem 4.png" alt="A imagem representa um trecho de um código-fonte, com cinco comandos não indentados.
+        " />
+
+        <p>
+          Veja nas imagens 3 e 4 exemplos de um mesmo código com e sem indentação. A forma indentada melhora muito a
+          legibilidade do código, pois é possível, somente de olhar, perceber que os comandos das linhas 2, 3 e 4 estão
+          hierarquicamente subordinados ao comando da linha 1 (recebendo um recuo) e o comando da linha 5 está
+          subordinado ao comando da linha 4 (dois recuos).
+        </p>
+
+        <div class="espaceTitle" id="modularization"></div>
+        <h1 class="text-subtitle1 dark-blue mx-3">Modularização</h1>
+
+        <p>
+          O processo de construção de um software pode ser feito de forma modularizada, ou seja, dividindo várias partes
+          do sistema em partes menores que executam tarefas mais específicas. Com isso, há um ganho na manutenção do
+          código, além de facilitar a legibilidade. Portanto, a modularização é o conceito de dividir o seu código em
+          blocos que se comunicam entre si, com responsabilidades e tarefas específicas. Assim, você deve pensar o seu
+          código de forma que as partes que serão reutilizadas em outros momentos possam ser escritas em blocos
+          separados.
+        </p>
+
+        <div class="espaceTitle" id="Documentation"></div>
+        <h1 class="text-subtitle1 dark-blue mx-3">Documentação</h1>
+
+        <p>
+          A documentação de uma linguagem de programação é a maneira como se apresenta e, especifica o funcionamento,
+          bem como os recursos de uma linguagem. Na documentação estão presentes explicações e às vezes exemplos de
+          todos os recursos e comandos da linguagem. Assim, quando você estiver aprendendo uma nova linguagem, você deve
+          consultar sua documentação, pois ela é a base de conhecimento e também a sua fonte de pesquisa, sendo mais
+          rápido você encontrar a informação que você procura.
+        </p>
+
+        <p>
+          No geral, a documentação é escrita de forma mais pontual e específica, sendo dividida por tópicos, facilitando
+          assim o processo de consulta.
+        </p>
+
+        <div class="espaceTitle" id="libraries-api-framework"></div>
+        <h1 class="text-subtitle1 dark-blue mx-3">Bibliotecas, APIs e Frameworks</h1>
+
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/66Nem0QAtJU"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+        <div class="espaceTitle" id="programming-language-levels"></div>
+        <h1 class="text-subtitle1 dark-blue mx-3">Níveis de Linguagens de programação</h1>
+
+        <p>
+          As linguagens de programação podem ser divididas em dois níveis: alto e baixo. A grosso modo, podemos entender
+          as linguagens de alto nível como sendo aquelas que estão mais próximas da linguagem humana. Seus comandos são
+          escritos através de palavras em língua natural (tradicionalmente o inglês), como por exemplo o if, for, while,
+          etc.
+        </p>
+
+        <p>
+          As linguagens de baixo nível são aquelas que estão próximas da linguagem de máquina (binário). Podem ser as
+          linguagens de máquina em si ou as linguagens de montagem (também chamadas de linguagens de nível
+          intermediário). Essas linguagens oferecem uma sintaxe distante de uma linguagem natural, mas muito próxima da
+          linguagem de máquina.
+        </p>
+
+
+
+        <div class="espaceTitle" id="some-programming-languages"></div>
+        <h1 class="text-subtitle1 dark-blue mx-3">Algumas Linguagens de programação</h1>
+        <!-- Image Map Generated by http://www.image-map.net/-->
+        <img class="w-75 m-auto" src="./img/ue2/Imagem 5.png" alt="" usemap="#image-map" />
+
+        <map name="image-map">
+          <area target="" alt="1" class="change-js" title="1" href=""
+            coords="127,1413,131,760,152,732,491,733,521,746,529,774,532,1335,528,1412,505,1443,212,1440,150,1436,137,1424"
+            shape="poly">
+          <area target="" alt="2" class="change-rubi" title="2" href=""
+            coords="599,1407,599,764,613,738,645,730,970,730,991,747,1003,778,1000,1411,985,1427,968,1437,631,1439,614,1428"
+            shape="poly">
+          <area target="" alt="3" class="change-c-sharp" title="3" href=""
+            coords="1072,1404,1072,762,1083,741,1105,730,1438,731,1460,742,1474,769,1473,1411,1459,1430,1435,1438,1106,1437,1083,1427"
+            shape="poly">
+          <area target="" alt="4" class="change-go" title="4" href=""
+            coords="127,2311,127,1669,140,1649,158,1636,491,1635,514,1645,528,1663,528,2309,516,2329,502,2341,159,2345,140,2334"
+            shape="poly">
+          <area target="" alt="5" class="change-python" title="5" href=""
+            coords="600,1668,600,2314,611,2335,630,2345,966,2343,988,2329,1003,2309,1001,1678,994,1649,973,1636,634,1638,606,1648"
+            shape="poly">
+          <area target="" alt="6" class="change-kotlin" title="6" href=""
+            coords="1072,1672,1073,2305,1083,2328,1103,2342,1446,2342,1463,2331,1476,2308,1474,1672,1463,1653,1446,1639,1103,1638,1085,1649,1078,1658"
+            shape="poly">
+          <area target="" alt="7" class="change-c-plus" title="7" href=""
+            coords="127,2579,125,3225,137,3245,149,3253,495,3254,515,3245,528,3223,526,2580,519,2564,499,2549,164,2549,138,2556"
+            shape="poly">
+          <area target="" alt="8" class="change-c" title="8" href=""
+            coords="600,3220,600,2581,607,2559,626,2549,963,2546,987,2557,1000,2583,1003,3220,993,3236,974,3254,630,3254,609,3243"
+            shape="poly">
+          <area target="" alt="9" class="change-java" title="9" href=""
+            coords="1072,2580,1072,3225,1079,3247,1105,3259,1445,3256,1469,3247,1476,3225,1473,2580,1462,2559,1442,2550,1105,2550,1083,2560"
+            shape="poly">
+          <area target="" alt="10" class="change-php" title="10" href=""
+            coords="127,4143,127,3498,137,3477,159,3464,488,3466,514,3475,529,3504,528,4136,521,4153,504,4170,164,4174,142,4165"
+            shape="poly">
+        </map>
+
+        <script src="./scripts/jquery.rwdImageMaps.min.js"></script>
+        <script>
+
+          $('img[usemap]').rwdImageMaps(); //Faz com que as imagens que usem mapArea sejam reajustadas conforme o tamanho muda
+
+          $(".change-js").on("click", function (e) {
+            e.preventDefault();
+            openModalJS();
+          });
+
+          $(".change-rubi").on("click", function (e) {
+            e.preventDefault();
+            openModalRubi();
+          });
+
+          $(".change-c-sharp").on("click", function (e) {
+            e.preventDefault();
+            openModalCSharp();
+          });
+
+          $(".change-go").on("click", function (e) {
+            e.preventDefault();
+            openModalGo();
+          });
+
+          $(".change-python").on("click", function (e) {
+            e.preventDefault();
+            openModalPython();
+          });
+
+          $(".change-kotlin").on("click", function (e) {
+            e.preventDefault();
+            openModalKotlin();
+          });
+
+          $(".change-c-plus").on("click", function (e) {
+            e.preventDefault();
+            openModalCPlus();
+          });
+
+          $(".change-c").on("click", function (e) {
+            e.preventDefault();
+            openModalC();
+          });
+
+          $(".change-java").on("click", function (e) {
+            e.preventDefault();
+            openModalJava();
+          });
+
+          $(".change-php").on("click", function (e) {
+            e.preventDefault();
+            openModalPhp();
+          });
+
+
+
+          var selectedImage = 1;
+
+          function changeSelectedImage2(value) {
+
+          }
+
+          /*  $(".change1").on("click", function (e) {
+             e.preventDefault();
+             changeSelectedImage2(1);
+           });
+           $(".change2").on("click", function (e) {
+             e.preventDefault();
+             changeSelectedImage2(2);
+           });
+           $(".change3").on("click", function (e) {
+             e.preventDefault();
+             changeSelectedImage2(3);
+           }); */
+        </script>
+        <p>
+          Para você conhecer melhor como é uma linguagem na prática, vamos dar uma introdução mais completa a linguagem
+          C#, que é uma das mais utilizadas. Ela é relativamente fácil de programar e de fazer a manutenção nos códigos,
+          uma linguagem poderosa e flexível. Com ela, é possível fazer aplicações comerciais, científicas e até jogos.
+          Conheça os tipos de variáveis mais usados em C#, eles são:
+        </p>
+
+  </section>
+
+
+
+  <table class="table-uc4">
+    <tr id="first">
+      <td>Tipo</td>
+      <td>Descrição</td>
+      <td>Exemplo</td>
+    </tr>
+    <tr>
+      <td>int</td>
+      <td>Representa os número inteiros</td>
+      <td>0 -8 254 -65</td>
+    </tr>
+    <tr>
+      <td>double</td>
+      <td>Representa os número reais</td>
+      <td>0.4 5.98 -7.1 </td>
+    </tr>
+    <tr>
+      <td>String</td>
+      <td>Representa um conjunto de caracteres literais</td>
+      <td>“Casa”<br>
+        ”#SENAIPLAY”<br>
+        “4687”</td>
+    </tr>
+    <tr>
+      <td>bool</td>
+      <td>Representa valores booleanos ou lógico</td>
+      <td>true <br>false</td>
+    </tr>
+  </table>
+
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+
+        <div class="atencion my-3 mx-1">
+          <img src="./img/global/icons/atencion.png" />
+          <p>
+            O tipo String é imutável, ou seja, qualquer mudança em uma string causa a criação de um novo String, isso
+            ocorre para otimizações em tempo de compilação e mais segurança, entre outros fatores
+          </p>
+        </div>
+
+        <p>
+          Outro tipo bem usado é o float, que é bastante semelhante ao double, mas é capaz de guardar números menos
+          extensos, pois possui uma menor cadeia de bytes, porém um benefício de seu uso é que requer menos memória. O
+          tipo float possui uma característica própria, em que o valor atribuído precisa ter um f no final, pois senão
+          ocorrerá um erro, pois esse sufixo o diferencia do tipo double, por exemplo 5.45f ou 0.25f.
+        </p>
+
+        <p>
+          A nomenclatura das variáveis em C# pode ser qualquer combinação entre os caracteres válidos, que são:
+        </p>
+
+        <p>
+          <li class="my-1 mx-1">
+            Todas as letras (com exceção do Ç) sem acentos, e ainda independente de ser caixa alta ou baixa;
+          </li>
+          <li class="my-1 mx-1">
+            Todos os números, contanto que não seja o primeiro caractere do nome;
+          </li>
+          <li class="my-1 mx-1">
+            E o caráter especial “ _ “ conhecido como “underline” ou “underscore”.
+          </li>
+        </p>
+
+        <p>
+          A ordem dos caracteres no nome de uma variável também importa (pois dependendo da ordem dos caracteres pode
+          formar uma palavra reservada), e no caso do uso de números, não podem ser usados para iniciar o nome.
+        </p>
+
+        <p>
+          Mas o que seria uma palavra reservada? Em programação as palavras reservadas, são palavras utilizadas para
+          acessar bibliotecas de dados ou comandos, que variam em cada linguagem de programação, como Java, Javascript,
+          C, C++, C# etc, essas palavras não podem ser usadas como nome de variáveis. Utilizando o C# como exemplo, os
+          nomes dos tipos int, float, string etc... e palavras como: class, using, public, static, entre outras… não
+          podem ser usadas para nomear uma variável, por serem reservadas a esses comandos.
+        </p>
+
+        <div class="atencion my-3 mx-1">
+          <img src="./img/global/icons/lightbulb.png" />
+          <p>
+            É possível utilizar o underline para iniciar o nome de variáveis e separar palavras, exemplo: _class,
+            _public, meu_nome, valor_menor, etc...
+          </p>
+        </div>
+
+        <p>
+          Uma variável pode ser nomeada usando mais de uma palavra. Nesse caso, é recomendado que a primeira palavra
+          seja escrita com inicial minúscula e a segunda, que precisa estar junto dela (sem o espaço entre elas),
+          iniciada com letra maiúscula. É importante frisar que essa recomendação pode variar de acordo com a linguagem
+          de programação utilizada.
+        </p>
+
+        <p>
+          É fundamental usar palavras simples e descritivas que fazem referência direta para o uso daquela variável, por
+          exemplo: se você vai usar uma variável para representar o salário de algum funcionário de uma empresa, o nome
+          mais recomendado para essa variável seria "salario" e não “x1”, “n1”, “a”, “b”, “c”, ou qualquer outro nome
+          não representativo.
+        </p>
+
+        <p>
+          Após declarar uma variável, mesmo que não atribua o valor no momento, deve-se terminar a declaração com o ;
+          (ponto e vírgula), tanto em C#, como em outras linguagens como Java, por exemplo. Veja os exemplos a seguir,
+          para você entender melhor como deve-se nomear e não esquecer de encerrar a declaração corretamente:
+        </p>
+
+
+
+        <div class="m-auto div-with-blue-border">
+          <p>
+            int <b>valorMaior;</b><br>
+            float <b>valorMaior;</b><br>
+            string <b>valorMaior;</b><br>
+            boolean <b>valorMaior;</b>
+          </p>
+        </div>
+
+        <div class="atencion my-3 mx-1">
+          <img src="./img/global/icons/atencion.png" />
+          <p>
+            O código de programação precisa ser legível e de fácil manutenção, o que contribuirá para evitar erros,
+            independente da linguagem usada. O programador deve ler o nome da variável e rapidamente compreender o que
+            aquela variável de fato representa. Isso é importante porque o código vai crescer em número de linhas e
+            quando for ser lido por outros programadores ou até mesmo pelo desenvolvedor, precisa estar legível.
+          </p>
+        </div>
+
+        <p>
+          Acompanhe o vídeo a seguir, para você conhecer um dos softwares mais utilizados na programação, o Visual
+          Studio Code. Nele, podemos programar em C#, assim como outras linguagens também. Neste vídeo, você vai ver
+          como é a sua instalação e aprender como declarar variáveis em C# na prática.
+        </p>
+
+        <iframe class="marginVertical my-5" width="100%" height="450" src="https://www.youtube.com/embed/d20U3T42DGE"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+
+        <div class="flex justify-center w-full">
+          <img src="./img/ue1/check.svg" />
+          <p class="px-3" id="check-green-word"> Solução do problematizando</p>
+        </div>
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/jphw2KYT7kQ"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <div class="containerFooter row">
+    <a class="row" href="aula-1.html">
+      <img class="arrowImg" src="img/global/icons/previusclass.png" />
+      <p class="btnDesafio">Desafio anterior</p>
+    </a>
+    <a class="row" href="aula-3.html">
+      <p class="btnDesafio">Próximo Desafio</p>
+      <img class="arrowImg" src="img/global/icons/nextclass.png" />
+    </a>
+  </div>
+
+  <!-- Libras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+
+</html>

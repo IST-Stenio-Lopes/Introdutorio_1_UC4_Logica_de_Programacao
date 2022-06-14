@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Digitais - SENAI EAD</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="SENAISP">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arapey&display=swap" rel="stylesheet">
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/aula14.css">
+    <link rel="stylesheet" href="./css/uc4.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script type="text/javascript" src="./scripts/jquery.js"></script>
+    <script src="./scripts/aula14.js"></script>
+    <script src="./scripts/index.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a onclick="openNav()"><img src="./img/global/icons/menu.png" class="logoJogos" /></a>
+        <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+        <div></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <button onclick="openList()" class="accordion"><img src="./img/global/icons/summary.svg"
+                style="margin-right: 10px;">
+            <p>Sumário</p>
+        </button>
+        <div class="panel" id="panelBtn">
+            <ul type="1">
+                <a class="listPanel" href="#contextualizing">
+                    <li>1.0 Contextualizando</li>
+                </a>
+                <a class="listPanel" href="#recursividade">
+                    <li>2.0 Proatividade</li>
+                </a>
+                <ul type="1" style="margin-left:20px;">
+                    <a class="listPanel" href="#recursao">
+                        <li>2.1 Definição</li>
+                    </a>
+                    <a class="listPanel" href="#caso-trivial">
+                        <li>2.2 Pilares</li>
+                    </a>
+                </ul>
+                <a class="listPanel" href="#recursividade">
+                    <li>3.0 Comunicação não violenta nos ambientes de trabalho</li>
+                </a>
+                <ul type="1" style="margin-left:20px;">
+                    <a class="listPanel" href="#recursao">
+                        <li>3.1 Definição</li>
+                    </a>
+                    <a class="listPanel" href="#caso-trivial">
+                        <li>3.2 Pilares</li>
+                    </a>
+                    <ul type="1" style="margin-left:30px;">
+                        <a class="listPanel" href="#recursao">
+                            <li>3.2.1 Separar observação da avaliação</li>
+                        </a>
+                        <a class="listPanel" href="#caso-trivial">
+                            <li>3.2.2 Expressar como nos sentimos</li>
+                        </a>
+                        <a class="listPanel" href="#caso-trivial">
+                            <li>3.2.3 Escolher como receber estímulos</li>
+                        </a>
+                    </ul>
+                </ul>
+
+            </ul>
+
+        </div>
+        <button onclick="changeTheme()" class="accordion">
+            <img src="./img/global/icons/themeIcon.svg" style="margin-right: 10px;" alt="Alterar tema">
+            <p>Alterar tema</p>
+        </button>
+        <button onclick="changeGray()" class="accordion">
+            <img src="./img/global/icons/scaleGrayIcon.svg" style="margin-right: 10px;" alt="Escala de Cinza">
+            <p>Escala de Cinza</p>
+        </button>
+        <div class="accordion2">
+            <div style="display: flex;">
+                <img src="./img/global/icons/textIcon.svg" style="margin-right: 10px;" alt="Tamanho da fonte">
+                <p>Tamanho da fonte</p>
+            </div>
+            <div>
+                <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+                <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="homePage">
+
+        <div class="header-title">
+            <div>
+                <h2 class="text-Course" style="color: white;">Curso Técnico em</h2>
+                <h1 class="text-NameCourse">Jogos Digitais</h1>
+            </div>
+
+            <div id="containerBoxTitle">
+                <div class="numberTitle">14</div>
+                <div class="titleHeader">Proatividade e Comunicação Não violenta</div>
+            </div>
+
+            <div>
+                <strong class="objectiveLearning">Objetivo de Aprendizagem</strong>
+                <p class="text-DescriptUnit">Programar estruturas de dados na elaboração de programas e sistemas</p>
+            </div>
+
+            <div>
+                <p class="text-LetsLearn">Vamos iniciar os estudos</p>
+                <a class="btnPlay" href="#contextualizing">Play</a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img
+            src="./img/global/icons/arrowUpScroll.png"></button>
+    <div class="espaceTitle" id="contextualizing"></div>
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <h1 class="text-Title light-blue">Contextualizando</h1>
+
+                <p>
+                    Assista ao vídeo abaixo para uma introdução aos seus estudos
+                </p>
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/TwWN2BvFL2w"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+              gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <div class="dicas">
+                    <img src="./img/global/icons/help.png" id="help" style="margin-right: 20px;" />
+                    <p>
+                        Como a Sara e o Pedro devem agir diante da atitude de Marília?
+                    </p>
+                </div>
+
+
+                <!-- Image Map Generated by http://www.image-map.net/ -->
+                <img src="./img/ue14/Pergunta 1/pergunta.png" usemap="#image-map-interation-1-img-default"
+                    class="w-75 m-auto" id="interation-1">
+
+                <map name="image-map-interation-1-img-default">
+                    <area target="" alt="a" title="a" href="" class="a"
+                        coords="109,269,111,253,121,241,138,235,411,235,429,243,438,258,439,275,429,291,418,297,135,298,116,287"
+                        shape="poly">
+                    <area target="" alt="b" title="b" href="" class="b"
+                        coords="109,342,115,326,122,318,132,312,412,311,428,318,438,333,440,348,433,364,417,375,138,375,121,368,113,357"
+                        shape="poly">
+                </map>
+
+                <!-- Image Map Generated by http://www.image-map.net/ -->
+
+                <map name="image-map-close-interation-1">
+                    <area target="" alt="close-interation-1" title="close-interation-1" href="" coords="75,80,13"
+                        class="close-iteration-1" shape="circle">
+                </map>
+
+
+                <div class="espaceTitle" id="recursividade"></div>
+                <h1 class="text-Title light-blue">Proatividade</h1>
+                <h1 class="text-subtitle1 dark-blue mx-3">Definição</h1>
+
+                <p>
+                    Segundo o dicionário proatividade é: Característica de quem busca identificar ou resolver os
+                    problemas por antecipação, com antecedência; presteza e diligência.
+                </p>
+                <p>
+                    Essa capacidade de identificação e resolução de problemas requer iniciativa e qualificação que é
+                    conquistada à medida que nos dispomos a aprender de forma contínua e ininterrupta.
+                </p>
+                <p>
+                    Cada vez mais, o mundo do trabalho requer profissionais competentes e proativos, que sejam técnicos,
+                    mas que também contemplem boas doses de iniciativas e competências socioemocionais, por isso é
+                    grande importância manter a comunicação não violenta, conhecida como CNV.
+                </p>
+
+                <p>
+                    Diariamente nós precisamos tomar decisões que podem ou não gerar um impacto significativo na vida.
+                    Mas é por meio da iniciativa, grande aliada da proatividade, que fazemos a diferença no contexto ao
+                    qual estamos inseridos.
+                </p>
+
+                <p>
+                    Você já deve ter percebido que, em quase todas as situações de nosso cotidiano, é possível exercer a
+                    iniciativa. Isso acontece desde uma melhoria sugerida no ambiente de trabalho ou uma simples ajuda
+                    para um idoso atravessar a rua. Por isso, precisamos estar atentos e prontos para colocar a
+                    iniciativa em prática.
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue14/Imagem 1.jpg" alt="Senhora idosa com bengala atravessando a rua na faixa de pedestre sendo ajudada por uma mulher magra, loira segurando uma sacola de compras.
+                " />
+
+                <p>
+                    Muitas vezes temos excelentes ideias, mas que infelizmente não rompem o campo mental e acabam
+                    ficando guardadas em nosso intelecto.
+                </p>
+
+                <p>
+                    Temos medo de que a ideia não seja bem aceita, medo que ela não seja tão legal como imaginamos e até
+                    medo do que podem pensar ao nosso respeito por estarmos interessados em expressar uma melhoria.
+                </p>
+                <p>
+                    Mas é necessário que rompamos com esses medos! Existe uma frase do Nelson Mandela que desejo
+                    compartilhar com você: “Aprendi que a coragem não é a ausência do medo, mas o triunfo sobre ele. O
+                    homem corajoso não é aquele que não sente medo, mas o que conquista esse medo”.
+                </p>
+                <p>
+                    O contexto de trabalho, assim com a própria vida social e familiar necessita de pessoas corajosas,
+                    aptas a enfrentarem seus medos por acreditarem que a melhoria contínua é possível, por acreditar que
+                    as equipes podem avançar em seus potenciais, pessoas que buscam sempre a qualidade, cientes de que
+                    uma única pessoa não pode sozinha realizar uma mudança extraordinária e de grande impacto, mas que
+                    pode, dar o primeiro passo
+                </p>
+                <p>
+                    E o primeiro passo é necessário em cada grande conquista, é por meio de iniciativas que uma pessoa
+                    aprende a andar, isso não a poupa de tombos no processo, mas a perseverança em alcançar o seu
+                    objetivo permite, mesmo sendo apenas um bebezinho enfrente seus medos para realizar o feito de
+                    andar. E é assim na vida profissional, bem como na vida familiar e social.
+                </p>
+
+
+                <p>
+                    Para uma melhor compreensão de proatividade, clique no vídeo a seguir e assista um exemplo da
+                    aplicabilidade no cotidiano:
+                </p>
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/E4fDDmZU0eo"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+
+                <h1 class="text-subtitle1 dark-blue mx-3">Pilares</h1>
+
+                <p>
+                    Como vimos, a proatividade é de grande relevância não só na vida profissional, como também, na vida
+                    social e familiar. Por isso, destacamos aqui alguns pilares da proatividade, que são: iniciativa,
+                    solução de problemas, qualidade e metas. Veja a imagem a seguir:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue14/Imagem 2.png" alt="Quatro pilares de cima para baixo, utilizando cores em tons claros 
+                (azul, lilás, rosa e amarelo) contendo as seguintes informações: o primeiro pilar possui a palavra  Iniciativa contendo ao lado 
+                seguinte descrição: possuam iniciativa para fazer aquilo que deve ser feito, independentemente daquela atividade ser sua ou não; 
+                o segundo pilar possui a palavra  solução de problema contendo ao lado a seguinte descrição: apresentem solução para os problemas 
+                em vez de criá-los, fazer de conta que não viu ou tentar transferi-los para outra pessoa; o terceiro pilar possui a palavra Qualidade 
+                contendo ao lado a seguinte descrição: estejam preocupados com a qualidade em tudo que fazem, mesmo que a atividades seja das mais simples 
+                e rotineiras e o quarto pilar possui a palavra Metas contendo ao lado seguinte descrição:procurem sair da sua zona de conforto e se arrisquem 
+                em novos horizontes.
+                " />
+
+                <p>
+                    O primeiro pilar refere-se a iniciativa, atualmente, muitas empresas buscam pessoas que superem as
+                    dificuldades de forma proativa. Dessa forma, a concorrência pode ser superada e o atendimento feito
+                    de forma satisfatória, já que os clientes e consumidores estão cada dia mais exigentes.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Parallax-->
+    <div class="parallax background-parallax1">
+        <div class="cubeBlack">
+            <p>
+                O segundo pilar da proatividade é a resolução de problemas, uma pessoa proativa vê em cada problema
+                uma oportunidade de crescimento, diante dos desafios, dessa forma busca com tranquilidade apresentar
+                alternativas. Para isso, é necessário identificar o máximo de características apresentados pelo
+                problema e, por meio, de uma análise encontre caminhos que apontem para a resolução.
+            </p>
+
+            <p>
+                O terceiro pilar da proatividade refere-se a qualidade, quem tem iniciativa e busca solucionar
+                problemas é, intrinsecamente, uma pessoa interessada na qualidade dos resultados, não acreditando na
+                concepção de fazer por fazer, e está sempre pensando em melhorar processos, que pode ser desde de
+                algo simples como conforto de sua própria casa, como a entrega de um serviço ou produto. A qualidade
+                está muito atrelada com a empatia, ou seja, considerando que você tenta oferecer algo semelhante ao
+                que gostaria de ter.
+            </p>
+
+            <p>
+                E por último, o quarto pilar que contempla as metas, uma pessoa proativa tem metas que proporcionam
+                diretamente na qualidade da entrega, para isso é necessário que a pessoa encare desafios, vá com
+                medo, mas vá, enfrentando-os com sabedoria, sabendo o momento de sair da zona de conforto para que
+                continuamente seja sempre sua melhor versão e alcance com êxito as metas determinadas.
+            </p>
+
+            <p>
+                A pessoa proativa não aplica tais pilares para ser notada ou para chamar atenção da liderança, ela
+                apenas não se paralisa diante das dificuldades, acredita na melhoria contínua e sabe que tem
+                potencial para contribuir significativamente, seja na sua própria vida, das pessoas que ama, no
+                ambiente profissional ou até mesmo no relacionamento social de uma forma mais ampla.
+            </p>
+
+
+
+        </div> <!-- End BlackBox -->
+    </div> <!-- End Parallax -->
+
+    <!--Section-->
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <p>
+                    A proatividade é uma chave que abre possibilidades, uma fórmula que te propulsiona a ir, te capacita
+                    a ser um agente de solução e te faz empático. Refere-se, a ofertar o que se tem de melhor não para
+                    obter admiração de outros, mas sim para despertar nos outros a capacidade de contemplarem que a
+                    qualidade pode ser atingida desde que você se disponha a dar o primeiro passo, nem que para isso
+                    custe enfrentar seus próprios medos.
+                </p>
+
+                <p>
+                    Ser proativo é ser instigado a fazer diferença, é tomar a decisão de subir o degrau da iniciativa,
+                    torna-se um agente solucionador, analisa-se problemas e propõem-se alternativas, tudo porque
+                    acredita-se que a qualidade que se deseja deve ser a mesma a ofertar e, para alcançá-la, é preciso
+                    romper limites, encarar os próprios medos e acreditar que cada um tem dentro de si a capacidade de
+                    tornar tangível o que provisoriamente não o é.
+                </p>
+
+                <h1 class="text-Title light-blue">COMUNICAÇÃO NÃO VIOLENTA NOS AMBIENTES DE TRABALHO</h1>
+
+                <h1 class="text-subtitle1 dark-blue mx-3">Definição</h1>
+
+                <p>
+                    Segundo Rosenberg (2006, p.21) em seu livro Comunicação não-violenta: Técnicas para aprimorar
+                    relacionamentos pessoais e profissionais, o autor:
+                </p>
+
+                <div class="atencion my-3 mx-3 ">
+                    <p>
+                    <p id="golden-p">“</p>
+
+                    &nbsp; A CNV se baseia em habilidades de linguagem e comunicação que fortalecem a capacidade de
+                    continuarmos humanos, mesmo em condições adversas”.Ela não tem nada de novo: tudo que foi
+                    integrado à CNV já era conhecido havia séculos. O objetivo é nos lembrar do que já sabemos - de
+                    como nós, humanos, deveríamos nos relacionar uns com os outros - e nos ajudar a viver de modo
+                    que se manifeste concretamente esse conhecimento.
+                    </p>
+                </div>
+
+                <p>
+                    Você se relaciona exatamente da mesma forma com todas as pessoas que conhece? Já comentou ou pensou
+                    na seguinte frase “ aquela pessoa é difícil”?
+                </p>
+
+                <p>
+                    O Relacionamento interpessoal requer sempre uma boa comunicação, independente do nível de
+                    proximidade, às pessoas que se relacionam precisam zelar por uma comunicação clara e objetiva, de
+                    forma amigável e coerente.
+                </p>
+
+                <p>
+                    Algumas pessoas abusam do nível de intimidade e “rompe limites” da boa convivência humana,
+                    acreditando serem despojadas e estarem apenas brincando, mas acabam “ferindo” de alguma forma a
+                    pessoa que recebe a brincadeira.
+                </p>
+
+                <p>
+                    Cada pessoa carrega uma história que pode ser dotada ou não de marcas por acontecimentos mal
+                    sucedidos que deixaram cicatrizes.<br />
+                    Muitas vezes, mesmo sem intenção, quando decidimos fazer brincadeiras como por exemplo do físico, do
+                    jeito ou até da iniciativa da outra pessoa diante de alguma situação, acabamos sem perceber,
+                    reavivando experiências traumáticas e paralisando a vida delas.
+                </p>
+
+                <p>
+                    Temos opiniões diferentes e, claro, cada pessoa pensa de uma forma. O que nos leva ou não a
+                    concordar com o que o outro falar. Imagine ainda você desejar expressar uma opinião sobre
+                    determinado processo e a outra pessoa já te interromper, pedindo calma e dizendo que não é bem
+                    assim. Chato, não é? Principalmente se sua opinião ainda não foi concluída e você realmente estiver
+                    na calma. A atitude da pessoa que te pediu calma acaba criando um bloqueio com a que deseja se
+                    expressar.
+                </p>
+
+
+
+                <img class="w-75 m-auto" src="./img/ue14/Imagem 3.png" alt="Imagem de personagem com expressão de curiosidade e balão de fala contendo interrogação
+                " />
+
+                <p>
+                    Mas então como aplicar CNV nessa situação?
+                </p>
+
+                <h1 class="text-subtitle1 dark-blue mx-3">Pilares da CNV</h1>
+
+                <h1 class="text-subtitle2 lilaz mx-6">Separar observação da avaliação</h1>
+
+                <p>
+                    Ainda em seu livro de Comunicação não-violenta Rosenberg (2006, p.50) fala que o primeiro componente
+                    da CNV requer a separação entre a observação de avaliação. “Precisamos observar claramente, sem
+                    acrescentar nenhuma avaliação”.
+                </p>
+                <p>
+                    No decorrer dos parágrafos Rosenberg (2006) afirma que ao combinar observação com avaliação,
+                    contribuímos para que as pessoas tendem a levar nosso comentário como crítica. Quando você recebe
+                    uma crítica um impulso natural é defesa, correto? Por mais que, posteriormente, analise o comentário
+                    e o entenda como oportunidade de melhoria, a princípio você pode ficar na defensiva justificando
+                    suas atitudes. Nesse contexto há uma grande dificuldade em separar a observação da avaliação.
+                </p>
+                <p>
+                    Lembra do exemplo que citamos quando alguém te interrompe, pedindo calma, enquanto você expõe sua
+                    opinião? No princípio da CNV, por exemplo, ela primeiro pode te deixar terminar de falar e,
+                    posteriormente, substituir a expressão: calma, não é bem assim. Entendo seu posicionamento, mas no
+                    momento não poderemos tomar essa iniciativa, no entanto, guardarei sua sugestão para que se possível
+                    possa ser aplicada em outro contexto ou em um outro momento oportuno. Consegue perceber a diferença?
+                </p>
+                <p>
+                    Deixo de interromper a pessoa pedindo calma e dizendo que não é assim, que é uma observação
+                    associada de avaliação, e substituo por ouvi-la e mostrar que a opinião dela tem valor, aplicando
+                    uma observação isenta de avaliação.
+                </p>
+                <p>
+                    Se é fácil? Com certeza não. Aplicar a CNV nos mais diversos contextos os quais estamos inseridos
+                    requer além de disciplina, prática constante buscando sempre a melhoria na linguagem interpessoal.
+                </p>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--Parallax-->
+    <div class="parallax background-parallax2">
+        <div class="cubeBlack">
+            <h1 class="text-subtitle2 lilaz mx-6">Expressar como nos sentimos</h1>
+            <p>
+                Se separar a observação da avaliação é o primeiro passo para aplicar a CNV, o segundo é saber
+                identificar e expressar sentimentos como afirma Rosenberg (2006, p.63).
+            </p>
+
+
+            <p>
+                Precisamos reconhecer nossos sentimentos diante das mais diversas situações e após identificá-lo saber
+                expressar.
+            </p>
+            <p>
+                Vamos voltar para o nosso exemplo da pessoa que tenta expressar uma opinião e é interrompida por outra
+                que pede calma e diz que não é bem assim. Agora, imagine que a pessoa que foi interrompida tenta
+                expressar seu sentimento diante da situação e diz: Acho que quando você me interrompe isso não é legal.
+                Veja que apesar de parecer, a pessoa não está expressando sentimento e sim uma opinião
+            </p>
+            <p>
+                Aí ela tenta reformular a frase e diz: Acredito que não é certo me interromper sem que termine de me
+                ouvir, ainda assim é uma opinião.
+            </p>
+
+            <p>
+                Mas se a pessoa falar: Não gosto quando você me interrompe pedindo calma e dizendo que não é bem assim,
+                me sinto frustrada e irritada. Dessa última forma, realmente a pessoa expressou seu sentimento em
+                relação a interrupção da pessoa que pedia calma e dizia que não era bem assim.
+            </p>
+        </div> <!-- End BlackBox -->
+    </div> <!-- End Parallax -->
+
+
+    <!--Section-->
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/Esp1hXc3V_s"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+
+                <h1 class="text-subtitle2 lilaz mx-6">Escolher como receber estímulos</h1>
+
+                <p>
+                    Uma possível reação diante de uma mensagem negativa ao nosso respeito é raiva, mas ao aplicarmos a
+                    CNV segundo Rosenberg aprendemos que:
+                </p>
+
+
+                <div class="atencion my-3 mx-3 ">
+                    <p>
+                    <p id="golden-p">“</p>
+
+                    &nbsp; A CNV aumenta nossa consciência de que o que os outros dizem e fazem pode ser o estímulo, mas
+                    nunca a causa dos nossos sentimentos resultam de como escolhemos receber o que os outros dizem e
+                    fazem, bem como de nossas necessidades e expectativas específicas naquele momento (2006, p.79)
+                    </p>
+                </div>
+
+                <p>
+                    Ele continua afirmando que temos quatro opções diante da mensagem negativa. Para conhecê-los, clique
+                    na carta e veja qual a consequência dela segundo Marshall B. Rosenberg:
+                </p>
+
+                <!--INICIO DA SEGUNDA INTERAÇÃO-->
+
+                <img class="w-75 m-auto" id="interation-2" src="./img/ue14/interacao/UC4-01.png"
+                    usemap="#image-map-1" />
+
+                <map name="image-map-1">
+                    <area target="" class="01" title="01" href="" coords="243,424,78,425,79,187,243,188" shape="poly">
+                    <area target="" class="02" title="02" href="" coords="290,422,290,189,454,189,453,423" shape="poly">
+                    <area target="" class="03" title="03" href="" coords="500,422,501,188,664,188,664,423" shape="poly">
+                    <area target="" class="04" title="04" href="" coords="711,188,711,423,876,423,875,189" shape="poly">
+                </map>
+
+                <map name="image-map-2">
+                    <area target="" class="close-return" title="close-return" href="" coords="88,44,14" shape="circle">
+                    <area target="" class="0101" title="0101" href="" coords="640,41,641,138,709,140,710,40"
+                        shape="poly">
+                    <area target="" class="0102" title="0102" href="" coords="729,41,729,138,797,139,796,41"
+                        shape="poly">
+                    <area target="" class="0103" title="0103" href="" coords="817,40,817,140,885,138,884,40"
+                        shape="poly">
+                </map>
+
+                <map name="image-map-3">
+                    <area target="" class="close-return" title="close-return" href="" coords="88,44,14" shape="circle">
+                    <area target="" class="0201" title="0201" href="" coords="552,40,553,138,620,140,621,41"
+                        shape="poly">
+                    <area target="" class="0202" title="0202" href="" coords="729,41,729,139,797,139,796,41"
+                        shape="poly">
+                    <area target="" class="0203" title="0203" href="" coords="817,140,817,39,885,41,885,139"
+                        shape="poly">
+                </map>
+
+                <map name="image-map-4">
+                    <area target="" class="close-return" title="close-return" href="" coords="88,44,14" shape="circle">
+                    <area target="" class="0301" title="0301" href="" coords="622,139,553,41" shape="rect">
+                    <area target="" class="0302" title="0302" href="" coords="639,42,711,141" shape="rect">
+                    <area target="" class="0303" title="0303" href="" coords="816,40,886,139" shape="rect">
+                </map>
+
+                <map name="image-map-5">
+                    <area target="" class="close-return" title="close-return" href="" coords="88,44,14" shape="circle">
+                    <area target="" class="0401" title="0401" href="" coords="552,41,621,140" shape="rect">
+                    <area target="" class="0402" title="0402" href="" coords="641,40,709,140" shape="rect">
+                    <area target="" class="0403" title="0403" href="" coords="729,42,798,139" shape="rect">
+                </map>
+
+                <script src="./scripts/jquery.rwdImageMaps.min.js"></script>
+
+
+                <script src="./scripts/aula14.js">
+
+
+
+                </script>
+
+
+
+
+
+
+                <!--FIM DA SEGUNDA INTERAÇÃO-->
+
+                <p>
+                    Na CNV há um incentivo em ir além de achar um culpado, mas por meio dela poder identificar a raiz do
+                    problema expressando o que não foi atendido e como aquilo pode frustrá-la, pois segundo Rosemberg
+                    “quanto mais tivermos a capacidade de relacionar nossos sentimentos às nossas necessidades, mais
+                    fácil será para os outros reagir compassivamente” (2006, p.82).
+                </p>
+
+                <p>
+                    Nossa real motivação em deixar de fazer algo não deve ter como base o medo da culpa e sim vir do
+                    coração.
+                    Nossas necessidades são a raíz dos nossos sentimentos e, muitas vezes, por não sabermos nos
+                    expressar a pessoa que recebe nossa mensagem acaba se convencendo de que você está emitindo uma
+                    crítica e não expressando uma necessidade que deixou de ser atendida.
+                </p>
+                <p>
+                    Durante a comunicação, muitas vezes, concentramos nosso foco e total atenção para analisar o erro
+                    que alguém cometeu conosco do que na nossa necessidade que deixou de ser atendida e ao expressarmos
+                    essa análise acabamos emitindo uma crítica.
+                </p>
+                <p>
+                    Certamente, provocando no receptor algum sentimento negativo diante da mensagem e um mecanismo de
+                    autodefesa e contra-ataque, podendo emitir uma nova análise de um erro, levando a um ciclo vicioso,
+                    que só será interrompido com a mudança de atitude de uma das partes, deixando de acusar para
+                    expressar sua real necessidade.
+                </p>
+                <p>
+                    Na comunicação não violenta o foco não se concentra em apontar o erro do outro, mas sim a nossa
+                    capacidade de expressar uma necessidade pessoal que não foi atendida e o sentimento que isso provoca
+                    em nós, de forma que culpar ou afrontar.
+                </p>
+                <p>
+                    Por isso, nunca seja a alternativa, mas que estamos sempre vigilantes na nossa capacidade de ser
+                    humano, com empatia, resiliência sem auto excluir ou excluir o outro, a CNV nos permite aprender com
+                    erros, nos permite zelarmos pela boa convivência da condição humana nos relacionamentos, pois somos
+                    seres sociais e que necessitam de convivência pacífica e harmoniosa seja qual for o contexto que
+                    estivermos inseridos, emocional, familiar e profissional.
+                </p>
+
+                <div class="flex justify-center w-full mtop-1">
+                    <img src="./img/ue1/check.svg" />
+                    <p class="px-3" id="check-green-word"> Solução do problematizando</p>
+                </div>
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/oao-SP0LKio"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <div class="containerFooter row">
+        <a class="row" href="aula-10.html">
+            <img class="arrowImg" src="img/global/icons/previusclass.png" />
+            <p class="btnDesafio">Desafio anterior</p>
+        </a>
+        <a class="row" href="aula-12.html">
+            <p class="btnDesafio">Próximo Desafio</p>
+            <img class="arrowImg" src="img/global/icons/nextclass.png" />
+        </a>
+    </div>
+
+    <!-- Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>

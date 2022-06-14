@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogos Digitais - SENAI EAD</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="SENAISP">
+
+  <!-- Font Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/aula5.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/uc4.css">
+  <script src="./scripts/index.js"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <a onclick="openNav()"><img src="./img/global/icons/menu.png" class="logoJogos" /></a>
+    <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+    <div></div>
+  </div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <button onclick="openList()" class="accordion"><img src="./img/global/icons/summary.svg"
+        style="margin-right: 10px;">
+      <p>Sumário</p>
+    </button>
+    <div class="panel" id="panelBtn">
+      <ul type="1">
+
+        <a class="listPanel" href="#contextualizing">
+          <li>1.0 Contextualizando</li>
+        </a>
+        <a class="listPanel" href="#arithmetic-operations">
+          <li>2.0 Operações aritméticas</li>
+        </a>
+        <a class="listPanel" href="#relational-operations">
+          <li>3.0 Operações relacionais</li>
+        </a>
+        <a class="listPanel" href="#logic-operations">
+          <li>4.0 Operações Lógicos</li>
+        </a>
+        <a class="listPanel" href="#logic-expressions">
+          <li>5.0 Expressões Lógicas</li>
+        </a>
+        <a class="listPanel" href="#arithmetic-expressions">
+          <li>6.0 Expressões aritméticas</li>
+        </a>
+
+      </ul>
+
+    </div>
+    <button onclick="changeTheme()" class="accordion">
+      <img src="./img/global/icons/themeIcon.svg" style="margin-right: 10px;" alt="Alterar tema">
+      <p>Alterar tema</p>
+    </button>
+    <button onclick="changeGray()" class="accordion">
+      <img src="./img/global/icons/scaleGrayIcon.svg" style="margin-right: 10px;" alt="Escala de Cinza">
+      <p>Escala de Cinza</p>
+    </button>
+    <div class="accordion2">
+      <div style="display: flex;">
+        <img src="./img/global/icons/textIcon.svg" style="margin-right: 10px;" alt="Tamanho da fonte">
+        <p>Tamanho da fonte</p>
+      </div>
+      <div>
+        <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+      </div>
+    </div>
+  </div>
+
+
+  <header class="homePage">
+
+    <div class="header-title">
+      <div>
+        <h2 class="text-Course" style="color: white;">Curso Técnico em</h2>
+        <h1 class="text-NameCourse">Jogos Digitais</h1>
+      </div>
+
+      <div id="containerBoxTitle">
+        <div class="numberTitle">5</div>
+        <div class="titleHeader">Operadores</div>
+      </div>
+
+      <div>
+        <strong class="objectiveLearning">Objetivo de Aprendizagem</strong>
+        <p class="text-DescriptUnit">
+          Aplicar os fundamentos de operadores e expressões
+        </p>
+      </div>
+
+      <div>
+        <p class="text-LetsLearn">Vamos iniciar os estudos</p>
+        <a class="btnPlay" href="#contextualizing">Play</a>
+      </div>
+
+    </div>
+
+  </header>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./img/global/icons/arrowUpScroll.png"></button>
+  <div class="espaceTitle" id="contextualizing"></div>
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+
+        <h1 class="text-Title light-blue">Contextualizando</h1>
+        <h3 class="text-Course">Assista ao vídeo abaixo para uma introdução
+          aos seus estudos</h3>
+
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/YXKJeIMBNeI"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="dicas">
+          <img src="./img/global/icons/help.png" id="help" style="margin-right: 20px;" />
+          <p>
+            Para Lucas cumprir com sua tarefa, quais os conhecimentos sobre o controle e tratamento de valores ele
+            precisa ter domínio?
+          </p>
+        </div>
+
+
+        <div class="espaceTitle" id="arithmetic-operations"></div>
+        <h1 class="text-Title light-blue">Operadores aritméticos</h1>
+
+        <p>
+          Para realizar cálculos matemáticos na programação, é necessária a utilização de operadores aritméticos. Eles
+          são usados nas expressões de soma, subtração, multiplicação e divisão que todos conhecemos da matemática,
+          porém, alguns possuem suas próprias simbologias, que são compreendidas pelo software quando um cálculo é
+          realizado.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <table class="table-uc4 text-center">
+    <tr id="first">
+      <td>Operador</td>
+      <td>Álgebra comum</td>
+      <td>Linguagens de Programação (C#, Java, Phython)</td>
+    </tr>
+    <tr>
+      <td>Adição</td>
+      <td>+</td>
+      <td>+</td>
+    </tr>
+    <tr>
+      <td>Subtração</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Multiplicação</td>
+      <td>X</td>
+      <td>*</td>
+    </tr>
+    <tr>
+      <td>Divisão</td>
+      <td>÷</td>
+      <td>/</td>
+    </tr>
+  </table>
+
+  <!--Parallax-->
+  <div class="parallax background-parallax1">
+    <div class="cubeBlack">
+
+      <p>
+        Existem mais dois operadores aritméticos que são bastante usados em programação. O primeiro é para a operação de
+        incremento, que é representado por ++ (dois sinais de adição juntos), e é utilizado para adicionar o valor 1 a
+        uma variável, muito utilizada em algoritmos com algum tipo de contador, por exemplo, quando seu código
+        executasse determinada função, seria adicionado 1 ao contador. Essa seria uma forma de informar o número de
+        vezes que aquela função foi executada.
+      </p>
+
+      <p>
+        O segundo operador é da operação de decremento, sendo representado por -- (dois sinais de subtração juntos) e é
+        utilizado para subtrair 1 de uma variável. Imagine que você precisa de um contador que irá diminuindo de 1 em 1
+        até chegar a zero, aí seria muito mais prático utilizar esse operador.
+      </p>
+
+      <p>
+        Incremento e decremento são ações que o computador faz bastante, visto que o controle de execução e o momento de
+        retornar para o usuário ocorre praticamente em todos os aplicativos. Vejamos um exemplo em jogos: Em League of
+        Legends, quando um personagem sofre um dano ao longo do tempo, é preciso um contador para registrar o dano total
+        aplicado. Esse dano total é sempre incrementado à medida que o campeão causa dano em algum inimigo, permitindo
+        que todo o dano aplicado em inimigos seja exibido ao final da partida.
+      </p>
+
+
+    </div> <!-- End BlackBox -->
+  </div> <!-- End Parallax -->
+
+
+
+
+  <!--Section-->
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+        <!--Div de aviso com lâmpada-->
+        <div class="atencion my-3 mx-3">
+          <img src="./img/global/icons/lightbulb.png" />
+          <p>
+            Algumas linguagens de programação (C#, Python, dentre outras), apresentam mais operadores aritméticos, como
+            a
+            operação de resto da divisão, chamado de mod, que é representado por %.<br />
+            Exemplo: 5%2 = 1 <br />
+            Nesse exemplo lê-se como 5 mod 2 que tem como resultado o valor 1, pois o resto da divisão de 5 por 2 é 1.
+
+          </p>
+        </div>
+
+        <p>
+          Como você já deve ter percebido, os operadores aritméticos são operadores nos quais você já está familiarizado
+          desde criança, sendo utilizados nas mais diversas áreas do conhecimento. No próximo tópico conheceremos
+          operadores que são utilizados quando se deseja comparar expressões lógicas sendo utilizadas na tomada de
+          decisões pelos softwares.
+        </p>
+        <p>
+          No vídeo a seguir vou te mostrar na prática como funcionam esses operadores:
+        </p>
+
+        <!--vídeo-->
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/3AN4ep-HVGg"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+        gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+        <!--SIMULADOR-->
+
+        <!--Div de aviso com alerta-->
+        <div class="atencion my-3 mx-1">
+          <img src="./img/global/icons/atencion.png" />
+          <p>
+            Os operadores dos conteúdos a seguir são os das linguagens C# e Java, que são utilizados nos softwares em
+            geral.
+          </p>
+        </div>
+
+        <div class="espaceTitle" id="relational-operations"></div>
+        <h1 class="text-Title light-blue">Operadores relacionais</h1>
+
+        <p>
+          Os operadores relacionais são utilizados para comparar os valores entre expressões lógicas, resultando em
+          resposta verdadeira “V” ou falsa “F”. São utilizados massivamente nos mais diversos tipos de softwares e sua
+          função é realizar checagens e ativar ou não, uma rotina dentro de um programa, caso o valor das expressões
+          estejam dentro das regras do operador escolhido.
+        </p>
+
+        <p>
+
+        <div class="grid mtop-1">
+          <div class="flex-and-grid-2">
+            <img src="./img/ue5/icons/1.svg" />
+            <p class="mx-3">
+              Vamos começar pelo operador de Igual a, representado pelo símbolo “ == ” (dois sinais de igualdade
+              juntos), é
+              utilizado para verificar se um valor é igual a outro, independente do seu tipo, retornando
+              verdadeiro se for
+              igual ou falso se for diferente.
+            </p>
+          </div>
+
+          <div class="flex-and-grid-2 mtop-1">
+            <img src="./img/ue5/icons/2.svg" />
+            <p class="mx-3">
+              Em seguida, há o operador Diferente de, representado pelo simbolo “ != ” (sinal de exclamação junto do
+              sinal
+              de igualdade), é utilizado para verificar se um valor é diferente de outro, retornando verdadeiro se for
+              diferente ou falso se for igual.
+            </p>
+          </div>
+
+          <div class="flex-and-grid-2 mtop-1">
+            <img src="./img/ue5/icons/3.svg" />
+            <p class="mx-3">
+              Os operadores Maior que e Menor que, representados respectivamente por “ > ” e “ < ”, são utilizados
+                exatamente como na matemática, servem para verificar se um valor é maior ou menor que outro, retornando
+                true ou false. </p>
+          </div>
+
+          <div class="flex-and-grid-2 mtop-1">
+            <div>
+              <img src="./img/ue5/icons/4.svg" />
+              <img src="./img/ue5/icons/5.svg" />
+            </div>
+
+            <p class="mx-3">
+              Há também os operadores Maior ou igual a… e Menor ou igual a…, representados respectivamente por
+              “>= ” e “ <= ”, se assemelhando muito com os vistos anteriormente, esses operadores também checam se um
+                número é maior ou menor que outro, mas agora, também checam se os números são iguais. Nesse caso, a
+                operação resultará em verdadeiro, se pelo menos uma uma das checagens forem atendidas, por exemplo, se
+                pelo menos o número for maior ou for igual retornará verdadeiro. </p>
+            </p>
+          </div>
+        </div>
+
+        <p>Acompanhe os exemplos do uso de cada operador relacional no vídeo a seguir.</p>
+
+        <!--vídeo-->
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/4pPJ-oXgmE4"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+
+        <!--SIMULADOR-->
+
+
+        <div class="espaceTitle" id="logic-operations"></div>
+        <h1 class="text-Title light-blue">Operadores Lógicos</h1>
+
+        <p>
+          Agora, vamos conhecer o conceito de operadores lógicos, que podem variar de simbologia, dependendo da
+          linguagem de programação utilizada, mas representam a mesma coisa. Para esse estudo vamos usar operadores de
+          duas linguagens muito comuns como exemplo, que são o C# e o Java.
+        </p>
+
+        <p>
+          Os operadores lógicos têm como o objetivo obter uma resposta ao retornar verdadeiro ou falso, a partir da
+          combinação de uma ou mais entradas em um determinado sistema, ou seja, é utilizado para comparar expressões
+          lógicas ou variáveis booleanas. Ao decorrer do texto vamos perceber que os operadores lógicos são simples de
+          serem compreendidos e aplicados a qualquer lógica de programação.
+        </p>
+
+        <div class="grid mtop-1">
+          <div class="flex-and-grid-2">
+            <img src="./img/ue5/icons/6.svg" />
+            <p class="mx-3">
+              O operador NOT representado pelo símbolo de exclamação “ ! ”, e é utilizado para inverter o valor
+              booleano, devendo ser escrita antes dele, informando que se a o valor for verdadeiro, passará a ser falso,
+              ou seja, se o valor for true, se tornará false.
+            </p>
+          </div>
+
+          <div class="flex-and-grid-2 mtop-1">
+            <img src="./img/ue5/icons/7.svg" />
+            <p class="mx-3">
+              O operador AND é representado pelo símbolo comercial duplo “ && “, que é utilizado para comparar dois
+              valores booleanos (que podem ser em forma de expressões ou variáveis), resultando em true (verdadeiro) se
+              ambas as expressões forem verdadeiras, senão retorna false (falso).
+            </p>
+          </div>
+        </div>
+
+        <!--vídeo-->
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/qVI2gZ8g73I"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+       gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+
+        <!--SIMULADOR-->
+        <div class="espaceTitle" id="logic-expressions"></div>
+        <h1 class="text-Title light-blue">Expressões Lógicas</h1>
+
+        <p>
+          Expressões lógicas utilizam operadores lógicos e os seus operandos são os resultados de operações relacionais
+          com variáveis booleanas.
+        </p>
+
+        <p>
+          Uma expressão lógica é utilizada para dar a condição necessária que as estruturas lógicas, dentro de um
+          algoritmo, precisam para executar seus comandos. Sendo o resultado da expressão lógica um único valor lógico,
+          será com base nesse valor que serão executados os comandos. A prioridade entre os operadores numa expressão
+          lógica é:
+        </p>
+
+        <p>
+          <b>1- Aritmético</b> (prioridade igual a da matemática)<br />
+          <b>2- Relacional</b> (ordem de aparição)<br />
+          <b>3- Operador</b> Lógico NOT<br />
+          <b>5- Operador</b> Lógico AND<br />
+          <b>6- Operador</b> Lógico OR<br />
+        </p>
+
+        <p>
+          O resultado dessa expressão será sempre um ÚNICO valor lógico (true ou false).
+        </p>
+
+        <div class="espaceTitle" id="arithmetic-expressions"></div>
+        <h1 class="text-Title light-blue">Expressões Aritméticas</h1>
+
+        <p>
+          As expressões aritméticas são constituídas por operadores aritméticos e variáveis numéricas, basicamente são
+          cálculos matemáticos como já estamos acostumados a fazer, seguindo a mesma ordem de precedência, mas agora,
+          também, usamos variáveis para representar números. Importante frisar que o resultado de uma expressão
+          aritmética será sempre um valor numérico.
+        </p>
+
+        <p>
+          Vamos praticar um pouco o que aprendemos?
+        </p>
+
+        <!--SIMULADOR-->
+
+
+
+        <div class="flex justify-center w-full mtop-1">
+          <img src="./img/ue1/check.svg" />
+          <p class="px-3" id="check-green-word"> Solução do problematizando</p>
+        </div>
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/TCbAzELKvMg"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="containerFooter row">
+    <a class="row" href="aula-4.html">
+      <img class="arrowImg" src="img/global/icons/previusclass.png" />
+      <p class="btnDesafio">Desafio anterior</p>
+    </a>
+    <a class="row" href="aula-6.html">
+      <p class="btnDesafio">Próximo Desafio</p>
+      <img class="arrowImg" src="img/global/icons/nextclass.png" />
+    </a>
+  </div>
+
+  <!-- Libras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+
+</html>

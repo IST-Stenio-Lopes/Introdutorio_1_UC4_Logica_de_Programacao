@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogos Digitais - SENAI EAD</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="SENAISP">
+
+  <!-- Font Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/aula1.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/uc4.css">
+  <script type="text/javascript" src="./scripts/jquery.js"></script>
+  <script src="./scripts/index.js"></script>
+
+
+
+
+
+  </script>
+</head>
+
+<body>
+  <div class="navbar">
+    <a onclick="openNav()"><img src="./img/global/icons/menu.png" class="logoJogos" /></a>
+    <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+    <div></div>
+  </div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <button onclick="openList()" class="accordion"><img src="./img/global/icons/summary.svg"
+        style="margin-right: 10px;">
+      <p>Sumário</p>
+    </button>
+    <div class="panel" id="panelBtn">
+      <ul type="1">
+        <a class="listPanel" href="#contextualizing">
+          <li>1.0 Contextualizando</li>
+        </a>
+        <a class="listPanel" href="#software-and-programing-logic">
+          <li>2.0 Softwares e a Lógica de programação</li>
+        </a>
+        <a class="listPanel" href="#algorithms">
+          <li>3.0 Algoritmos</li>
+        </a>
+        <a class="listPanel" href="#narrative-description">
+          <li>4.0 Descrição Narrativa</li>
+        </a>
+        <a class="listPanel" href="#flowcharts">
+          <li>5.0 Fluxogramas</li>
+        </a>
+        <a class="listPanel" href="#value-representation">
+          <li>6.0 Representação de valores</li>
+        </a>
+        <a class="listPanel" href="#pseudocode">
+          <li>7.0 Pseudocódigo</li>
+        </a>
+        <a class="listPanel" href="#recapping">
+          <li>8.0 Recapitulando</li>
+        </a>
+
+      </ul>
+    </div>
+    <button onclick="changeTheme()" class="accordion">
+      <img src="./img/global/icons/themeIcon.svg" style="margin-right: 10px;" alt="Alterar tema">
+      <p>Alterar tema</p>
+    </button>
+    <button onclick="changeGray()" class="accordion">
+      <img src="./img/global/icons/scaleGrayIcon.svg" style="margin-right:
+          10px;" alt="Escala de Cinza">
+      <p>Escala de Cinza</p>
+    </button>
+    <div class="accordion2">
+      <div style="display: flex;">
+        <img src="./img/global/icons/textIcon.svg" style="margin-right: 10px;" alt="Tamanho da fonte">
+        <p>Tamanho da fonte</p>
+      </div>
+      <div>
+        <button name="increase-font" id="increase-font" title="Aumentar
+            fonte">A +</button>
+        <button name="decrease-font" id="decrease-font" title="Diminuir
+            fonte">A -</button>
+      </div>
+    </div>
+  </div>
+
+
+  <header class="homePage">
+    <div class="header-title">
+      <div>
+        <h2 class="text-Course" style="color: white;">Curso Técnico em</h2>
+        <h1 class="text-NameCourse">Jogos Digitais</h1>
+      </div>
+      <div id="containerBoxTitle">
+        <div class="numberTitle">1</div>
+        <div class="titleHeader">Algoritmos</div>
+      </div>
+      <div>
+        <strong class="objectiveLearning">Objetivo de Aprendizagem</strong>
+        <p class="text-DescriptUnit">Reconhecer os fundamentos de lógica de programação</p>
+      </div>
+      <div>
+        <p class="text-LetsLearn">Vamos iniciar os estudos</p>
+        <a class="btnPlay" href="#contextualizing">Play</a>
+      </div>
+    </div>
+  </header>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./img/global/icons/arrowUpScroll.png"></button>
+
+  <section class="container course">
+
+    <div class="section">
+      <div class="contentSection">
+        <div>
+          <div class="espaceTitle" id="contextualizing"></div>
+          <h1 class="text-Title light-blue">Contextualizando</h1>
+          <h3 class="text-Course">Assista ao vídeo abaixo para uma introdução
+            aos seus estudos</h3>
+        </div>
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/yb0XWN7f0Yk"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="dicas">
+          <img src="./img/global/icons/help.png" id="help" style="margin-right: 20px;" />
+          <p>
+            Quais estratégias para representação do algoritmo Pedro poderá utilizar para atender à demanda da empresa e,
+            por que é importante estruturá-lo com precisão e clareza?
+          </p>
+        </div>
+
+        <div class="espaceTitle" id="software-and-programing-logic"></div>
+        <h1 class="text-Title light-blue">Softwares e a Lógica de Programação</h1>
+
+        <p>
+          Os softwares indicam o que a máquina (hardware) deve executar, ou seja, determina a parte lógica dos sistemas
+          computacionais. Os sistemas operacionais, como Windows, macOS, iOS e Android são softwares, assim como os
+          aplicativos que estão conosco todos os dias a partir de celulares e smartphones.
+        </p>
+
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/3-CDtqWvF9Q"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      </div>
+    </div>
+
+  </section>
+
+  <div class="espaceTitle" id="algorithms"></div>
+  <div class="parallax background-parallax1">
+    <div class="cubeBlack">
+      <h1 class="text-Title light-blue">Algoritmos</h1>
+      <p>
+        Os algoritmos são passos ordenados que instruem ações que devem ser realizadas para se obter um determinado
+        resultado. Antes de executarmos esses passos, é importante planejar quais são e como deverão ser executados para
+        que tudo saia como o esperado.
+        Nesse sentido, o algoritmo é a estruturação ordenada dos passos necessários para a solução de um problema, por
+        exemplo. A sua representação efetiva, garantirá que outras pessoas acompanhem e contribuam para a obtenção dessa
+        solução. É importante conhecer a estrutura dos algoritmos e como representá-los, visto que programação envolve
+        basicamente a implementação de algoritmos.
+      </p>
+
+      <div class="atencion my-3 mx-3">
+        <img src="./img/global/icons/lightbulb.png" />
+        <p>
+          Diariamente estamos trabalhando com algoritmos mesmo sem darmos conta disso. Ao fritar um ovo, por exemplo,
+          seguimos determinadas etapas para termos o ovo frito, semelhante ao processo de utilização do algoritmo em que
+          por meio de etapas se obtém um resultado.
+        </p>
+      </div>
+
+      <p>
+        Em programação, existem algumas estratégias para representar um algoritmo, mesmo antes de ter que escrevê-lo em
+        código para ser processado pelo computador, essa representação é importante quando temos que apresentá-la para
+        terceiros, caberá ao elaborador do algoritmo garantir que ele seja bem compreendido por todos. Veja um exemplo a
+        seguir:
+      </p>
+    </div> <!-- End BlackBox -->
+  </div> <!-- End Parallax -->
+
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <img class="w-75 m-auto" src="./img/ue1/Imagem 1.png" alt="Infográfico que representa um algoritmo antes de descrevê-lo para códigos. 
+        Utiliza-se várias formas e setas. O infográfico segue uma trilha que começa com a palavra Início, seguindo para abrir tela 
+        de login, Digite seu login,  ler o login, login cadastrado no sistema? que pode seguir para o não ou sim. Se for para o não, 
+        segue para login não cadastrado e depois volta para digite seu login; se for para o sim continua a trilha em digite sua senha, 
+        ler a senha, senha cadastrada no sistema? que pode seguir para o não ou sim. Se for para o não, segue para senha não cadastrada 
+        e  depois volta para digite sua senha; se for sim, segue a trilha em login realizado com sucesso, liberar acesso, fechar tela 
+        de login e encerra a execução do algoritmo na palavra Fim.
+        " />
+
+        <p>
+          O estudo sobre algoritmos é essencial na área de programação, sendo uma das principais bases de conhecimento
+          da área e acompanhando o programador durante toda a sua vida profissional. Para compreender melhor, acompanhe
+          agora quais são as estratégias mais utilizadas para representar algoritmos.
+        </p>
+
+        <div class="espaceTitle" id="narrative-description"></div>
+        <h1 class="text-Title light-blue">Descrição Narrativa</h1>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <p>
+          A forma como representamos nossos algoritmos é importante, uma delas é a Descrição Narrativa, ela é uma das
+          formas mais fáceis porém menos usadas, pois o seu foco é entender como se dá a solução do problema, ao invés
+          de focar nas etapas que levam até ela. Essa maneira pode ser usada para descrever qualquer tipo de
+          algoritmo. Para usar essa forma de representação, basta descrever ou “narrar” como seriam os passos até
+          chegar na solução, da forma mais simples e direta possível, utilizando linguagem comum mesmo. Para
+          exemplificar, faremos a representação descritiva de um algoritmo para realizar a fritura de um ovo:
+        </p>
+        <br>
+
+        <p>1. Pegue o ovo;
+        </p>
+        <p>2. Pegue a frigideira;
+        </p>
+        <p>3. Pegue a manteiga;
+        </p>
+        <p>4. Posicione a frigideira no fogão;
+        </p>
+        <p>5. Acenda o fogo;
+        </p>
+        <p>6. Coloque uma porção de manteiga na frigideira;
+        </p>
+        <p>7. Quebre o ovo e ponha o conteúdo de dentro da casca na frigideira;
+        </p>
+        <p>8. Aguarde até que o ovo esteja frito;
+        </p>
+        <p>9. Apague o fogo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <p>
+          Esse exemplo nos mostra uma das características mais básicas de um algoritmo, que é de não ser o único caminho
+          possível para a solução desejada, apenas mais um, que pode ser o melhor ou não.
+        </p>
+        <p>
+          Você percebeu que, durante toda a descrição, é como se estivéssemos dando ordens para alguém? Isso se torna
+          mais perceptível quando usamos a representação descritiva, que é a mais próxima da forma em que nos
+          comunicamos, pois essa característica de “ordenar” uma ação, está presente em todos os algoritmos. É
+          exatamente isso que um programador faz, resumidamente, é por meio de algoritmos que o programador dar ordens
+          para o computador executar alguma ação.
+        </p>
+        <p>
+          A descrição narrativa pode ser fácil de se entender e de ser escrita, porém apresenta alguns pontos que fazem
+          com que seja a menos usada, como:
+        </p>
+        <p>
+          <li class="my-1 mx-1">
+            Pode ser mal interpretada ou ter uma interpretação diferente da esperada;
+          </li>
+          <li class="my-1 mx-1">
+            Simples ações possuem descrições extensas;
+          </li>
+          <li class="my-1 mx-1">
+            A falta de informações pode gerar incredulidade no resultado.
+          </li>
+        </p>
+        <p>
+          Esse tipo de representação é geralmente usada em âmbito acadêmico ou quando queremos demonstrar como
+          determinado algoritmo funciona de forma resumida, seja para alguém que não tem muito conhecimento na área ou,
+          até mesmo, se estamos sem tempo de fazer uma representação mais elaborada.
+        </p>
+
+
+        <div class="espaceTitle" id="flowcharts"></div>
+        <h1 class="text-Title light-blue">Fluxogramas</h1>
+
+        <p>
+          Os fluxogramas são bastante utilizados para representar algoritmos. Apesar de não serem de difícil
+          interpretação, requerem mais atenção para que possam ser bem compreendidos. Esse tipo de representação utiliza
+          formas geométricas para simbolizar as várias etapas do algoritmo, fazendo uso de gráficos que tornam a leitura
+          muito mais prática, funcionando como uma espécie de mapa, no qual é possível representar melhor as etapas que
+          serão executadas.
+        </p>
+
+        <p>
+          Lembra do algoritmo de fritar o ovo que descrevemos? Acompanhe agora como sua representação fica mais rica ao
+          ser representada em um fluxograma.
+        </p>
+
+        <img class="w-75 m-auto" src="./img/ue1/Imagem 2.png"
+          alt="Infográfico representando um algoritmo feito para fritar um ovo. Início fritar um ovo, Tem o ovo? Se não, comprar o ovo. Se sim, pegar a manteiga. Tem manteiga? Se não, comprar manteiga. Se sim, posicionar a frigideira no fogão, depois colocar uma porção de manteiga na frigideira, acender o fogo, por o conteúdo do ovo na frigideira, aguardar. O ovo fritou? Se não, aguardar mais um pouco. Se sim, apagar o fogo e o resultado é o ovo frito." />
+
+        <p>
+          Você consegue perceber como ele nos entrega mais informações e deixa bem mais claro o que está sendo feito?
+          Geralmente, algoritmos representados em fluxogramas são bem mais complexos do que o exemplo dado, entretanto,
+          diferentemente da forma descritiva, o uso de fluxograma deve ter seu foco em demonstrar, da forma mais
+          objetiva possível, como é todo o processo de execução do algoritmo, deixando claro as etapas que levam ao
+          resultado.
+          Para conseguir ler corretamente um fluxograma é necessário saber o que cada forma representa, no exemplo do
+          ovo frito que usamos temos:
+        </p>
+
+        <div class="flex-and-grid-2 w-full">
+          <img width="60px" src="./img/ue1/icons/Vector1-sphere.svg" alt="Imagem de uma esfera" />
+          <p class="my-2 mx-2">As esferas representando o início e fim do algoritmo;</p>
+        </div>
+        <div class="flex-and-grid-2 w-full">
+          <img width="60px" src="./img/ue1/icons/Vector2-diamond.svg" alt="Imagem de um losango" />
+          <p class="my-2 mx-2">Os losangos representando condições de checagem;</p>
+        </div>
+        <div class="flex-and-grid-2 w-full">
+          <img width="60px" src="./img/ue1/icons/Vector3-cube.svg" alt="Imagem de um retângulo" />
+          <p class="my-2 mx-2">Os retângulos representando bloco de ações;</p>
+        </div>
+        <div class="flex-and-grid-2 w-full">
+          <img width="60px" src="./img/ue1/icons/Vector4-hexagon.svg" alt="Imagem de um hexágono" />
+          <p class="my-2 mx-2">Os hexágonos representando a entrada de dados.</p>
+        </div>
+
+        <div class="atencion my-3 mx-3">
+          <img src="./img/global/icons/lightbulb.png" />
+          <p>
+            Utilizando um fluxograma, o programador tem a possibilidade de representar seu algoritmo independente do
+            nível de complexidade.
+          </p>
+        </div>
+
+        <p>
+          É fundamental fazer bom uso das formas e uma ótima dica é nunca usar a mesma forma para tipos diferentes de
+          etapas (como usar uma forma para condições e a mesma forma para ações por exemplo), o uso de formas simples é
+          importante para dar clareza ao fluxograma quando for lido por alguém, mas o seu elaborador não está preso à
+          forma nenhuma, podendo escolher usar qualquer uma que quiser. Você pode usar sites ou programas para elaborar
+          seu fluxograma, a maneira como você o constrói não importa, mas sim como ele fica após terminado, por que quem
+          está elaborando deve se preocupar, não só com a estrutura e o fluxo lógico do algoritmo, mas se todo o
+          processo terá uma leitura de fácil compreensão para terceiros, pois é comum o programador trabalhar em equipe,
+          então ter facilidade em elaborar algoritmos bastante descritivos faz diferença na hora de compartilhar o
+          trabalho.
+        </p>
+
+        <div class="atencion my-3 mx-1">
+          <img src="./img/global/icons/atencion.png" />
+          <p>
+            Ao ler um fluxograma, deve-se seguir a mesma direção que as setas apresentadas, que servem justamente para
+            indicar a direção do fluxo lógico para chegar no resultado.
+          </p>
+        </div>
+
+        <!--SIMULADOR-->
+
+        <div class="espaceTitle" id="value-representation"></div>
+        <h1 class="text-Title light-blue">Representação de valores</h1>
+
+        <p>
+          Agora que você já conhece como representar seu algoritmo de forma prática, antes de saber como ele é em
+          código, é importantíssimo que você conheça sobre a representação dos valores que manipulamos quando
+          programamos um software.
+        </p>
+        <p>
+          Para representar algum valor na programação, usamos as Variáveis, que são espaços reservados na memória RAM do
+          computador para armazenar dados, como caixas virtuais que guardarão o valor que você atribuir para elas. Esses
+          valores podem ser numéricos, literais, lógicos e até outros tipos de dados mais específicos.
+        </p>
+        <p>
+          O termo variável, vem justamente da sua principal característica, que é a capacidade de variar o valor
+          guardado, possibilitando que o último valor guardado seja substituído por um novo sempre que necessário,
+          contanto que seja do mesmo tipo de dado. Por possuírem essa característica, elas são a forma mais comum na
+          programação, sendo o principal produto de tratamento dentro dos softwares, isto é, aquilo que mais é
+          manipulado quando programamos.
+        </p>
+        <p>
+          Além do tipo de dado, toda variável possui um nome próprio, para que seja facilmente identificada sempre que
+          precisar ser acessada. Representando um valor que pode ou não estar definido. Contudo, mesmo que indefinido, é
+          possível saber o tipo de valor, se é um número ou uma palavra, por exemplo.
+        </p>
+
+        <div class="atencion my-3 mx-3">
+          <img src="./img/global/icons/lightbulb.png" />
+          <p>
+            Outro tipo de representação de valores são as constantes, que compartilham os mesmos tipos de valores de uma
+            variável, porém, uma vez que o valor armazenado nela é definido, ele não é mais alterado, ou seja, ela
+            sempre representará aquele valor guardado.
+          </p>
+        </div>
+
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/Gou9VavekMM"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+        <p>
+          Para entender melhor o motivo de usar variáveis, vamos pensar em um algoritmo que calcule o total de quanto um
+          funcionário irá receber, depois de uma bonificação de por exemplo 35% no seu salário. Como seria um algoritmo
+          para isso? Acompanhe o exemplo no fluxograma a seguir.
+        </p>
+
+        <img class="w-75 m-auto" src="./img/ue1/Imagem 3.png" alt="Fluxograma, começando em iniciar, seguido de pedir pagamento; depois, 
+        multiplicar pagamento por 1,35; depois, mostrar resultado e por fim encerrar.
+        " />
+
+        <p>
+          Você consegue perceber o que é a variável que usamos nesse algoritmo? Isso mesmo, pagamento é a nossa
+          variável. Uma vez que um valor é atribuído a pagamento, o algoritmo executa o cálculo como se o que estivesse
+          escrito fosse o valor que ela representa e não a palavra pagamento, que é apenas o nome da variável.
+        </p>
+
+        <p>
+          Digamos que o valor atribuído a ela seja 1100 como exemplo, no momento do cálculo é como se o algoritmo
+          estivesse escrito assim:
+        </p>
+
+        <img class="w-75 m-auto" src="./img/ue1/Imagem 4.png" alt="Fluxograma, começando em iniciar, seguido de pedir pagamento; depois, multiplicar 
+        1100 por 1,35; depois, mostrar resultado e por fim encerrar.
+        " />
+
+      </div>
+    </div>
+  </section>
+
+  <div class="espaceTitle" id="pseudocode"></div>
+  <div class="parallax background-parallax2">
+    <div class="cubeBlack">
+      <h1 class="text-Title light-blue">Pseudocódigo</h1>
+      <p>
+        Agora que você conhece sobre como representar um valor, vamos aumentar o nível de aprendizagem e conhecer uma
+        forma de representar um algoritmo que consegue fazer um uso ainda melhor das variáveis, o Pseudocódigo.
+      </p>
+
+      <p>
+        O pseudocódigo é uma forma intermediária de escrita, estando entre a língua comum que falamos e as linguagens de
+        programação. Um dos principais objetivos da utilização de pseudocódigos é possibilitar, para quem ainda não
+        possui conhecimento em programação, uma experiência real de como programar o seu algoritmo de forma fácil e
+        prática usando uma linguagem fácil de compreensão.
+      </p>
+      <p>
+        Foi criado com o propósito de ser um dos primeiros contatos do estudante na areá, pois não é apenas uma
+        representação, mas uma simulação de uma verdadeira programação no computador, assim, quando o estudante for
+        começar a programar usando linguagens de programação reais, terá mais facilidade em trabalhar com os códigos e
+        formas de escrita.
+      </p>
+      <p>
+        O pseudocódigo é mais usado para representações de algoritmos mais específicos, como cálculos matemáticos e
+        sistemas lógicos, o que não impede, obviamente, a representação de outros tipos de algoritmos. Contudo, não é
+        uma das formas mais práticas de representação, qualquer pessoa pode saber o que está escrito, mas o seu sistema
+        lógico é melhor compreendido por outros programadores por exemplo, tornando essa forma de representação ser
+        menos indicada se você deseja ter mais praticidade e mais liberdade criativa na hora de elaborar seu algoritmo,
+        nesse caso, o uso de um fluxograma seria a melhor escolha.
+      </p>
+    </div> <!-- End BlackBox -->
+  </div> <!-- End Parallax -->
+
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <p>
+          Um exemplo de pseudocódigo bastante utilizado é o Portugol, também conhecido como Português Estruturado, uma
+          pseudo linguagem feita com propósito voltado a aprendizagem de programadores, veja a seguir um vídeo sobre a
+          instalação do Portugol.
+        </p>
+
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/aSus3ngEPKY"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+        <p>
+          Para exemplificar, veja a seguir como é representado um algoritmo que realiza uma soma simples entre dois
+          números inteiros utilizando o portugol, nesse exemplo vamos usar apenas alguns termos dos vários que existem
+          nessa pseudo linguagem.
+        </p>
+
+        <img class="w-75 m-auto" src="./img/ue1/Imagem 5.png" alt="Tela com fundo escuro mostrando a linguagem de programação utilizada pelo Portugol. Palavra programa escrito em vermelho, logo abaixo uma chave, palavra inteiro escrito em azul,  número 1, inteiro escrito em azul, número 2. De cima para baixo, palavra função, escrita em vermelho, palavra início e parênteses, abaixo, chave, abaixo, palavra escreva, entre parênteses ‘’digite um número’’ em amarelo, abaixo palavra leia entre parênteses número 1, abaixo palavra escreva, entre parênteses ‘’digite outro número’’ em amarelo, em seguida palavra leia entre parênteses número 2, seguido pela palavra escreva entre parênteses número 1 mais número 2. Por fim, duas chaves.
+        " />
+
+        <div class="atencion my-3 mx-1">
+          <img src="./img/global/icons/atencion.png" />
+          <p>
+            A quantidade de termos do portugol se estende bem mais do que no exemplo usado, sendo possível escrever
+            qualquer tipo de algoritmo, porém, de forma bem mais extensa e complexa que os outros tipos de
+            representações.
+          </p>
+        </div>
+
+        <p>
+          Em programação é comum usar softwares para interpretar seu código quando se está programando, mas para evoluir
+          como programador é necessário dominar a linguagem de programação propriamente dita. Veja a seguir como seria
+          esse mesmo algoritmo se fosse feito em uma linguagem de programação, que no caso é a linguagem C.
+        </p>
+
+        <img class="w-75 m-auto" src="./img/ue1/Imagem 6.png" alt="Linguagem de programação C, de cima para baixo temos: #include <stdio.h>, embaixo #include <stdlib.h>, logo abaixo: int main (void), seguido de: {, int numero 1, numero 2; na linha seguinte printf(‘’digite um numero inteiro:’’); depois scanf(‘’%d’’, &numero1); na linha seguinte printf(‘’digite um numero inteiro:’’); depois scanf(‘’%d’’, &numero2); logo abaixo printf(numero1 + numero2); seguido de system(‘’pause’’); e na última linha return (0); }.
+          " />
+
+        <p>
+          Você percebeu a diferença de escrita entre os dois exemplos usados? Sabendo da dificuldade inicial que há para
+          muitas pessoas compreenderem códigos em programação, o portugol utiliza termos simples e objetivos, mas bem
+          próximos da forma como nós falamos, com intuito de fazer com que os estudantes possam ter uma noção inicial do
+          que o código faz, mesmo antes de memorizarem os seus termos.
+        </p>
+        <p>
+          Para entendermos melhor o uso do pseudocódigo, vamos analisar o algoritmo do exemplo da soma dada
+          anteriormente utilizando o portugol. Você conseguiu identificar as variáveis usadas nele? A partir do uso de
+          pseudocódigo, já passa a ser necessário saber como declarar uma variável, isto é, criá-la e deixá-la pronta
+          para ser utilizada no código.
+        </p>
+        <p>
+          O método para declarar uma variável é bem simples e, independente da linguagem de programação utilizada,
+          seguirá a mesma ordem e quantidade de etapas. Esse método consiste em, primeiramente, definir o tipo de dado
+          que será guardado, depois deve ser escrito qual é o nome da variável, e por fim, mas não obrigatório nesse
+          momento, atribuir um valor para ela.
+        </p>
+        <p>
+          Dessa vez, conheça os tipos de dados presentes no portugol studio, começando com os tipos numéricos, que são
+          utilizados principalmente para realizar cálculos matemáticos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <table class="table-uc4 w-full my-1">
+    <tr id="first">
+      <td>Tipo</td>
+      <td>Descrição</td>
+      <td>Valores</td>
+    </tr>
+    <tr>
+      <td>Inteiro</td>
+      <td>Representa os números inteiros.</td>
+      <td>21 &nbsp; &nbsp; -7<br>
+        0 &nbsp; &nbsp;144</td>
+    </tr>
+    <tr>
+      <td>Real</td>
+      <td>Representa os números reais (decimais)</td>
+      <td> -2.5 &nbsp; &nbsp; 7.1<br>
+        0.65 &nbsp; &nbsp;-28.98</td>
+    </tr>
+  </table>
+
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <p class="my-1">
+          Agora os tipos literais, utilizados para guardar letras, caracteres especiais e até números.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <table class="table-uc4 w-full my-1">
+    <tr id="first">
+      <td>Tipo</td>
+      <td>Descrição</td>
+      <td>Valores</td>
+    </tr>
+    <tr>
+      <td>Caracter</td>
+      <td>Representa um único caractere e deve ser escrito entre aspas simples.</td>
+      <td>‘M’ &nbsp;‘#’<br>
+        ‘b’ &nbsp; ‘6’</td>
+    </tr>
+    <tr>
+      <td>Cadeia</td>
+      <td>Representa um conjunto de caracteres e deve ser escrito entre aspas duplas.</td>
+      <td>“Casa”<br>”#SENAIPLAY”<br>
+        “4687”</td>
+    </tr>
+  </table>
+
+
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <div class="atencion my-3 mx-1">
+          <img src="./img/global/icons/atencion.png" />
+          <p>
+            Não é possível realizar cálculos com variáveis de tipo literal, mesmo que seja um número, pois esse número
+            não é tratado como número e sim um caractere literal (textual).
+          </p>
+        </div>
+
+        <p>
+          O Tipo lógico é utilizado em expressões lógicas quando queremos criar condições de checagem no algoritmo, ou
+          seja, checar se algo é verdadeiro ou não.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <table class="table-uc4 my-1">
+    <tr id="first">
+      <td>Tipo</td>
+      <td>Descrição</td>
+      <td>Valores</td>
+    </tr>
+    <tr>
+      <td>Lógico</td>
+      <td>Representa valores lógicos, que só podem ser verdadeiros ou falsos.</td>
+      <td>verdadeiro<br>
+        falso</td>
+    </tr>
+
+  </table>
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+
+        <p>
+          Agora, vamos saber como nomear corretamente as variáveis, em que o seu “nome” tem como objetivo servir como
+          identificação da variável e nada mais é do que um conjunto de caracteres, que pode ser qualquer combinação
+          entre os caracteres válidos, que são:
+        </p>
+
+        <p>
+          <li class="my-1 mx-1">
+            Todas as letras (com exceção do Ç) sem acentos, e ainda independente de ser caixa alta ou baixa;
+
+          </li>
+          <li class="my-1 mx-1">
+            Todos os números, contanto que não esteja no início do nome;
+          </li>
+          <li class="my-1 mx-1">
+            E o caráter especial “ _ “ conhecido como “underline” ou “underscore”.
+          </li>
+        </p>
+
+        <p>
+          Por fim, atribuímos um valor para a variável, para isso é utilizado o sinal de igualdade =, que diferente de
+          como usamos na matemática, em programação o sinal de igualdade sozinho serve para atribuir valor e não
+          comparar.
+        </p>
+
+        <p>
+          Importante ressaltar que esse método de declaração de variável pode ser usado em qualquer linguagem de
+          programação, que sempre será na mesma ordem, que é: tipo > nome > valor, o que pode mudar é apenas a
+          nomenclatura dos tipos de dados, que no caso usamos os tipos do portugol studio na programação do
+          pseudocódigo.
+        </p>
+
+        <p>
+          Agora que ficou conhecendo as etapas, acompanhe os exemplos a seguir com a declaração de
+          variáveis de cada tipo no portugol studio.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <table class="table-uc4 w-full my-1">
+    <tr id="first">
+      <td>Declaração</td>
+      <td>Descrição</td>
+
+    </tr>
+    <tr>
+      <td>Inteiro dias = 7</td>
+      <td>Variável do tipo inteiro chamada dias com valor 7</td>
+    </tr>
+    <tr>
+      <td>Real pagamento = 2495.50</td>
+      <td>variável do tipo real chamada pagamento com valor 2495.50</td>
+    </tr>
+    <tr>
+      <td>Caracter tamanho = ‘G’</td>
+      <td>Variável do tipo caracter chamada tamanho com valor ‘G’</td>
+    </tr>
+    <tr>
+      <td>Cadeia casa = “preta”</td>
+      <td>Variável do tipo cadeia chamada casa com valor “preta”</td>
+    </tr>
+    <tr>
+      <td>Lógico checagem = verdadeiro</td>
+      <td>Variável do tipo lógico chamada checagem com valor verdadeiro</td>
+    </tr>
+
+  </table>
+
+  <section class="container course">
+    <div class="section">
+      <div class="contentSection">
+
+        <p>
+          Notou que semelhante a descrição narrativa, em uma parte do algoritmo a forma de escrita é como se
+          estivéssemos dando ordens a alguém? A seguir, vamos ver a descrição de cada elemento:
+        </p>
+
+        <p>
+          <li class="my-1 mx-1">
+            <b>programa:</b> é o programa em si, tudo que estiver dentro das chaves após o nome “programa” será
+            computado quando
+            o usuário executar o programa.
+          </li>
+          <li class="my-1 mx-1">
+            <b>inteiro</b>: O tipo de variável a ser trabalhado no algoritmo, nesse caso temos as variáveis numero1 e o
+            numero2,
+            que guardam valores do tipo de números inteiros.
+          </li>
+          <li class="my-1 mx-1">
+            <b>função início:</b> é a ordem que inicia o algoritmo dentro do programa, todas as instruções que estiverem
+            dentro
+            de suas chaves serão executadas;
+          </li>
+          <li class="my-1 mx-1">
+            <b>escreva:</b> é a ordem para o programa escrever o que está dentro dos parênteses, na tela. No exemplo
+            usado temos:
+            escreva (“digite um número"), a frase digite um número aparecerá na tela quando essa linha for executada.
+          </li>
+          <li class="my-1 mx-1">
+            <b>leia:</b> é a ordem para o programa ler o que o usuário vai digitar e guardar os dados recebidos em uma
+            variável.
+            Usando o exemplo, temos: leia (numero1), quando essa linha for executada, o programa vai esperar o usuário
+            digitar alguma coisa para então continuar com a execução do programa e guardar o que o usuário digitou, na
+            variável numero1.
+          </li>
+        </p>
+
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/xpfwQml98bw"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+        gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+        <div class="atencion my-3 mx-3">
+          <img src="./img/global/icons/lightbulb.png" />
+          <p>
+            O portugol foi criado pelos professores Antonio Carlos Nicolodi do Brasil e Antonio Mannso de Portugal em
+            1986, ele é usado em vários outros países que falam o portugues.
+          </p>
+        </div>
+
+
+        <div class="espaceTitle" id="recapping"></div>
+        <h1 class="text-Title light-blue">Recapitulando</h1>
+
+        <p>
+          Nesta unidade conhecemos o que é um algoritmo e a sua importância na solução de problemas. Sabemos que sua boa
+          estruturação é fundamental para que o código flua bem e o programa funcione da forma esperada. Com isso,
+          possibilitar uma leitura precisa das etapas, tanto para o seu criador, como para outros programadores que
+          venham a trabalhar com ele.
+        </p>
+
+        <p>
+          Foi demonstrado as diferentes estratégias para representar um algoritmo, desde a representação narrativa, como
+          também em fluxograma e pseudocódigo usando o portugol studio. Também conhecemos as variáveis, que são o
+          elemento básico de processamento e a forma de representar os valores que manipulamos na execução do algoritmo.
+          Por meio do seu uso se torna possível a elaboração de algoritmos ainda mais completos, possibilitando um maior
+          número de soluções como foi demonstrado nos exemplos, nos quais você também aprendeu como é o processo de
+          criar e atribuir valores às variáveis e pode acompanhar sua utilização na prática.
+        </p>
+
+        <p>
+          O estudo de algoritmos é de grande importância para se tornar um verdadeiro profissional na área de
+          programação, servindo como uma das bases do conhecimento durante toda a carreira.
+        </p>
+
+
+        <div class="flex justify-center w-full">
+          <img src="./img/ue1/check.svg" />
+          <p class="px-3" id="check-green-word"> Solução do problematizando</p>
+        </div>
+        <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/zsTTj9437MM"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+      </div>
+    </div>
+    </div>
+
+    </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <div class="background-1 "> </div>
+
+  <div class="containerFooter row">
+    <div class="row disable">
+      <!-- Button Removed -->
+    </div>
+    <a class="row" href="aula-2.html">
+      <p class="btnDesafio">Próximo Desafio</p>
+      <img class="arrowImg" src="img/global/icons/nextclass.png" />
+    </a>
+  </div>
+
+  <!-- Libras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+
+</html>

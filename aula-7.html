@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Digitais - SENAI EAD</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="SENAISP">
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/aula7.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./scripts/index.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a onclick="openNav()"><img src="./img/global/icons/menu.png" class="logoJogos" /></a>
+        <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+        <div></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <button onclick="openList()" class="accordion"><img src="./img/global/icons/summary.svg"
+                style="margin-right: 10px;">
+            <p>Sumário</p>
+        </button>
+        <div class="panel" id="panelBtn">
+            <ul type="1">
+                <a class="listPanel" href="#contextualizing">
+                    <li>1.0 Contextualizando</li>
+                </a>
+                <a class="listPanel" href="#repetitions">
+                    <li>2.0 Repetições</li>
+                </a>
+                <ul type="1" style="margin-left:20px;">
+                    <a class="listPanel" href="#for">
+                        <li>2.1 For</li>
+                    </a>
+                    <a class="listPanel" href="#while">
+                        <li>2.2 For while</li>
+                    </a>
+                    <a class="listPanel" href="#do-while">
+                        <li>2.3 Do while</li>
+                    </a>
+                </ul>
+            </ul>
+
+        </div>
+        <button onclick="changeTheme()" class="accordion">
+            <img src="./img/global/icons/themeIcon.svg" style="margin-right: 10px;" alt="Alterar tema">
+            <p>Alterar tema</p>
+        </button>
+        <button onclick="changeGray()" class="accordion">
+            <img src="./img/global/icons/scaleGrayIcon.svg" style="margin-right: 10px;" alt="Escala de Cinza">
+            <p>Escala de Cinza</p>
+        </button>
+        <div class="accordion2">
+            <div style="display: flex;">
+                <img src="./img/global/icons/textIcon.svg" style="margin-right: 10px;" alt="Tamanho da fonte">
+                <p>Tamanho da fonte</p>
+            </div>
+            <div>
+                <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+                <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="homePage">
+
+        <div class="header-title">
+            <div>
+                <h2 class="text-Course" style="color: white;">Curso Técnico em</h2>
+                <h1 class="text-NameCourse">Jogos Digitais</h1>
+            </div>
+
+            <div id="containerBoxTitle">
+                <div class="numberTitle">7</div>
+                <div class="titleHeader">Repetições</div>
+            </div>
+
+            <div>
+                <strong class="objectiveLearning">Objetivo de Aprendizagem</strong>
+                <p class="text-DescriptUnit">Programar funções e métodos na elaboração de
+                    programação e sistemas</p>
+            </div>
+
+            <div>
+                <p class="text-LetsLearn">Vamos iniciar os estudos</p>
+                <a class="btnPlay" href="#contextualizing">Play</a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img
+            src="./img/global/icons/arrowUpScroll.png"></button>
+    <div class="espaceTitle" id="contextualizing"></div>
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <h1 class="text-Title light-blue">Contextualizando</h1>
+                <h3 class="text-Course">Assista ao vídeo abaixo para uma introdução
+                    aos seus estudos</h3>
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/-lZoFwiOPMc"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                  gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="dicas">
+                    <img src="./img/global/icons/help.png" id="help" style="margin-right: 20px;" />
+                    <p>
+                        Por quais características, as estruturas de repetições, se fazem tão importantes na vida do
+                        programador?
+                    </p>
+                </div>
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/DdoXFur6z_E"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                  gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+                <div class="espaceTitle" id="repetitions"></div>
+                <h1 class="text-Title light-blue">Repetições</h1>
+
+                <p>
+                    O loop, do inglês ciclo, é todo o processo de repetição que um programa realiza, desde a sua
+                    inicialização e execução das suas tarefas, até a sua finalização. Para então, ter a reinicialização
+                    de toda a lógica, sendo executada indefinidamente, ou até que um agente interno ou externo
+                    interrompa a sua execução. Na imagem a seguir você pode conferir a estrutura básica de um loop.
+                </p>
+
+                <p>
+                    A estrutura dos comandos, a seguir, pode mudar de acordo com a linguagem de programação. Para essa
+                    unidade vamos utilizar exemplos da linguagem de C#, pois é uma das mais comuns no mercado.
+                </p>
+
+                <!--Div de aviso com alerta-->
+                <div class="atencion my-3 mx-1">
+                    <img src="./img/global/icons/atencion.png" />
+                    <p>
+                        Mesmo que a sintaxe seja diferente em linguagens como: Java, Python, Pascal, Fortran, entre
+                        outras, o fundamental é que você compreenda a lógica por trás dos comandos. Dessa forma, você
+                        não tem muita dificuldade em utilizar nenhuma delas.
+                    </p>
+                </div>
+
+                <img class="w-75 m-auto" src="./img/ue7/Imagem 1.png" alt="Fluxograma começando em iniciar, passa por executar ações, finaliza e apresenta 
+                um loop, retornando ao início.
+                " />
+            </div>
+        </div>
+    </section>
+
+
+    <!--Parallax-->
+    <div class="espaceTitle" id="for"></div>
+    <div class="parallax background-parallax1">
+        <div class="cubeBlack">
+            <h1 class="text-Title light-blue">For</h1>
+            <p>
+                O loop de repetição for (do inglês “para”), é o mais utilizado nas rotinas de programação, especialmente
+                quando é conhecido previamente a quantidade de loops que deverão ser executados, ou seja, a quantidade
+                de vezes que você deseja que ações sejam executadas. Dentro do for, existem três parâmetros, que são:
+                Inicialização, Condição e incremento.
+            </p>
+
+            <p>
+                <li class="my-1 mx-1">
+                    Na inicialização, é informado uma variável para ser o contador dela o qual será iniciada a contagem
+                    da
+                    repetição.
+                </li>
+                <li class="my-1 mx-1">
+                    A condição indica ao loop o que deve ser examinado, para que, enquanto for verdade, o loop continue
+                    a
+                    acontecer, nesse caso examina a variável que é o contador do loop.
+                </li>
+                <li class="my-1 mx-1">
+                    Já o incremento é onde a variável que conta o loop, é incrementada em cada loop do for, geralmente
+                    usando o operador de incremento que vimos na unidade sobre operadores.
+                </li>
+            </p>
+
+            <p>
+                Esses parâmetros ficam alocados dentro de parênteses, após o nome do comando e é utilizado o ponto e
+                vírgula “ ; “, para fazer a separação entre eles. Veja, a seguir, um exemplo do uso do for:
+            </p>
+
+            <img class="w-75 m-auto" src="./img/ue7/Imagem 2.png" alt="" />
+
+        </div> <!-- End BlackBox -->
+    </div> <!-- End Parallax -->
+
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/LK-UhU893c0"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                <div class="espaceTitle" id="while"></div>
+                <h1 class="text-Title light-blue">While</h1>
+
+                <p>
+                    O loop de repetição while (enquanto) é um loop no qual é possível definir uma condição, para que
+                    ações continuem sendo sempre executadas enquanto ela não for verdadeira e aí então parar a sua
+                    rotina. Esta instrução é usada quando queremos, que determinadas tarefas, sejam repetidas um número
+                    indefinido de vezes. A condição que fará com que o loop while pare, deverá retornar um valor
+                    booleano, ou seja, precisa ser uma expressão lógica. Veja, a seguir, um exemplo do comando while:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue7/Imagem 3.png" alt="" />
+
+                <p>
+                    Perceba que usamos uma variável inteira para ser o contador, que é usado na condição que mantém o
+                    loop sendo executado ou não. Nesse caso, essa condição analisa se a variável é menor que 7,e,
+                    enquanto ela for, o loop continuará a ser executado. É importante salientar que o loop pode não ser
+                    executado nenhuma vez; isso pode acontecer quando a primeira verificação da condição for falsa.
+                    Neste caso, o programa simplesmente irá pular e continuar o algoritmo.
+                </p>
+                <p>
+                    O contrário também é muito comum de acontecer, se o programador esquecer de dar uma saída para o
+                    loop, ou seja, não colocar o fator para que o loop pare de acontecer: o programa ficará preso para
+                    sempre, criando o chamado “loop infinito”.
+                </p>
+                <p>
+                    No exemplo usado, a variável “contador”, que é usada na condição do loop, é incrementada a cada
+                    execução e, dessa forma, quando ela alcançar o valor esperado na condição, o loop será encerrado.
+                </p>
+
+                <div class="espaceTitle" id="do-while"></div>
+                <h1 class="text-Title light-blue">Do while</h1>
+
+                <p>
+                    A estrutura de repetição do while (faça enquanto) é bem semelhante à rotina while, porém, com a
+                    diferença de que ela garante que o código dentro do loop seja executado pelo menos uma vez, antes de
+                    entrar na condição de repetição while propriamente dita. Veja um exemplo desse comando a seguir:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue7/Imagem 4.png" alt="" />
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/7kT66EyBKXA"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+
+
+
+                <div class="flex justify-center w-full mtop-1">
+                    <img src="./img/ue1/check.svg" />
+                    <p class="px-3" id="check-green-word"> Solução do problematizando</p>
+                </div>
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/7OIXz41tLmc"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                      gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <div class="containerFooter row">
+        <a class="row" href="aula-6.html">
+            <img class="arrowImg" src="img/global/icons/previusclass.png" />
+            <p class="btnDesafio">Desafio anterior</p>
+        </a>
+        <a class="row" href="aula-8.html">
+            <p class="btnDesafio">Próximo Desafio</p>
+            <img class="arrowImg" src="img/global/icons/nextclass.png" />
+        </a>
+    </div>
+
+    <!-- Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>

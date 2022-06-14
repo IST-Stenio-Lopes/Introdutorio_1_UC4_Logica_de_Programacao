@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Digitais - SENAI EAD</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="SENAISP">
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/aula10.css">
+    <link rel="stylesheet" href="./css/uc4.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./scripts/index.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a onclick="openNav()"><img src="./img/global/icons/menu.png" class="logoJogos" /></a>
+        <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+        <div></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <button onclick="openList()" class="accordion"><img src="./img/global/icons/summary.svg"
+                style="margin-right: 10px;">
+            <p>Sumário</p>
+        </button>
+        <div class="panel" id="panelBtn">
+            <ul type="1">
+                <a class="listPanel" href="#contextualizing">
+                    <li>1.0 Contextualizando</li>
+                </a>
+                <a class="listPanel" href="#vectors">
+                    <li>2.0 Vetores</li>
+                </a>
+                <ul type="1" style="margin-left:20px;">
+                    <a class="listPanel" href="#matrices">
+                        <li>2.1 Matrizes</li>
+                    </a>
+                    <a class="listPanel" href="#registers">
+                        <li>2.2 Registros</li>
+                    </a>
+                </ul>
+
+            </ul>
+
+        </div>
+        <button onclick="changeTheme()" class="accordion">
+            <img src="./img/global/icons/themeIcon.svg" style="margin-right: 10px;" alt="Alterar tema">
+            <p>Alterar tema</p>
+        </button>
+        <button onclick="changeGray()" class="accordion">
+            <img src="./img/global/icons/scaleGrayIcon.svg" style="margin-right: 10px;" alt="Escala de Cinza">
+            <p>Escala de Cinza</p>
+        </button>
+        <div class="accordion2">
+            <div style="display: flex;">
+                <img src="./img/global/icons/textIcon.svg" style="margin-right: 10px;" alt="Tamanho da fonte">
+                <p>Tamanho da fonte</p>
+            </div>
+            <div>
+                <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+                <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="homePage">
+
+        <div class="header-title">
+            <div>
+                <h2 class="text-Course" style="color: white;">Curso Técnico em</h2>
+                <h1 class="text-NameCourse">Jogos Digitais</h1>
+            </div>
+
+            <div id="containerBoxTitle">
+                <div class="numberTitle">10</div>
+                <div class="titleHeader">Vetores, Matrizes e Registros</div>
+            </div>
+
+            <div>
+                <strong class="objectiveLearning">Objetivo de Aprendizagem</strong>
+                <p class="text-DescriptUnit">Reconhecer os fundamentos de lógica de programação</p>
+            </div>
+
+            <div>
+                <p class="text-LetsLearn">Vamos iniciar os estudos</p>
+                <a class="btnPlay" href="#contextualizing">Play</a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img
+            src="./img/global/icons/arrowUpScroll.png"></button>
+    <div class="espaceTitle" id="contextualizing"></div>
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <h1 class="text-Title light-blue">Contextualizando</h1>
+                <p>
+                    Assista ao vídeo abaixo para uma introdução aos seus estudos
+                </p>
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/ntDIr9t89AE"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+              gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <div class="dicas">
+                    <img src="./img/global/icons/help.png" id="help" style="margin-right: 20px;" />
+                    <p>
+                        Considerando que os candidatos possuem nome, endereço, partido, cargo, número na urna,
+                        quantidade de votos, e os partidos possuem nome, sigla e número, como ficaria a estrutura para
+                        definir um candidato? Considerando ainda que todos os candidatos começam com votação zerada,
+                        como fazer para zerar a quantidade de votos de todos os candidatos?
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Parallax-->
+    <div class="parallax background-parallax1" alt="aaaaa">
+        <div class="cubeBlack">
+            <h1 class="text-Title light-blue">Vetores</h1>
+            <p>
+                Os vetores são estruturas relativamente simples de se trabalhar e que ajudam, e muito, o trabalho do
+                programador. Vamos imaginar o seguinte problema: você precisa criar um algoritmo que leia nome e quatro
+                notas de cem alunos, calcular a média das notas e informar “aprovado” ou “reprovado”. Considerando uma
+                variável para cada nota e uma para nome, teríamos aí 400 variáveis para notas e 100 para os nomes.
+            </p>
+
+            <p>
+                Imagine o trabalho que isso daria e a quantidade de linhas de código somente para a declaração das
+                variáveis. E pior, imagine que depois de pronto, fosse necessário acrescentar mais 20 alunos. Tarefa
+                complicada!
+            </p>
+
+            <p>
+                Mas, as linguagens de programação fornecem uma estrutura, denominada vetor ou array, que facilita todo
+                esse trabalho de agrupar variáveis. Os vetores são também conhecidos como arrays unidimensionais, ou
+                seja, possuem apenas uma “linha de variáveis”. No nosso exemplo, poderíamos declarar essa variável
+                utilizando a seguinte estrutura:
+            </p>
+
+
+
+        </div> <!-- End BlackBox -->
+    </div> <!-- End Parallax -->
+
+    <!--Section-->
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <img class="w-75 m-auto" src="./img/ue10/Imagem 1.png" alt="Declaração de um array de string com 100 posições e atribuição dos 
+                elementos João e Maria nas posições 0 e 1.
+                " />
+
+                <p>
+                    Veja que “nomes” agora não é mais somente uma variável tipo string, mas sim um conjunto de variáveis
+                    do
+                    tipo string, que recebe o nome “nomes”. Cada uma dessas variáveis pode ser acessada utilizando o seu
+                    índice, que em programação chama-se index, ou seja, a posição de elementos em qualquer conjunto numa
+                    estrutura de dados.
+                </p>
+
+                <!--Div de aviso com lâmpada-->
+                <div class="atencion my-3 mx-3">
+                    <img src="./img/global/icons/lightbulb.png" />
+                    <p>
+                        Na maioria das linguagens, os índices dos vetores começam em 0. Assim, um vetor de 100 elementos
+                        será indexado de 0 a 99. Por exemplo, o primeiro elemento possui o index igual a 0 e o segundo,
+                        o index igual a 1 e etc.
+                    </p>
+                </div>
+
+                <p>
+                    Às vezes é necessário percorrer todos os elementos de um vetor, como por exemplo, para inicializá-lo
+                    com valores iniciais. Isso pode ser feito com a ajuda de um comando de loop. Veja o exemplo:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue10/Imagem 2.png" alt="Declaração de um array de 100 inteiros denominado notas e um comando for
+                 que preenche o array com valores 0." />
+
+                <p>
+                    Neste exemplo, temos um vetor de inteiros de 100 notas. O comando “for” percorre cada um dos
+                    elementos dos vetores. Como ele faz isso? Repare que a variável de incremento “i” é utilizada como
+                    índice do vetor. Logo, na primeira iteração do loop, “i” valerá 0 e acessaremos o elemento 0.
+                    Depois, “i” terá o valor 1 e será acessado o elemento 1, até que chegamos no 100º elemento, de
+                    índice 99. Um outro exemplo, é como somar todas as notas de um vetor e tirar sua média. Veja a
+                    seguir:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue10/Imagem 3.png"
+                    alt="Comando de repetição for que percorre o array notas, atribuindo à variável soma 
+                o valor acumulado da soma dos elementos do array. Ao fim, a variável media recebe a média desse acumulado." />
+
+                <p>
+                    Neste exemplo, nosso vetor de notas é do tipo float e temos duas variáveis para guardar a soma e a
+                    média das notas. A parte de inserção das notas foi omitida neste exemplo, pois nos interessa apenas
+                    como tirar a média. Veja que, a cada iteração do loop “for”, é acumulado na variável “soma” o valor
+                    do elemento que está sendo acessado no momento. Assim, ao término da execução de loop, teremos na
+                    variável “soma” o número total das notas contidas no vetor. Portanto, para calcular a média, basta
+                    dividir a soma por 100. Esse tipo de abordagem é bastante interessante e eficiente, pois se você
+                    quisesse aumentar o número de notas, basta alterar o valor 100 nos parâmetros do comando de laço.
+                    Uma forma mais eficiente ainda seria criar uma variável para tamanho, e sempre que precisar, alterar
+                    somente o valor da variável, como mostrado a seguir:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue10/Imagem 4.png" alt="Comando de repetição for que percorre o array notas, atribuindo à variável soma 
+                o valor acumulado da soma dos elementos do array. Ao fim, a variável media recebe a média desse acumulado. A variável tamanho recebe o valor 100.
+                " />
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/f6KJ9F1WbiE"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+
+                <h1 class="text-Title light-blue">Matrizes</h1>
+
+                <p>
+                    As matrizes, também conhecidas como arrays multi-dimensionais, são estruturas onde temos um vetor de
+                    n posições, e a cada elemento desse vetor está associado um outro vetor de m posições. No nosso
+                    exemplo, poderíamos ter um vetor de 100 elementos (um para cada aluno), e a cada elemento um vetor
+                    de 4 elementos (as 4 notas).
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <table class="table-uc4 text-center">
+        <tr id="first">
+            <td id="table-color-none"></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td id="first" class="no-border">1</td>
+            <td>9,5</td>
+            <td>10</td>
+            <td>8</td>
+            <td>7,5</td>
+        </tr>
+        <tr>
+            <td id="first" class="no-border">2</td>
+            <td>10</td>
+            <td>9</td>
+            <td>9</td>
+            <td>6,5</td>
+        </tr>
+        <tr>
+            <td id="first" class="no-border">3</td>
+            <td>9</td>
+            <td>8,5</td>
+            <td>9,5</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td id="first" class="no-border">...</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="first" class="no-border">99</td>
+            <td>7</td>
+            <td>10</td>
+            <td>10</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td id="first" class="no-border">100</td>
+            <td>7</td>
+            <td>8,5</td>
+            <td>5,5</td>
+            <td>4</td>
+        </tr>
+
+    </table>
+
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <p>
+                    Assim, cada linha da tabela acima representa um aluno, e as colunas representam as notas. Portanto,
+                    uma matriz bidimensional pode ser interpretada como se fosse uma tabela. Veja, no exemplo, como
+                    podemos declarar uma matriz bidimensional:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue10/Imagem 5.png" alt="Declaração de uma matriz bidimensional de 100 linhas por 4 colunas e atribui à linha 
+                3 coluna 2 o valor 7,5
+                " />
+
+                <p>
+                    Aqui nesse exemplo, temos uma matriz 100 X 4, ou seja, 100 linhas por 4 colunas. Cada linha
+                    representa um aluno e as colunas são as notas. No exemplo, estamos acessando o quarto aluno (índice
+                    3) e a terceira nota (índice 2) e atribuindo o valor 7.5.
+                    Assim como nos vetores, podemos percorrer facilmente uma matriz, só que desta vez utilizando dois
+                    loops aninhados (um para as linhas e outro para as colunas).
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue10/Imagem 6.png" alt="Criação de matriz bidimensional de 100 linhas e 40 colunas e 2 comandos de repetição aninhados 
+                que percorrem a matriz preenchendo-a com o valor 0.
+                " />
+
+                <p>
+                    Observe que o loop mais externo (representado com a variável “i”) controla as linhas, enquanto o
+                    loop interno é responsável pelas colunas (variável “j”). Assim, para cada linha, é preenchido todas
+                    as colunas com o valor 0. Ao término da execução do laço mais interno, o controle é passado para o
+                    laço externo, que incrementa 1 no contador “i” (a próxima linha). Em sequência, é executado o laço
+                    interno com o valor de “j”zerado, dando início ao preenchimento das colunas dessa nova linha. Isso é
+                    repetido até que não haja mais linhas (i = 100).
+                </p>
+
+                <p>
+                    Se for necessário calcular a média específica de um aluno, basta informar o índice desse aluno ou
+                    até mesmo criar um vetor contendo todas essas médias.
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue10/Imagem 7.png"
+                    alt="Criação de uma matriz bidimensional notasAlunos com 100 linhas e 4 colunas, um vetor nomes de 100 
+                posições e um vetor medias de 100 posições. Atribuição ao vetor nomes na posição o elemento Pedro e o cálculo da média das notas do elemento 10 da matriz." />
+
+            </div>
+        </div>
+    </section>
+
+    <!--Parallax-->
+    <div class="parallax background-parallax2" alt="aaaa">
+        <div class="cubeBlack">
+
+            <p>
+                No exemplo acima, foi calculada a média do aluno Pedro, que está no índice 10. Veja que tanto nos
+                vetores nomes e médias, quanto na matriz de notas, foi utilizado o mesmo índice (10). Isso é uma
+                estratégia para garantir que os dados referentes ao mesmo aluno estejam sempre no mesmo índice. Assim,
+                se quisermos saber seu nome, notas ou média, basta informar a posição e teremos essas informações.
+            </p>
+
+            <p>
+                Há outros tipos de matrizes, como às tridimensionais, que possuem três índices e são utilizadas para
+                guardar informações que necessitam de três dimensões, tais como as coordenadas de um personagem em um
+                ambiente 3D (x, y, z) ou os canais de cores de um pixel (R, G, B). O processo de criação e utilização é
+                semelhante ao das matrizes bidimensionais, e, para percorrê-las, basta utilizar um loop para cada
+                dimensão.
+            </p>
+
+            <img class="w-75 m-auto" src="./img/ue10/Imagem 8.png" alt="Criação de uma matriz tridimensional para armazenar o valor das cores em RGB.
+            " />
+
+            <p>
+                No exemplo acima, temos uma matriz para guardar a quantidade de tons de cores vermelho, verde e azul em
+                uma determinada cor. Cada um desses canais podem armazenar 256 tons de cada cor, e a mistura desses tons
+                formam todas as cores. No exemplo, na posição (255, 0, 0) é atribuída a cor vermelha.
+            </p>
+
+        </div> <!-- End BlackBox -->
+    </div> <!-- End Parallax -->
+
+    <!--Section-->
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/IbzVzgaR_fA"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+
+                <h1 class="text-Title light-blue">Registros</h1>
+
+                <p>
+                    Os registros (também conhecidos como structs) são estruturas heterogêneas, pois permitem armazenar,
+                    em uma mesma variável, diferentes tipos de dados, ao passo que matrizes e vetores são estruturas
+                    homogêneas (permitem apenas um único tipo de dado). Um registro pode ser composto de vários campos
+                    (elementos) e cada um deles pode ser de um tipo diferente. No nosso exemplo, podemos ter um registro
+                    do tipo Aluno, contendo os campos nome, notas e matrícula:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue10/Imagem 9.png" alt="Criação da estrutura Aluno com os elementos nome, nota1, nota2 e matricula. Atribuição a esses 
+                elementos dos valores Pedro, 8.5, 7.5 e 123456
+                " />
+
+                <p>
+                    A partir do momento que criamos um registro, este pode ser utilizado como se fosse uma variável
+                    durante o nosso programa. Ele passa a ser um novo tipo de dado! No exemplo anterior, criamos o
+                    registro Aluno, e no programa declaramos a variável “x”, que é do tipo Aluno.
+                </p>
+
+                <p>
+                    Para acessar os seus
+                    campos, basta selecionar a variável, seguido do sinal ponto (.) e o nome do campo. Por exemplo,
+                    “x.nome” acessa o campo nome do aluno x. Agora, ficou mais fácil agruparmos todos os nossos alunos.
+                    Ao invés de termos um vetor para nota e outro para nome, podemos ter um único vetor para alunos:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue10/Imagem 10.png" alt="Criação de um vetor de estrutura Aluno.
+                " />
+
+                <p>
+                    O exemplo anterior mostra que agora temos um vetor de alunos, ou seja, cada posição é um aluno, que
+                    contém nome, notas e matrícula. Portanto, o uso combinado de registros e vetores traz enorme
+                    facilidade e economia de código na nossa programação.
+                </p>
+
+                <p>
+                    Podemos ter também registros aninhados, isto é, um registro que contém como campo um outro registro.
+                    Pense no seguinte exemplo: temos que guardar a data de nascimento do aluno, separado por mês, dia e
+                    ano. Nesse caso, podemos criar um registro DataNascimento e dentro do registro aluno fazer uma
+                    chamada a DataNascimento:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue10/Imagem 11.png" alt="Criação e atribuição de um vetor de registro Alunos e criação de um registro para Data de nascimento com os 
+                elementos dia, mes e ano.
+                " />
+
+                <p>
+                    Dizemos aqui que o registro Aluno está aninhado com DataNasc. Se quisermos acessar o ano de
+                    nascimento de um aluno, temos que informar qual aluno, o campo nascimento e o campo ano. Por fim,
+                    toda vez que você tiver que agrupar dados de tipos diferentes, mas que se referem a um mesmo
+                    conceito, você pode utilizar os registros. Se for necessário detalhar um campo específico, utilize
+                    registros aninhados. E, se houver muitos dados desse registro, considere utilizar um vetor de
+                    registros.
+                </p>
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/GNhUgAu5uxU"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+
+                <div class="flex justify-center w-full mtop-1">
+                    <img src="./img/ue1/check.svg" />
+                    <p class="px-3" id="check-green-word"> Solução do problematizando</p>
+                </div>
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/0hG7iVbU16A"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="containerFooter row">
+        <a class="row" href="aula-9.html">
+            <img class="arrowImg" src="img/global/icons/previusclass.png" />
+            <p class="btnDesafio">Desafio anterior</p>
+        </a>
+        <a class="row" href="aula-11.html">
+            <p class="btnDesafio">Próximo Desafio</p>
+            <img class="arrowImg" src="img/global/icons/nextclass.png" />
+        </a>
+    </div>
+
+    <!-- Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>

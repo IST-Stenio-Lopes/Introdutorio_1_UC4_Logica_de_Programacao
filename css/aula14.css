@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey&display=swap');
+
+.background-parallax1{
+    background-image: url('../img/ue14/parallax/Imagem\ 1.png');
+  }
+
+.background-parallax2{
+    background-image: url('../img/ue14/parallax/Imagem\ 2.png');
+  }
+
+
+  #golden-p{
+    font-family: 'Arapey' !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+margin-top: -3%;
+
+/* identical to box height */
+
+
+color: #FFC700;
+    
+  }
