@@ -68,10 +68,20 @@
     border: 2px solid rgba(0, 194, 255, 1);
     border-radius: 40px;
     text-align: center;
+    /* width: 100%; */
 }
 
 #container-fatorial p{
     font-weight: bolder;
     font-size: 2rem;
     padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+
+  
+  #container-fatorial{
+
+    width: 100%;
+}
 }
