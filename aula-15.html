@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-touch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Digitais - SENAI EAD</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="SENAISP">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arapey&display=swap" rel="stylesheet">
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/aula15.css">
+    <link rel="stylesheet" href="./css/uc4.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script type="text/javascript" src="./scripts/jquery.js"></script>
+
+    <script src="./scripts/index.js"></script>
+
+</head>
+
+<body>
+    <div class="navbar">
+        <a onclick="openNav()"><img src="./img/global/icons/menu.png" class="logoJogos" /></a>
+        <img src="./img/global/icons/logoSenai.png" class="logoJogos" />
+        <div></div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <button onclick="openList()" class="accordion"><img src="./img/global/icons/summary.svg"
+                style="margin-right: 10px;">
+            <p>Sumário</p>
+        </button>
+        <div class="panel" id="panelBtn">
+            <ul type="1">
+                <a class="listPanel" href="#contextualizing">
+                    <li>1.0 Contextualizando</li>
+                </a>
+                <a class="listPanel" href="#self-management">
+                    <li>2.0 Autogestão</li>
+                </a>
+                <ul type="1" style="margin-left:20px;">
+                    <a class="listPanel" href="#time-management">
+                        <li>2.1 Gestão do tempo</li>
+                    </a>
+                    <a class="listPanel" href="#concentration">
+                        <li>2.2 Concentração</li>
+                    </a>
+                    <ul type="2" style="margin-left:30px;">
+                        <a class="listPanel" href="#subject">
+                            <li>2.2.1 Disciplina</li>
+                        </a>
+                        <a class="listPanel" href="#responsibility">
+                            <li>2.2.2 Responsabilidade</li>
+                        </a>
+                    </ul>
+                    <a class="listPanel" href="#soft-skills">
+                        <li>2.3 Desenvolvimento de Soft Skills (Capacidade socioemocionais)</li>
+                    </a>
+                    <a class="listPanel" href="#self-knowledge">
+                        <li>2.4 Autoconhecimento</li>
+                    </a>
+                    <a class="listPanel" href="#organization">
+                        <li>2.5 Organização</li>
+                    </a>
+                    <a class="listPanel" href="#flexibility">
+                        <li>2.6 Flexibilidade</li>
+                    </a>
+                    <a class="listPanel" href="#commitment">
+                        <li>2.7 Compromisso</li>
+                    </a>
+                </ul>
+                <a class="listPanel" href="#professonal-work">
+                    <li>3.0 Autogerenciamento de carreira profissional</li>
+                </a>
+                <ul type="1" style="margin-left:20px;">
+                    <a class="listPanel" href="#organization">
+                        <li>3.1 Organização</li>
+                    </a>
+                </ul>
+
+            </ul>
+
+        </div>
+        <button onclick="changeTheme()" class="accordion">
+            <img src="./img/global/icons/themeIcon.svg" style="margin-right: 10px;" alt="Alterar tema">
+            <p>Alterar tema</p>
+        </button>
+        <button onclick="changeGray()" class="accordion">
+            <img src="./img/global/icons/scaleGrayIcon.svg" style="margin-right: 10px;" alt="Escala de Cinza">
+            <p>Escala de Cinza</p>
+        </button>
+        <div class="accordion2">
+            <div style="display: flex;">
+                <img src="./img/global/icons/textIcon.svg" style="margin-right: 10px;" alt="Tamanho da fonte">
+                <p>Tamanho da fonte</p>
+            </div>
+            <div>
+                <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+                <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="homePage">
+
+        <div class="header-title">
+            <div>
+                <h2 class="text-Course" style="color: white;">Curso Técnico em</h2>
+                <h1 class="text-NameCourse">Jogos Digitais</h1>
+            </div>
+
+            <div id="containerBoxTitle">
+                <div class="numberTitle">15</div>
+                <div class="titleHeader">Autogestão</div>
+            </div>
+
+            <div>
+                <strong class="objectiveLearning">Objetivo de Aprendizagem</strong>
+                <p class="text-DescriptUnit">Acatar, com consciência e coerência, as premissas da autogestão nas suas
+                    atividades profissionais,
+                    considerando critérios de organização, disciplina, responsabilidade, concentração e gestão do tempo
+                </p>
+            </div>
+
+            <div>
+                <p class="text-LetsLearn">Vamos iniciar os estudos</p>
+                <a class="btnPlay" href="#contextualizing">Play</a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img
+            src="./img/global/icons/arrowUpScroll.png"></button>
+    <div class="espaceTitle" id="contextualizing"></div>
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <h1 class="text-Title light-blue">Contextualizando</h1>
+
+                <p>
+                    Assista ao vídeo abaixo para uma introdução aos seus estudos
+                </p>
+
+                <iframe class="marginVertical" width="100%" height="450"
+                    src="https://www.youtube.com/watch?v=TwWN2BvFL2w" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+              gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <div class="dicas">
+                    <img src="./img/global/icons/help.png" id="help" style="margin-right: 20px;" />
+                    <p>
+                        Como Cristiane deve utilizar os princípios de autogestão, para realizar todas as entregas
+                        necessárias dentro dos prazos,
+                        sem perder qualidade e sem abdicar do seu momento de lazer?
+                    </p>
+                </div>
+
+
+
+
+                <div class="espaceTitle" id="recursividade"></div>
+                <h1 class="text-Title light-blue">Autogestão</h1>
+
+
+                <p>
+                    Utilizando a autogestão, que se refere a uma competência socioemocional, as pessoas tendem a ser
+                    mais eficientes, disciplinadas e orientadas para seus objetivos, sendo capazes de organizar seus
+                    compromissos e responsabilidades, a fim de cumprir com metas, agindo de maneira responsável e
+                    cidadã, realizando projetos e superando desafios do dia a dia, como por exemplo, a execução de
+                    diversas tarefas simultaneamente. Ela pode ser aprendida e desenvolvida por qualquer pessoa e é
+                    composta pelas capacidades de: responsabilidade, organização, concentração, disciplina e gestão de
+                    tempo.
+
+                </p>
+                <p>
+                    Essas cinco competências são de grande importância para o cumprimento de tarefas, seja ela no âmbito
+                    profissional ou pessoal. Dessa maneira, é indispensável, para identificar os objetivos e acima de
+                    tudo alcançá-los.
+
+                </p>
+                <p>
+                    A autogestão é uma competência que está presente dentro das macro competências socioemocionais, a
+                    figura a seguir mostra detalhadamente a divisão:
+                </p>
+
+
+                <img class="w-75 m-auto" src="./img/ue15/img1.png" alt="" />
+
+                <h1 class="text-subtitle1 dark-blue mx-3">Gestão do tempo</h1>
+
+                <p>
+                    Você já parou para pensar que às vezes as horas, do dia, são mais curtas? Já teve a sensação de que
+                    o tempo parece estar passando de forma mais acelerada? Como se 60 minutos passassem mais rápido?
+                </p>
+
+                <p>
+                    Frenético, é uma boa palavra para definir o tempo, pois a forma como temos vivido tem se tornado,
+                    cada vez mais, acelerada, uma rotina completamente preenchida com muitos compromissos e atividades
+                    para dar conta no decorrer do dia.
+                </p>
+                <p>
+                    Não sei você, mas particularmente já observei que há pessoas que têm inúmeros compromissos,
+                    trabalhos e ainda conseguem investir em autocuidado e tempo para família, já outras vivem submersas
+                    com tanta coisa para dar conta que parecem até perder o fôlego. Por que será que isso acontece?
+                </p>
+
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/E4fDDmZU0eo"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+
+
+                <p>
+                    Como acabamos de assistir no vídeo anterior, percebe-se que o fato de viver, requer colaboração, a
+                    vida em comunidade, faz parte do propósito humano. Então, gerir o nosso tempo é vital para nosso
+                    avanço como pessoa.
+                </p>
+
+                <p>
+                    Profissionalmente falando, é necessário gerir o tempo de tal forma que você não seja sinônimo do que
+                    você faz no trabalho, mas que o seu trabalho seja apenas uma porcentagem de quem você é. Ou seja, se
+                    ao se perguntar quem é você, sua primeira definição seja o que você faz para obter renda para viver
+                    é necessário refletir sobre.
+                </p>
+
+                <p>
+                    Então como gerir o tempo profissional? Aqui vão algumas dicas que podem te ajudar:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue15/img1.png" alt="" />
+
+                <p>
+                    Dentre as alternativas citadas, anteriormente, é relevante abordarmos com mais veemência a
+                    utilização de ferramentas para gestão do tempo, pois por meio delas você conseguirá gerir seu tempo
+                    de forma a realizar as atividades necessárias e ainda investir seu tempo livre na sua qualidade de
+                    vida pessoal e familiar.
+                </p>
+
+                <p>
+                    Muitos dizem que tempo é dinheiro, porém é muito mais do que isso. Tempo é vida, e viver é muito
+                    mais do que sobreviver. E é o que você faz com seu tempo que determinará como tem sido sua vida em
+                    relação a qualidade e histórias a serem construídas.
+                </p>
+
+                <p>
+                    Mas o que é uma ferramenta de gestão de tempo? São instrumentos que te ajudarão na organização do
+                    seu tempo de forma a tornar possível desempenhar várias atividades, sejam elas de cunho profissional
+                    ou pessoal. Existem inúmeras ferramentas de gestão de tempo como por exemplo:
+                </p>
+
+                <div id="time-manegement-container">
+
+                    <div class="time-manegement-job">
+                        <div class="time-manegement-job-img">
+                            <img src="./img/ue15/icons/icon1.png" />
+                        </div>
+                        <div class="time-manegement-job-txt">
+                            <b>Agenda</b>
+                            <p>
+                                Sim! A velha e boa agenda é um excelente começo para definir tudo aquilo que precisa ser
+                                realizado, planejar as atividades que você precisa fazer no decorrer do dia e ir
+                                riscando conforme forem sendo feitas, além de prazeroso te ajudará a definir bem suas
+                                metas. Mas lembre, caso não consiga realizar tudo, não se apavore ou se frustre,
+                                imprevistos acontecem, com o tempo você conseguirá mensurar com mais propriedade o que é
+                                possível ser realizado. A regra para todo bom planejamento é flexibilidade. Hoje além da
+                                agenda física há também a agenda virtual que sincronizada ao seu dispositivo móvel pode
+                                facilitar ainda mais a organização e produtividade do seu dia a dia.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="time-manegement-job">
+                        <div class="time-manegement-job-img">
+                            <img src="./img/ue15/icons/icon2.png" />
+                        </div>
+                        <div class="time-manegement-job-txt">
+                            <b>Kanban</b>
+                            <p>
+                                Uma ferramenta visual muito utilizada na gestão à vista, possibilita organizar as
+                                atividades por prioridade classificando-as em três categorias, são elas: a fazer,
+                                fazendo e feito. Tais categorias ainda possibilitam o acompanhamento do progresso de
+                                cada atividade. Também está disponível no formato online.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="time-manegement-job">
+                        <div class="time-manegement-job-img">
+                            <img src="./img/ue15/icons/icon3.png" />
+                        </div>
+                        <div class="time-manegement-job-txt">
+                            <b>Pomodoro</b>
+                            <p>
+                                A técnica ajuda na concentração do tempo, fundamenta-se em um ciclo produtivo em que a
+                                pessoa concentra sua atenção nas tarefas durante vinte e cinco minutos, após esse tempo,
+                                deve descansar por cinco minutos. Quando completa de uma hora e meia a duas horas de
+                                trabalho, o intervalo de descanso é de 15 a 30 minutos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="time-manegement-job">
+                        <div class="time-manegement-job-img">
+                            <img src="./img/ue15/icons/icon4.png" />
+                        </div>
+                        <div class="time-manegement-job-txt">
+                            <b>Softwares e Aplicativos</b>
+                            <p>
+                                Atualmente, existem softwares e aplicativos em prol de facilitar a vida e organizar as
+                                atividades profissionais e pessoais de seus usuários, tais ferramentas tem como objetivo
+                                promover a qualidade de vida de seus usuários no sentido de ajudar na organização de
+                                suas vidas possibilitando o aumento da produtividade.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="atencion my-3 mx-3">
+
+                    <img src="./img/global/icons/lightbulb.png" />
+                    <div class="column">
+                        <p>
+                            É possível refletir sobre gerenciamento de tempo com ótimos filmes, aqui estão algumas
+                            sugestões
+                            para você se atentar sobre este assunto:
+
+
+                        </p>
+
+                        <p>
+                            <li class="my-1 mx-1">
+                                Click (2006)
+                            </li>
+                            <li class="my-1 mx-1">
+                                O preço do amanhã (2011)
+                            </li>
+                            <li class="my-1 mx-1">
+                                A chegada (2016)
+                            </li>
+                            <li class="my-1 mx-1">
+                                Passageiros (2016)
+                            </li>
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!--Parallax-->
+    <div class="parallax background-parallax1">
+        <div class="cubeBlack">
+
+            <!--Subtitulo-->
+            <h1 class="text-subtitle1 dark-blue mx-3">Concentração</h1>
+            <p>
+                Para estudantes, profissionais, das mais diversas áreas, como também para a maioria das atividades
+                diárias, a capacidade de ter foco é fundamental. Apesar da extrema importância, nem sempre é fácil
+                mantê-lo.
+            </p>
+
+            <p>
+                Mas afinal o que é foco? <br />
+                De acordo com o dicionário online, o foco é: “ponto mais importante ou principal de; ponto central que
+                dá origem a; centro; ponto que recebe a convergência, que é alvo, de.”
+            </p>
+
+            <p>
+                Ou seja, é um objetivo em que se deve alcançar, e para isso requer a definição de metas, estratégias e
+                concentração.
+            </p>
+
+            <p>
+                Imagine que você tem um carro que está muito sujo e necessita de uma limpeza. Imaginou? Pois, bem você
+                decide que seu carro precisa ser lavado (idealização), mas necessitará partir para o planejamento e
+                portanto a ação. Se você estiver apenas ciente de que seu carro precisa ser limpo e não agir em prol
+                dessa limpeza estará vivenciando na prática a procrastinação, afinal como afirma o ditado popular é
+                melhor o feito do que o perfeito.
+            </p>
+
+
+
+        </div> <!-- End BlackBox -->
+    </div> <!-- End Parallax -->
+
+    <!--Section-->
+    <section class="container course">
+        <div class="section">
+            <div class="contentSection">
+
+                <p>
+                    Contudo, sabendo o que deverá ser feito, que no caso é a limpeza do veículo, você precisa planejar o
+                    dia
+                    da limpeza, se o serviço será feito por você ou se você vai levar para um lavajato de sua
+                    preferência.
+                    Além disso, precisará estabelecer qual dia realizará a limpeza; se tem os produtos e materiais
+                    necessários, caso seja você quem limpará, ou se tem o dinheiro, caso seja feito em um lava jato.
+                </p>
+
+                <p>
+                    Concentrar-se então, é saber o que se tem para fazer, prever em que momento será feito, planejar, se
+                    preparar e portanto “colocar a mão na massa” para realizar a ação. Esse combo de decisões necessita
+                    de
+                    empenho em sua realização, para que não seja paralisado por distrações. As distrações são uma série
+                    de
+                    fatores inesperados ou não que podem atrasar ou evitar que a meta se torne tangível e é por isso que
+                    se
+                    faz necessária a aplicação da disciplina para manter-se concentrado em suas atribuições.
+                    O infográfico a seguir mostra dicas para manter a concentração nas suas atividades.
+                </p>
+
+                <div id="concentration-imgs">
+                    <img src="./img/ue15/img3.png" />
+                    <img src="./img/ue15/img4.png" />
+                    <img src="./img/ue15/img5.png" />
+                </div>
+
+                <h1 class="text-subtitle2 lilaz mx-6">Disciplina</h1>
+
+                <p>
+                    Ao pensarmos em um atleta que alcançou medalha de ouro em olimpíada, ou, paraolimpíada, logo
+                    pensamos na dedicação, abstenção e compromisso que essa pessoa teve para obter o resultado.
+                </p>
+
+                <p>
+                    Resultados tangíveis são frutos de disciplina e perseverança, para isso faz-se necessário empenho e
+                    foco.
+                </p>
+
+                <p>
+                    Uma pessoa que inicia uma atividade física para manter a saúde em dia sabe que a continuidade é uma
+                    das regras, afinal não adianta frequentar a academia uma vez por semana, comer tudo que deseja,
+                    querer perder massa gorda e ganhar massa magra, não é mesmo?
+                </p>
+
+                <p>
+                    Seja qual for a atividade, física ou cognitiva realizada irá requerer de você:
+                </p>
+
+                <p>
+                    <li class="my-1 mx-1">
+                        Foco;
+                    </li>
+                    <li class="my-1 mx-1">
+                        Perseverança;
+                    </li>
+                    <li class="my-1 mx-1">
+                        Mudanças de hábitos;
+                    </li>
+                    <li class="my-1 mx-1">
+                        Compromisso com o que se pretende atingir, ou seja, disciplina.
+                    </li>
+                </p>
+
+                <p>
+                    Na vida profissional não é diferente, a disciplina é um fator fundamental para as entregas que
+                    precisam ser feitas, pois o alcance de resultados precisam ser conquistados degrau por degrau, num
+                    processo contínuo e ininterrupto. Por isso:
+                </p>
+
+                <p>
+                    <li class="my-1 mx-1">
+                        Invista
+                    </li>
+                    <li class="my-1 mx-1">
+                        Persista
+                    </li>
+                    <li class="my-1 mx-1">
+                        Jamais desista
+                    </li>
+                </p>
+
+                <p>
+                    Você constrói a sua própria história!
+                </p>
+
+                <h1 class="text-subtitle2 lilaz mx-6">Responsabilidade</h1>
+
+                <p>
+                    De acordo com o dicionário on-line de português, Responsabilidade, é o “Dever de responder pelo
+                    próprio comportamento, pelas ações de outras pessoas ou instituições; [...] é perceptível que a
+                    responsabilidade está intrinsecamente ligada a uma ação diante de uma situação ou obrigação.’’ Ser
+                    responsável é, portanto, uma decisão diante de uma alternativa que requer sensatez no cumprimento de
+                    obrigações.
+                </p>
+
+                <p>
+                    Há vários contextos possíveis para aplicabilidade da responsabilidade na vida, mas aqui, vamos focar
+                    na responsabilidade profissional.
+                </p>
+                <p>
+                    Você se acha uma pessoa responsável para atuar profissionalmente? O que te faz definir sua
+                    responsabilidade ou ausência dela?
+                </p>
+                <p>
+                    Para entender essa temática te convido a mergulhar comigo nas linhas a seguir, e se preparar, para
+                    entender as características que, se praticadas, te ajudarão a se tornar uma pessoa responsável.
+                </p>
+                <p>
+                    Todo trabalho requer do trabalhador que entregas sejam feitas, tais entregas podem ser produtos ou
+                    serviços. Mas as entregas a serem feitas necessitam de uma qualidade mínima para que o ciclo de
+                    execução e consumo seja estabelecido, correto?
+                </p>
+                <p>
+                    Vou te dar um exemplo para entender melhor esse “loop” entre execução e consumo, vamos lá? Clique no
+                    vídeo a seguir para assistir.
+                </p>
+
+                <iframe class="marginVertical" width="100%" height="450" src="https://www.youtube.com/embed/0CfPpj9UaFE"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+
+                <p>
+                    O vídeo mostra exatamente o ponto que queremos chegar, a irresponsabilidade no trabalho, seja ela no
+                    fornecimento de um produto ou na execução de um serviço gera uma insatisfação, além de paralisar o
+                    seu crescimento profissional.
+                </p>
+
+                <p>
+                    Lógico que existem inúmeros exemplos de irresponsabilidade como: não entregar o documento no prazo,
+                    não comparecer ao trabalho sem justificativa, não cumprir as obrigações, não zelar pela organização
+                    e qualidade das entregas profissionais, disseminar contentas no ambiente de trabalho, entre outros.
+                </p>
+
+                <p>
+                    Será que há dicas que podem me tornar um pouco mais responsável? Sim com certeza, mas uma coisa você
+                    precisa entender: a responsabilidade é um processo a ser construído e não uma mágica que te dará de
+                    uma hora para outra o título de profissional responsável.
+                </p>
+                <p>
+                    Vamos portanto identificar algumas dicas que se aplicadas, continuamente, te possibilitarão galgar o
+                    caminho da construção da responsabilidade profissional
+                </p>
+
+                <h1 class="text-subtitle1 dark-blue mx-3">Desenvolvimento de Soft Skills (Capacidades socioemocionais)
+                </h1>
+
+                <p>
+                    A primeira e principal dica está intrinsecamente ligada à forma de atuar profissionalmente, as soft
+                    skills não são adquiridas de um dia para outro e, sim, construídas cotidianamente ao longo da vida,
+                    é por meio do desenvolvimento dessas capacidades que se são formados valores como ética, trabalho em
+                    equipe, empatia, flexibilidade entre outro. E tudo isso para agirmos com amabilidade no desempenho
+                    das nossas funções, pois segundo MIchelle Schneider.
+                </p>
+
+
+                <!--GIF-->
+
+                <h1 class="text-subtitle1 dark-blue mx-3">Autoconhecimento</h1>
+
+                <p>
+                    A primeira e principal dica está intrinsecamente ligada à forma de atuar profissionalmente, as soft
+                    skills não são adquiridas de um dia para outro e, sim, construídas cotidianamente ao longo da vida,
+                    é por meio do desenvolvimento dessas capacidades que se são formados valores como ética, trabalho em
+                    equipe, empatia, flexibilidade entre outro. E tudo isso para agirmos com amabilidade no desempenho
+                    das nossas funções, pois segundo MIchelle Schneider.
+                </p>
+
+                <h1 class="text-subtitle1 dark-blue mx-3">Organização</h1>
+
+                <p>
+                    A responsabilidade profissional requer organização seja das metas, do tempo, do ambiente, de
+                    arquivos, enfim dos aspectos relacionados à função desempenhada, pois por meio dela é tangível a
+                    realização das metas estabelecidas.
+                </p>
+
+                <h1 class="text-subtitle1 dark-blue mx-3">Flexibilidade</h1>
+
+                <p>
+                    Seja flexível, mas saiba se posicionar, o planejamento está sujeito a implicações que podem levar às
+                    alterações, saber entender isso é fundamental como também aceitar sugestões, porém também saiba
+                    manter seu posicionamento, o equilíbrio entre ceder e manter seu ponto de vista reflete a marca de
+                    decisões flexíveis.
+                </p>
+
+                <h1 class="text-subtitle1 dark-blue mx-3">Compromisso</h1>
+
+                <p>
+                    Se empenhar em suas ações rotineiras reflete características de uma pessoa comprometida, pois a
+                    dedicação a uma ação irá requerer qualidade, cumprimento de prazos resultando em entregas
+                    satisfatórias.
+                </p>
+
+                <p>
+                    Anote as dicas e, diariamente, incorpore-as na sua rotina. Com perseverança você se tornará mais
+                    responsável.
+                </p>
+
+                <h1 class="text-Title light-blue">Autogerenciamento de carreira profissional</h1>
+
+                <p>
+                    Para falar de autogerenciamento de carreira requer primeiro entender a definição do que é carreira
+                    profissional. De acordo com CHIAVENATO (2010) “[...] significa a sequência de posições e atividades
+                    desenvolvidas por uma pessoa ao longo do tempo em uma organização”. É certo que ninguém nasce
+                    sabendo, cada habilidade do ser humano é desenvolvida no decorrer da vida, para isso é necessário
+                    maturidade e experiência.
+                </p>
+                <p>
+                    Mas, como obter experiência sem oportunidade, não é mesmo? É por isso que o primeiro emprego de uma
+                    pessoa é algo memorável, considerando que a inexperiência é impulsionada pela força de vontade em
+                    aprender. Sendo assim, a partir das primeiras oportunidades, a pessoa colaboradora vai realizando
+                    uma autoanálise em que reflete seus pontos de melhoria e necessidades de investimento.
+                </p>
+                <p>
+                    Por isso, há a necessidade de qualificar-se por meio dos estudos, pois, a mobilização do
+                    conhecimento com as habilidades, as atitudes e os valores de forma progressiva farão de você uma
+                    pessoa competente.
+                </p>
+                <p>
+                    Há um provérbio popular que diz: “o trabalho dignifica o homem e a mulher”. Mas porque será?
+                    Realizar um trabalho além de ser umas das principais fontes de renda de uma pessoa, é também uma
+                    oportunidade de desenvolvimento pessoal, é por ele que potencializamos o que desenvolvemos e, assim,
+                    tornamo-nos capazes e consequentemente nos sentimos úteis, o trabalho dignifica pelo fato de te
+                    fazer sentir-se útil. As pessoas desejam se sentirem importantes, naquilo que fazem, principalmente
+                    quando o fazem com qualidade.
+                </p>
+                <p>
+                    Hoje, existem inúmeros formatos de trabalho em que resumimos em formais e informais, cada nova
+                    oportunidade traz consigo um aprendizado e a partir do momento em que a pessoa vai vivenciando novas
+                    experiências, consequentemente vai construindo sua carreira, que é muito mais do que está descrito
+                    no seu currículo, mas fala de quem você é após um trabalho, quais seus anseios profissionais e de
+                    que forma você pode e deseja contribuir?
+                </p>
+                <p>
+                    Antes, o gerenciamento de carreira era feito pelas próprias organizações por meio de um plano de
+                    carreira, principalmente por serem altas e verticalizadas como afirma CHIAVENATO (2010) , mas hoje
+                    “[...] com as organizações achatadas devido ao enxugamento dos níveis hierárquicos, o
+                    encarreiramento está se tornando cada vez mais horizontalizado”.
+                </p>
+                <p>
+                    O que antes era papel das organizações, cada dia mais tem se tornado papel da própria pessoa
+                    colaboradora, os planos de carreira que preparavam para cargos mais altos, dão lugar ao
+                    autogerenciamento de carreira, em que cada um tem se tornado responsável por sua própria progressão.
+                </p>
+                <div class="atencion my-3 mx-3 ">
+                    <p>
+                    <p id="golden-p">“</p>
+
+                    &nbsp; Agora quem precisa se preocupar com a carreira não é mais a organização. Essa incumbência
+                    está rapidamente passando para as mãos de cada pessoa. Em outras palavras, cada pessoa é que deve
+                    administrar sua própria carreira profissional e saber como ajustá-la continuamente às demandas e
+                    exigências de um mundo em rápida mudança e transformação. (CHIAVENATO, 2010, p. 227)
+                    </p>
+                </div>
+
+                <p>
+                    Por isso, é essencial atualizar-se constantemente, está de olho nas exigências do mercado, verificar
+                    as atualizações referentes a sua profissão, organizar-se e administrar o seu tempo de forma a sempre
+                    investir na sua vida profissional. Dicas importantes, evite a procrastinação e neutralize ameaças,
+                    faça delas oportunidades para não baixar a guarda, mas ao invés disso que o que deseja te paralisar
+                    seja uma ferramenta propulsora para que você avance, dê o seu melhor, seja sempre sua melhor versão
+                    e que qualidade seja seu lema profissional.
+                </p>
+
+                <div class="atencion my-3 mx-3">
+                    <img src="./img/global/icons/lightbulb.png" />
+                    <p>
+                        Se liga aí! Currículo físico não é o único meio de se candidatar a vagas profissionais. A
+                        utilização da rede social LinkedIn é uma ótima oportunidade para crescimento profissional,
+                        desenvolvimento de habilidades e aumento de networking. Inclusive, por meio dessa rede você pode
+                        conseguir trabalhos freelancer ou até mesmo home office na sua área de atuação. Então, se você
+                        ainda não tem cadastro nessa rede social, acesse o link: <a href="https://www.linkedin.com"
+                            target="_blank">https://www.linkedin.com</a>
+                    </p>
+                </div>
+
+                <h1 class="text-subtitle1 dark-blue mx-3">Organização</h1>
+
+                <p>
+                    Você conseguiu perceber o quanto a organização é necessária para possibilitar o alcance de uma meta?
+                    E que se não houver um planejamento, metas bem definidas e organizadas, desperdiçamos esforços à
+                    toa? Muitas vezes o cansaço da nossa rotina se dá devido a ausência de organização.
+                </p>
+
+                <p>
+                    Imagine que você vai pintar a parede da sua casa. Você compra a tinta e um pincel, daí na hora de
+                    pintar percebe que precisa da lixa, portanto saí para comprá-la, quando volta e vai iniciar a
+                    pintura analisa que o rolo seria mais viável que o pincel e precisa sair novamente, enfim, se não
+                    houver organização por meio de um bom planejamento, seus esforços serão desgastantes e o que poderia
+                    ser realizado em quatro horas pode levar até dois dias?
+                </p>
+                <p>
+                    Ser organizado é buscar conquistar os seus objetivos de forma planejada utilizando os recursos e
+                    tempo que lhe são disponíveis. Em todos os setores da nossa vida, a exemplo da entrega de um
+                    trabalho, receita de bolo, planejamento de um roteiro de viagem, quando não utilizamos bem essa
+                    capacidade, nos resulta na geração de esforços desnecessários.
+                </p>
+                <p>
+                    Quando vamos com muita sede ao pote, ou buscamos finalizar o trabalho com muita rapidez e sem
+                    paciência, esquecemos de planejar e somos capazes de passar por cima de detalhes importantes, sem
+                    perceber que tudo está ao nosso alcance quando há a aplicação da organização e do planejamento. É
+                    necessário passar por uma melhoria organizacional para que haja execução qualitativa de metas
+                    profissionais e pessoais. A definição correta de horários, limites, qualidades, e espaços são alguns
+                    dos pontos importantes para se ter sucesso na realização das tarefas. Em caso específico de um líder
+                    de equipe, é necessário que esses pontos se estendam para todas as pessoas envolvidas.
+                </p>
+                <p>
+                    A seguir, é apresentado alguns pontos importantes para uma boa organização, na vida pessoal ou
+                    profissional, sendo elas:
+                </p>
+
+                <img class="w-75 m-auto" src="./img/ue15/img6.png" alt="" />
+
+                <div class="atencion my-3 mx-1">
+                    <img src="./img/global/icons/atencion.png" />
+                    <p>
+                        Nos sites e lojas de aplicativos é possível encontrar diversos aplicativos de gerenciamento. A
+                        seguir te apresentaremos alguns que possam te auxiliar:
+                        TickTick: Lista de tarefas, lembretes e calendário
+                        Evernote: Organizador de notas
+                        Mini Hábitos: Rotina, hábito e tarefas diárias
+                        Focus To-Do: Timer pomodoro e lista de tarefas
+                    </p>
+                </div>
+
+                <p>
+                    Verifique se você conseguiu absorver o que foi apresentado, nesta UE, associando a coluna da direita
+                    à coluna da esquerda. Clique e arraste os blocos da coluna direita para cada conceito
+                    correspondente:
+                </p>
+
+
+
+
+                <p id="pontos-totais">
+
+                </p>
+
+                <div id="container-drag-and-drop">
+                    <div class="board">
+                        <img src="./img/ue15/atividades/1.png" />
+                        <div class="dropzone" id="drop-1">
+                            <div class="card" draggable="true" id="drag-3">
+                                <p>Prender a atenção apenas aos pontos importantes para completar o que precisa ser
+                                    feito, evitando distrações.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="board">
+                        <img src="./img/ue15/atividades/2.png" />
+                        <div class="dropzone" id="drop-2">
+                            <div class="card" draggable="true" id="drag-5">
+                                <p>Coordenar o tempo em relação às suas atividades, bem como se planejar para o futuro.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="board">
+                        <img src="./img/ue15/atividades/3.png" />
+                        <div class="dropzone" id="drop-3">
+                            <div class="card" draggable="true" id="drag-2">
+                                <p>Arranjo sistemático para atingir os objetivos desejados, através de função, ordem e
+                                    finalidade.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="board">
+                        <img src="./img/ue15/atividades/4.png" />
+                        <div class="dropzone" id="drop-4">
+                            <div class="card" draggable="true" id="drag-4">
+                                <p>Estabelecer objetivos e motivações claras para executar as tarefas, se entregando por
+                                    inteiro, não apenas o mínimo.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="board">
+                        <img src="./img/ue15/atividades/5.png" />
+                        <div class="dropzone" id="drop-5">
+                            <div class="card" draggable="true" id="drag-1">
+                                <p>Realizar as tarefas, cumprindo os compromissos assumidos, apesar da dificuldade,
+                                    sendo necessário comprometimento com a tarefa como um todo, para além de nossos
+                                    interesses individuais.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+    </section>
+
+
+
+
+
+
+
+
+    <div class="flex justify-center w-full mtop-1">
+        <img src="./img/ue1/check.svg" />
+        <p class="px-3" id="check-green-word"> Solução do problematizando</p>
+    </div>
+    <iframe class="marginVertical" width="100%" height="450" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+
+    </div>
+    </div>
+    </section>
+
+
+
+
+
+    <div class="containerFooter row">
+        <a class="row" href="aula-14.html">
+            <img class="arrowImg" src="img/global/icons/previusclass.png" />
+            <p class="btnDesafio">Desafio anterior</p>
+        </a>
+
+    </div>
+
+    <!-- Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="./scripts/aula15.js"></script>
+</body>
+
+</html>
