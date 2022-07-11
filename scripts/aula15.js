@@ -12,6 +12,9 @@ var point;
 const cards = document.querySelectorAll(".card");
 const dropzones = document.querySelectorAll(".dropzone");
 
+const checkBoxFalse = document.getElementById("container-points-false");
+const checkBoxTrue = document.getElementById("container-points-true");
+
 function checkPoints() {
   point = 0;
   var loop = 1;
@@ -24,7 +27,15 @@ function checkPoints() {
     loop++;
   });
 
-  let text = `Pontos: ${point}`;
+  if (point < 5) {
+    checkBoxTrue.style.display = "none";
+    checkBoxFalse.style.display = "block";
+  } else if (point >= 5) {
+    checkBoxTrue.style.display = "flex";
+    checkBoxFalse.style.display = "none";
+  }
+
+  let text = `Quase lá, você acertou ${point}/5. Tente novamente!`;
   document.getElementById("pontos-totais").innerText = text;
 }
 

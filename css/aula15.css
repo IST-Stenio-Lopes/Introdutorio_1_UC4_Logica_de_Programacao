@@ -114,6 +114,52 @@ color: #FFC700;
     opacity: 0.3;
 }
 
+
+#container-points-false{
+    width: 60%;
+    display: flex;
+    align-self: center;
+    border: 1px solid #FF0000;
+    border-radius: 8px;
+    align-items: center;
+    align-content: flex-start;
+    margin-top: 80px;
+    min-height: 80px;
+}
+
+#container-points-false img{
+    max-width: 10%;
+    align-self: center;
+    flex: 1;
+}
+#container-points-false p{
+    flex: 1;
+}
+
+
+#container-points-true{
+    width: 60%;
+    display: none;
+    align-self: center;
+    border: 1px solid #2AB863;
+    border-radius: 8px;
+    align-items: center;
+    align-content: flex-start;
+    margin-top: 80px;
+    min-height: 80px;
+    
+}
+#container-points-true img{
+    max-width: 10%;
+    align-self: center;
+    flex: 1;
+}
+#container-points-true p{
+    flex: 1;
+}
+
+
+
 @media screen and (max-width: 600px) {
     #container-drag-and-drop{
         width: 100%;
@@ -132,5 +178,13 @@ color: #FFC700;
 
     .card p{
         font-size: 55%;
+    }
+
+    #container-points-false{
+        width: 100%;
+    }
+
+    #container-points-true{
+        width: 100%;
     }
 }
