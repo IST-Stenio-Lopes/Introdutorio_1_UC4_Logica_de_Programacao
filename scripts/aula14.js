@@ -83,7 +83,6 @@ $(".0203").on("click", function (e) {
   e.preventDefault();
   GetFourthImage();
 });
-
 $(".0301").on("click", function (e) {
   e.preventDefault();
   GetFirstImage();
@@ -96,7 +95,6 @@ $(".0303").on("click", function (e) {
   e.preventDefault();
   GetFourthImage();
 });
-
 $(".0401").on("click", function (e) {
   e.preventDefault();
   GetFirstImage();

@@ -84,12 +84,10 @@ dropzones.forEach((dropzone) => {
 
 function dragenter() {
   // log('DROPZONE: Enter in zone ')
-
   select && this.classList.add("void");
 
   filho = this.querySelector(".card");
-
-  //   console.log(filho); aa
+  //   console.log(filho);
 }
 
 function dragover() {
